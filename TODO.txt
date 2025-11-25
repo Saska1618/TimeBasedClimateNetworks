@@ -1,0 +1,9 @@
+szukiteni a teruletet
+
+a helyszinek, mint ido - egy eso lehet, hogy ma Kolozsvaron van, de Gyergyoba csak holnap er el
+
+elore hatarozzak meg statisztikai ertekeket, hogy mi folott lesz kapcsolat, hogyan mondom meg azt, hogy anomalia
+
+meghatarozni a hipoteziseket, hogy merhetoek legyenek
+
+transformer model attention block - meg kell josolja melyik idocimket hasznalja fel egy kovetkezo idocimkehez
