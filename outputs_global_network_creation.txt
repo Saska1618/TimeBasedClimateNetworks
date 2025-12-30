@@ -1,0 +1,176 @@
+Starting to work on Cluj : 1960-01 - 1990-12
+Statistics calculated
+Number of nodes: 372
+Number of edges: 56449
+First network created
+Pruning 44545 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Cluj : 1991-01 - 2024-12
+Statistics calculated
+Number of nodes: 408
+Number of edges: 67658
+First network created
+Pruning 54602 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Bacskatopolya : 1960-01 - 1990-12
+Statistics calculated
+Number of nodes: 372
+Number of edges: 56184
+First network created
+Pruning 44280 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Bacskatopolya : 1991-01 - 2024-12
+Statistics calculated
+Number of nodes: 408
+Number of edges: 67683
+First network created
+Pruning 54627 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Brasov : 1960-01 - 1990-12
+Statistics calculated
+Number of nodes: 372
+Number of edges: 56302
+First network created
+Pruning 44398 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Brasov : 1991-01 - 2024-12
+Statistics calculated
+Number of nodes: 408
+Number of edges: 68027
+First network created
+Pruning 54971 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Deva : 1960-01 - 1990-12
+Statistics calculated
+Number of nodes: 372
+Number of edges: 56280
+First network created
+Pruning 44376 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Deva : 1991-01 - 2024-12
+Statistics calculated
+Number of nodes: 408
+Number of edges: 67751
+First network created
+Pruning 54695 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Gheorgheni : 1960-01 - 1990-12
+Statistics calculated
+Number of nodes: 372
+Number of edges: 56369
+First network created
+Pruning 44465 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Gheorgheni : 1991-01 - 2024-12
+Statistics calculated
+Number of nodes: 408
+Number of edges: 68010
+First network created
+Pruning 54954 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Gyor : 1960-01 - 1990-12
+Statistics calculated
+Number of nodes: 372
+Number of edges: 56226
+First network created
+Pruning 44322 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Gyor : 1991-01 - 2024-12
+Statistics calculated
+Number of nodes: 408
+Number of edges: 67714
+First network created
+Pruning 54658 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Kassa : 1960-01 - 1990-12
+Statistics calculated
+Number of nodes: 372
+Number of edges: 56246
+First network created
+Pruning 44342 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Kassa : 1991-01 - 2024-12
+Statistics calculated
+Number of nodes: 408
+Number of edges: 67781
+First network created
+Pruning 54725 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Kecskemet : 1960-01 - 1990-12
+Statistics calculated
+Number of nodes: 372
+Number of edges: 56214
+First network created
+Pruning 44310 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Kecskemet : 1991-01 - 2024-12
+Statistics calculated
+Number of nodes: 408
+Number of edges: 67876
+First network created
+Pruning 54820 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Keszthely : 1960-01 - 1990-12
+Statistics calculated
+Number of nodes: 372
+Number of edges: 56135
+First network created
+Pruning 44231 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Keszthely : 1991-01 - 2024-12
+Statistics calculated
+Number of nodes: 408
+Number of edges: 67635
+First network created
+Pruning 54579 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Oradea : 1960-01 - 1990-12
+Statistics calculated
+Number of nodes: 372
+Number of edges: 56407
+First network created
+Pruning 44503 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Oradea : 1991-01 - 2024-12
+Statistics calculated
+Number of nodes: 408
+Number of edges: 67866
+First network created
+Pruning 54810 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Pecs : 1960-01 - 1990-12
+Statistics calculated
+Number of nodes: 372
+Number of edges: 56089
+First network created
+Pruning 44185 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved
+Starting to work on Pecs : 1991-01 - 2024-12
+Statistics calculated
+Number of nodes: 408
+Number of edges: 67656
+First network created
+Pruning 54600 edges to reach average degree of 64...
+Finished. Final Average Degree: 64.00
+Network pruned and saved

@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from dtaidistance import dtw
 
-def calculate_similarity(month1_data, month2_data, weights={'deriv': 0.8, 'tg': 0.08, 'tn': 0.06, 'tx': 0.06}):
+def calculate_similarity(month1_data, month2_data, weights={'deriv': 0.7, 'tg': 0.1, 'tn': 0.1, 'tx': 0.1}):
     '''
     Calculates the similarity between two months based on their climate data.
     

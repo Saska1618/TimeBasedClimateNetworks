@@ -7,3 +7,29 @@ elore hatarozzak meg statisztikai ertekeket, hogy mi folott lesz kapcsolat, hogy
 meghatarozni a hipoteziseket, hogy merhetoek legyenek
 
 transformer model attention block - meg kell josolja melyik idocimket hasznalja fel egy kovetkezo idocimkehez
+
+
+################
+
+- given a month get statistics that its connections how many of them are different months (like 2024-06 - 13% january, 12% february etc)
+- connections in desc list
+- month graphs (create graphs for each month) - diameter for these means szetesett vagy nem
+- 2 graphs - 1960-90 - 91-24
+- atlag honapok - honap grafokban a legnagyobb fokszamu csomopont
+
+1️⃣ Does combining DTW with monthly stats make sense?
+Conceptually: yes. You are combining:
+DTW distance → similarity of daily temperature-change patterns
+Monthly mean → overall warmth
+Monthly min/max → extremes
+This gives you both:
+Shape similarity (how the month evolves day by day)
+Level & extremes (how hot/cold it actually was)
+That’s often better than DTW alone for climate analysis.
+
+Typical weights:
+w_dtw = 0.5–0.7
+w_mean = 0.1–0.2
+w_min = 0.1
+w_max = 0.1
+Adjust based on what you care about.

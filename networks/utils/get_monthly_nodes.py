@@ -1,6 +1,10 @@
 import pandas as pd
 
-def get_monthly_nodes(city):
+def get_monthly_nodes(city, start, end, target_month=0):
+
+    start_date = pd.to_datetime(start)
+    end_date = pd.to_datetime(end)
+
     # Load the datasets
     tg_df = pd.read_csv(f'../../data/tg/{city}_tg.csv')
     tn_df = pd.read_csv(f'../../data/tn/{city}_tn.csv')
@@ -25,7 +29,18 @@ def get_monthly_nodes(city):
     # Resample the data by month and aggregate
     monthly_nodes = {}
     for name, group in df.groupby(pd.Grouper(freq='ME')):  # Corrected from 'M' to 'ME'
+
+        if target_month != 0 and name.month != target_month:
+            continue
+
+        if name < start_date or name > end_date:
+            continue
+        
+
         month_str = name.strftime('%Y-%m')
+
+        # if pd.to_datetime(month_str) < start_date or pd.to_datetime(month_str) > end_date:
+        #     continue
         
         # Get the list of daily derivatives, dropping the first NaN value
         tg_derivatives = [round(x, 1) for x in group['tg_derivative'].dropna().tolist()]
