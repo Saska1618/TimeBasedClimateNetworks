@@ -33,7 +33,7 @@ def get_monthly_nodes(city, start, end, target_month=0):
         if target_month != 0 and name.month != target_month:
             continue
 
-        if name < start_date or name > end_date:
+        if name < start_date or name.to_period('M') > end_date.to_period('M'):
             continue
         
 

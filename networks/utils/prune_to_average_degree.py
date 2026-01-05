@@ -1,6 +1,6 @@
 import networkx as nx
 
-def prune_to_average_degree(graphml_path, target_avg_degree=64, weight_attr='weight'):
+def prune_to_average_degree(graph, target_avg_degree=64, weight_attr='weight'):
     """
     Reads a GraphML file and removes the weakest links until the 
     average degree drops to the target value.
@@ -16,7 +16,8 @@ def prune_to_average_degree(graphml_path, target_avg_degree=64, weight_attr='wei
     # 1. Read the graph
     # Force undirected if your logic implies simple connectivity. 
     # If your graph is directed, remove force_multigraph/multigraph checks as needed.
-    G = nx.read_graphml(graphml_path)
+    # G = nx.read_graphml(graphml_path)
+    G = graph
     
     # 2. Basic Stats
     num_nodes = G.number_of_nodes()
