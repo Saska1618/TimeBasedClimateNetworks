@@ -1,0 +1,571 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d2" for="edge" attr.name="weight" attr.type="float"/>
+<key id="d1" for="node" attr.name="month" attr.type="long"/>
+<key id="d0" for="node" attr.name="year" attr.type="long"/>
+<graph edgedefault="undirected"><node id="1960-08">
+  <data key="d0">1960</data>
+  <data key="d1">8</data>
+</node>
+<node id="1961-08">
+  <data key="d0">1961</data>
+  <data key="d1">8</data>
+</node>
+<node id="1962-08">
+  <data key="d0">1962</data>
+  <data key="d1">8</data>
+</node>
+<node id="1963-08">
+  <data key="d0">1963</data>
+  <data key="d1">8</data>
+</node>
+<node id="1964-08">
+  <data key="d0">1964</data>
+  <data key="d1">8</data>
+</node>
+<node id="1965-08">
+  <data key="d0">1965</data>
+  <data key="d1">8</data>
+</node>
+<node id="1966-08">
+  <data key="d0">1966</data>
+  <data key="d1">8</data>
+</node>
+<node id="1967-08">
+  <data key="d0">1967</data>
+  <data key="d1">8</data>
+</node>
+<node id="1968-08">
+  <data key="d0">1968</data>
+  <data key="d1">8</data>
+</node>
+<node id="1969-08">
+  <data key="d0">1969</data>
+  <data key="d1">8</data>
+</node>
+<node id="1970-08">
+  <data key="d0">1970</data>
+  <data key="d1">8</data>
+</node>
+<node id="1971-08">
+  <data key="d0">1971</data>
+  <data key="d1">8</data>
+</node>
+<node id="1972-08">
+  <data key="d0">1972</data>
+  <data key="d1">8</data>
+</node>
+<node id="1973-08">
+  <data key="d0">1973</data>
+  <data key="d1">8</data>
+</node>
+<node id="1974-08">
+  <data key="d0">1974</data>
+  <data key="d1">8</data>
+</node>
+<node id="1975-08">
+  <data key="d0">1975</data>
+  <data key="d1">8</data>
+</node>
+<node id="1976-08">
+  <data key="d0">1976</data>
+  <data key="d1">8</data>
+</node>
+<node id="1977-08">
+  <data key="d0">1977</data>
+  <data key="d1">8</data>
+</node>
+<node id="1978-08">
+  <data key="d0">1978</data>
+  <data key="d1">8</data>
+</node>
+<node id="1979-08">
+  <data key="d0">1979</data>
+  <data key="d1">8</data>
+</node>
+<node id="1980-08">
+  <data key="d0">1980</data>
+  <data key="d1">8</data>
+</node>
+<node id="1981-08">
+  <data key="d0">1981</data>
+  <data key="d1">8</data>
+</node>
+<node id="1982-08">
+  <data key="d0">1982</data>
+  <data key="d1">8</data>
+</node>
+<node id="1983-08">
+  <data key="d0">1983</data>
+  <data key="d1">8</data>
+</node>
+<node id="1984-08">
+  <data key="d0">1984</data>
+  <data key="d1">8</data>
+</node>
+<node id="1985-08">
+  <data key="d0">1985</data>
+  <data key="d1">8</data>
+</node>
+<node id="1986-08">
+  <data key="d0">1986</data>
+  <data key="d1">8</data>
+</node>
+<node id="1987-08">
+  <data key="d0">1987</data>
+  <data key="d1">8</data>
+</node>
+<node id="1988-08">
+  <data key="d0">1988</data>
+  <data key="d1">8</data>
+</node>
+<node id="1989-08">
+  <data key="d0">1989</data>
+  <data key="d1">8</data>
+</node>
+<node id="1990-08">
+  <data key="d0">1990</data>
+  <data key="d1">8</data>
+</node>
+<node id="1991-08">
+  <data key="d0">1991</data>
+  <data key="d1">8</data>
+</node>
+<node id="1992-08">
+  <data key="d0">1992</data>
+  <data key="d1">8</data>
+</node>
+<node id="1993-08">
+  <data key="d0">1993</data>
+  <data key="d1">8</data>
+</node>
+<node id="1994-08">
+  <data key="d0">1994</data>
+  <data key="d1">8</data>
+</node>
+<node id="1995-08">
+  <data key="d0">1995</data>
+  <data key="d1">8</data>
+</node>
+<node id="1996-08">
+  <data key="d0">1996</data>
+  <data key="d1">8</data>
+</node>
+<node id="1997-08">
+  <data key="d0">1997</data>
+  <data key="d1">8</data>
+</node>
+<node id="1998-08">
+  <data key="d0">1998</data>
+  <data key="d1">8</data>
+</node>
+<node id="1999-08">
+  <data key="d0">1999</data>
+  <data key="d1">8</data>
+</node>
+<node id="2000-08">
+  <data key="d0">2000</data>
+  <data key="d1">8</data>
+</node>
+<node id="2001-08">
+  <data key="d0">2001</data>
+  <data key="d1">8</data>
+</node>
+<node id="2002-08">
+  <data key="d0">2002</data>
+  <data key="d1">8</data>
+</node>
+<node id="2003-08">
+  <data key="d0">2003</data>
+  <data key="d1">8</data>
+</node>
+<node id="2004-08">
+  <data key="d0">2004</data>
+  <data key="d1">8</data>
+</node>
+<node id="2005-08">
+  <data key="d0">2005</data>
+  <data key="d1">8</data>
+</node>
+<node id="2006-08">
+  <data key="d0">2006</data>
+  <data key="d1">8</data>
+</node>
+<node id="2007-08">
+  <data key="d0">2007</data>
+  <data key="d1">8</data>
+</node>
+<node id="2008-08">
+  <data key="d0">2008</data>
+  <data key="d1">8</data>
+</node>
+<node id="2009-08">
+  <data key="d0">2009</data>
+  <data key="d1">8</data>
+</node>
+<node id="2010-08">
+  <data key="d0">2010</data>
+  <data key="d1">8</data>
+</node>
+<node id="2011-08">
+  <data key="d0">2011</data>
+  <data key="d1">8</data>
+</node>
+<node id="2012-08">
+  <data key="d0">2012</data>
+  <data key="d1">8</data>
+</node>
+<node id="2013-08">
+  <data key="d0">2013</data>
+  <data key="d1">8</data>
+</node>
+<node id="2014-08">
+  <data key="d0">2014</data>
+  <data key="d1">8</data>
+</node>
+<node id="2015-08">
+  <data key="d0">2015</data>
+  <data key="d1">8</data>
+</node>
+<node id="2016-08">
+  <data key="d0">2016</data>
+  <data key="d1">8</data>
+</node>
+<node id="2017-08">
+  <data key="d0">2017</data>
+  <data key="d1">8</data>
+</node>
+<node id="2018-08">
+  <data key="d0">2018</data>
+  <data key="d1">8</data>
+</node>
+<node id="2019-08">
+  <data key="d0">2019</data>
+  <data key="d1">8</data>
+</node>
+<node id="2020-08">
+  <data key="d0">2020</data>
+  <data key="d1">8</data>
+</node>
+<node id="2021-08">
+  <data key="d0">2021</data>
+  <data key="d1">8</data>
+</node>
+<node id="2022-08">
+  <data key="d0">2022</data>
+  <data key="d1">8</data>
+</node>
+<node id="2023-08">
+  <data key="d0">2023</data>
+  <data key="d1">8</data>
+</node>
+<node id="2024-08">
+  <data key="d0">2024</data>
+  <data key="d1">8</data>
+</node>
+<edge source="1960-08" target="1972-08">
+  <data key="d2">0.7524977497931221</data>
+</edge>
+<edge source="1960-08" target="1980-08">
+  <data key="d2">0.7683184067161939</data>
+</edge>
+<edge source="1961-08" target="1970-08">
+  <data key="d2">0.7450556668275358</data>
+</edge>
+<edge source="1961-08" target="1972-08">
+  <data key="d2">0.7553591358419705</data>
+</edge>
+<edge source="1961-08" target="1975-08">
+  <data key="d2">0.7385662642896341</data>
+</edge>
+<edge source="1961-08" target="1983-08">
+  <data key="d2">0.7901980380068357</data>
+</edge>
+<edge source="1961-08" target="1988-08">
+  <data key="d2">0.7361483140174382</data>
+</edge>
+<edge source="1961-08" target="1996-08">
+  <data key="d2">0.7972184060599175</data>
+</edge>
+<edge source="1961-08" target="1999-08">
+  <data key="d2">0.8336136200887384</data>
+</edge>
+<edge source="1961-08" target="2011-08">
+  <data key="d2">0.7527436766938499</data>
+</edge>
+<edge source="1962-08" target="2000-08">
+  <data key="d2">0.7957403455095431</data>
+</edge>
+<edge source="1963-08" target="1986-08">
+  <data key="d2">0.7435873986655499</data>
+</edge>
+<edge source="1963-08" target="2008-08">
+  <data key="d2">0.7499780240549393</data>
+</edge>
+<edge source="1965-08" target="1987-08">
+  <data key="d2">0.7830737031645431</data>
+</edge>
+<edge source="1966-08" target="1967-08">
+  <data key="d2">0.7720890406408539</data>
+</edge>
+<edge source="1966-08" target="1969-08">
+  <data key="d2">0.7996127099981264</data>
+</edge>
+<edge source="1967-08" target="1969-08">
+  <data key="d2">0.8003233976165143</data>
+</edge>
+<edge source="1967-08" target="1973-08">
+  <data key="d2">0.8204992886399817</data>
+</edge>
+<edge source="1967-08" target="1983-08">
+  <data key="d2">0.738640012033738</data>
+</edge>
+<edge source="1967-08" target="1988-08">
+  <data key="d2">0.7585940699886887</data>
+</edge>
+<edge source="1967-08" target="1998-08">
+  <data key="d2">0.797902342556579</data>
+</edge>
+<edge source="1967-08" target="1999-08">
+  <data key="d2">0.7375449529191459</data>
+</edge>
+<edge source="1968-08" target="1980-08">
+  <data key="d2">0.7908794541015406</data>
+</edge>
+<edge source="1969-08" target="1979-08">
+  <data key="d2">0.7692912133800353</data>
+</edge>
+<edge source="1969-08" target="1987-08">
+  <data key="d2">0.7635689441834642</data>
+</edge>
+<edge source="1969-08" target="1988-08">
+  <data key="d2">0.7383411371417066</data>
+</edge>
+<edge source="1969-08" target="1998-08">
+  <data key="d2">0.7587193964925983</data>
+</edge>
+<edge source="1969-08" target="2005-08">
+  <data key="d2">0.7757428654749224</data>
+</edge>
+<edge source="1969-08" target="2006-08">
+  <data key="d2">0.7946729285747709</data>
+</edge>
+<edge source="1970-08" target="1972-08">
+  <data key="d2">0.7518830580043849</data>
+</edge>
+<edge source="1970-08" target="1975-08">
+  <data key="d2">0.825147300080672</data>
+</edge>
+<edge source="1970-08" target="1980-08">
+  <data key="d2">0.7414955435470413</data>
+</edge>
+<edge source="1970-08" target="1990-08">
+  <data key="d2">0.7459284392674543</data>
+</edge>
+<edge source="1970-08" target="1993-08">
+  <data key="d2">0.7553376454373164</data>
+</edge>
+<edge source="1970-08" target="1999-08">
+  <data key="d2">0.7731400849380315</data>
+</edge>
+<edge source="1970-08" target="2002-08">
+  <data key="d2">0.7486025865796946</data>
+</edge>
+<edge source="1970-08" target="2004-08">
+  <data key="d2">0.7923214141147431</data>
+</edge>
+<edge source="1970-08" target="2014-08">
+  <data key="d2">0.7685862216839202</data>
+</edge>
+<edge source="1970-08" target="2016-08">
+  <data key="d2">0.765441678512529</data>
+</edge>
+<edge source="1971-08" target="1974-08">
+  <data key="d2">0.7488505837042264</data>
+</edge>
+<edge source="1971-08" target="1994-08">
+  <data key="d2">0.7458889447537838</data>
+</edge>
+<edge source="1971-08" target="2007-08">
+  <data key="d2">0.7864829175640438</data>
+</edge>
+<edge source="1971-08" target="2014-08">
+  <data key="d2">0.7440006331640981</data>
+</edge>
+<edge source="1971-08" target="2017-08">
+  <data key="d2">0.785016858243743</data>
+</edge>
+<edge source="1972-08" target="1993-08">
+  <data key="d2">0.7418126715911808</data>
+</edge>
+<edge source="1973-08" target="1975-08">
+  <data key="d2">0.7517270319909748</data>
+</edge>
+<edge source="1973-08" target="1988-08">
+  <data key="d2">0.8170812956019889</data>
+</edge>
+<edge source="1973-08" target="1990-08">
+  <data key="d2">0.7830075909676413</data>
+</edge>
+<edge source="1973-08" target="1996-08">
+  <data key="d2">0.7411915920475575</data>
+</edge>
+<edge source="1973-08" target="1998-08">
+  <data key="d2">0.8072449324688249</data>
+</edge>
+<edge source="1973-08" target="2002-08">
+  <data key="d2">0.7686212823636095</data>
+</edge>
+<edge source="1973-08" target="2008-08">
+  <data key="d2">0.7632588385686435</data>
+</edge>
+<edge source="1973-08" target="2014-08">
+  <data key="d2">0.8074748597869115</data>
+</edge>
+<edge source="1973-08" target="2021-08">
+  <data key="d2">0.7977626688515443</data>
+</edge>
+<edge source="1974-08" target="1983-08">
+  <data key="d2">0.8115897529730842</data>
+</edge>
+<edge source="1974-08" target="2011-08">
+  <data key="d2">0.7924811214644054</data>
+</edge>
+<edge source="1975-08" target="1981-08">
+  <data key="d2">0.763778512985544</data>
+</edge>
+<edge source="1975-08" target="1990-08">
+  <data key="d2">0.7772388677131997</data>
+</edge>
+<edge source="1975-08" target="1991-08">
+  <data key="d2">0.7550329327414873</data>
+</edge>
+<edge source="1975-08" target="2002-08">
+  <data key="d2">0.7582658810221418</data>
+</edge>
+<edge source="1975-08" target="2004-08">
+  <data key="d2">0.7590852076086962</data>
+</edge>
+<edge source="1975-08" target="2021-08">
+  <data key="d2">0.7726962746076868</data>
+</edge>
+<edge source="1977-08" target="1989-08">
+  <data key="d2">0.7571478725357403</data>
+</edge>
+<edge source="1981-08" target="1984-08">
+  <data key="d2">0.8226836144952253</data>
+</edge>
+<edge source="1982-08" target="2004-08">
+  <data key="d2">0.7357244108223743</data>
+</edge>
+<edge source="1983-08" target="1985-08">
+  <data key="d2">0.773608499058035</data>
+</edge>
+<edge source="1983-08" target="1988-08">
+  <data key="d2">0.8119085557379988</data>
+</edge>
+<edge source="1983-08" target="1996-08">
+  <data key="d2">0.8032657013100405</data>
+</edge>
+<edge source="1983-08" target="1998-08">
+  <data key="d2">0.7564756967995457</data>
+</edge>
+<edge source="1985-08" target="1988-08">
+  <data key="d2">0.7487650472062188</data>
+</edge>
+<edge source="1985-08" target="1993-08">
+  <data key="d2">0.7481087105747297</data>
+</edge>
+<edge source="1985-08" target="1995-08">
+  <data key="d2">0.746342669340296</data>
+</edge>
+<edge source="1985-08" target="2016-08">
+  <data key="d2">0.7608589982607854</data>
+</edge>
+<edge source="1986-08" target="2009-08">
+  <data key="d2">0.758416509403612</data>
+</edge>
+<edge source="1988-08" target="1996-08">
+  <data key="d2">0.7888083231358519</data>
+</edge>
+<edge source="1988-08" target="1998-08">
+  <data key="d2">0.7501828274540575</data>
+</edge>
+<edge source="1988-08" target="2011-08">
+  <data key="d2">0.7502936951222661</data>
+</edge>
+<edge source="1990-08" target="2004-08">
+  <data key="d2">0.7398011370715963</data>
+</edge>
+<edge source="1990-08" target="2016-08">
+  <data key="d2">0.753912593053292</data>
+</edge>
+<edge source="1993-08" target="2002-08">
+  <data key="d2">0.7587489021402599</data>
+</edge>
+<edge source="1993-08" target="2004-08">
+  <data key="d2">0.7521022896609242</data>
+</edge>
+<edge source="1993-08" target="2016-08">
+  <data key="d2">0.7516577286551352</data>
+</edge>
+<edge source="1994-08" target="2001-08">
+  <data key="d2">0.7446962083741118</data>
+</edge>
+<edge source="1996-08" target="2011-08">
+  <data key="d2">0.7746939612249814</data>
+</edge>
+<edge source="2000-08" target="2012-08">
+  <data key="d2">0.7618614306179291</data>
+</edge>
+<edge source="2000-08" target="2013-08">
+  <data key="d2">0.738106561931418</data>
+</edge>
+<edge source="2000-08" target="2015-08">
+  <data key="d2">0.7818290348206696</data>
+</edge>
+<edge source="2000-08" target="2022-08">
+  <data key="d2">0.7640727448259165</data>
+</edge>
+<edge source="2001-08" target="2011-08">
+  <data key="d2">0.7960651016429073</data>
+</edge>
+<edge source="2001-08" target="2019-08">
+  <data key="d2">0.8161000012908738</data>
+</edge>
+<edge source="2001-08" target="2023-08">
+  <data key="d2">0.7984335314689408</data>
+</edge>
+<edge source="2002-08" target="2008-08">
+  <data key="d2">0.8009785478034969</data>
+</edge>
+<edge source="2002-08" target="2016-08">
+  <data key="d2">0.7467463594916617</data>
+</edge>
+<edge source="2002-08" target="2021-08">
+  <data key="d2">0.7542692639376815</data>
+</edge>
+<edge source="2004-08" target="2008-08">
+  <data key="d2">0.7423246092451025</data>
+</edge>
+<edge source="2004-08" target="2014-08">
+  <data key="d2">0.7775112831976342</data>
+</edge>
+<edge source="2007-08" target="2017-08">
+  <data key="d2">0.8353507631325877</data>
+</edge>
+<edge source="2008-08" target="2009-08">
+  <data key="d2">0.7681470423354803</data>
+</edge>
+<edge source="2008-08" target="2016-08">
+  <data key="d2">0.7514062184645518</data>
+</edge>
+<edge source="2008-08" target="2021-08">
+  <data key="d2">0.7401352607863997</data>
+</edge>
+<edge source="2011-08" target="2023-08">
+  <data key="d2">0.7515224975090328</data>
+</edge>
+<edge source="2013-08" target="2017-08">
+  <data key="d2">0.7501415874198885</data>
+</edge>
+</graph></graphml>

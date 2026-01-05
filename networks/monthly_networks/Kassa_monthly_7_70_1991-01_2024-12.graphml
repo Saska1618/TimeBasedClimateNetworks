@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d2" for="edge" attr.name="weight" attr.type="float"/>
+<key id="d1" for="node" attr.name="month" attr.type="long"/>
+<key id="d0" for="node" attr.name="year" attr.type="long"/>
+<graph edgedefault="undirected"><node id="1991-07">
+  <data key="d0">1991</data>
+  <data key="d1">7</data>
+</node>
+<node id="1992-07">
+  <data key="d0">1992</data>
+  <data key="d1">7</data>
+</node>
+<node id="1993-07">
+  <data key="d0">1993</data>
+  <data key="d1">7</data>
+</node>
+<node id="1994-07">
+  <data key="d0">1994</data>
+  <data key="d1">7</data>
+</node>
+<node id="1995-07">
+  <data key="d0">1995</data>
+  <data key="d1">7</data>
+</node>
+<node id="1996-07">
+  <data key="d0">1996</data>
+  <data key="d1">7</data>
+</node>
+<node id="1997-07">
+  <data key="d0">1997</data>
+  <data key="d1">7</data>
+</node>
+<node id="1998-07">
+  <data key="d0">1998</data>
+  <data key="d1">7</data>
+</node>
+<node id="1999-07">
+  <data key="d0">1999</data>
+  <data key="d1">7</data>
+</node>
+<node id="2000-07">
+  <data key="d0">2000</data>
+  <data key="d1">7</data>
+</node>
+<node id="2001-07">
+  <data key="d0">2001</data>
+  <data key="d1">7</data>
+</node>
+<node id="2002-07">
+  <data key="d0">2002</data>
+  <data key="d1">7</data>
+</node>
+<node id="2003-07">
+  <data key="d0">2003</data>
+  <data key="d1">7</data>
+</node>
+<node id="2004-07">
+  <data key="d0">2004</data>
+  <data key="d1">7</data>
+</node>
+<node id="2005-07">
+  <data key="d0">2005</data>
+  <data key="d1">7</data>
+</node>
+<node id="2006-07">
+  <data key="d0">2006</data>
+  <data key="d1">7</data>
+</node>
+<node id="2007-07">
+  <data key="d0">2007</data>
+  <data key="d1">7</data>
+</node>
+<node id="2008-07">
+  <data key="d0">2008</data>
+  <data key="d1">7</data>
+</node>
+<node id="2009-07">
+  <data key="d0">2009</data>
+  <data key="d1">7</data>
+</node>
+<node id="2010-07">
+  <data key="d0">2010</data>
+  <data key="d1">7</data>
+</node>
+<node id="2011-07">
+  <data key="d0">2011</data>
+  <data key="d1">7</data>
+</node>
+<node id="2012-07">
+  <data key="d0">2012</data>
+  <data key="d1">7</data>
+</node>
+<node id="2013-07">
+  <data key="d0">2013</data>
+  <data key="d1">7</data>
+</node>
+<node id="2014-07">
+  <data key="d0">2014</data>
+  <data key="d1">7</data>
+</node>
+<node id="2015-07">
+  <data key="d0">2015</data>
+  <data key="d1">7</data>
+</node>
+<node id="2016-07">
+  <data key="d0">2016</data>
+  <data key="d1">7</data>
+</node>
+<node id="2017-07">
+  <data key="d0">2017</data>
+  <data key="d1">7</data>
+</node>
+<node id="2018-07">
+  <data key="d0">2018</data>
+  <data key="d1">7</data>
+</node>
+<node id="2019-07">
+  <data key="d0">2019</data>
+  <data key="d1">7</data>
+</node>
+<node id="2020-07">
+  <data key="d0">2020</data>
+  <data key="d1">7</data>
+</node>
+<node id="2021-07">
+  <data key="d0">2021</data>
+  <data key="d1">7</data>
+</node>
+<node id="2022-07">
+  <data key="d0">2022</data>
+  <data key="d1">7</data>
+</node>
+<node id="2023-07">
+  <data key="d0">2023</data>
+  <data key="d1">7</data>
+</node>
+<node id="2024-07">
+  <data key="d0">2024</data>
+  <data key="d1">7</data>
+</node>
+<edge source="1991-07" target="2001-07">
+  <data key="d2">0.8107813363933833</data>
+</edge>
+<edge source="1991-07" target="2005-07">
+  <data key="d2">0.7889423485019662</data>
+</edge>
+<edge source="1991-07" target="2008-07">
+  <data key="d2">0.7241831130917631</data>
+</edge>
+<edge source="1991-07" target="2012-07">
+  <data key="d2">0.7624640326966603</data>
+</edge>
+<edge source="1991-07" target="2020-07">
+  <data key="d2">0.7287708062172163</data>
+</edge>
+<edge source="1991-07" target="2023-07">
+  <data key="d2">0.8045863080898028</data>
+</edge>
+<edge source="1992-07" target="1999-07">
+  <data key="d2">0.7241698924022097</data>
+</edge>
+<edge source="1992-07" target="2004-07">
+  <data key="d2">0.7042592840427304</data>
+</edge>
+<edge source="1993-07" target="2000-07">
+  <data key="d2">0.754787847558427</data>
+</edge>
+<edge source="1994-07" target="2006-07">
+  <data key="d2">0.8003084543873044</data>
+</edge>
+<edge source="1994-07" target="2009-07">
+  <data key="d2">0.7081017083754977</data>
+</edge>
+<edge source="1995-07" target="2001-07">
+  <data key="d2">0.7221824199602686</data>
+</edge>
+<edge source="1995-07" target="2002-07">
+  <data key="d2">0.7750592092580154</data>
+</edge>
+<edge source="1995-07" target="2003-07">
+  <data key="d2">0.7099406939697624</data>
+</edge>
+<edge source="1995-07" target="2007-07">
+  <data key="d2">0.7811271694462323</data>
+</edge>
+<edge source="1995-07" target="2012-07">
+  <data key="d2">0.7429348120179841</data>
+</edge>
+<edge source="1995-07" target="2023-07">
+  <data key="d2">0.7156578222315519</data>
+</edge>
+<edge source="1998-07" target="2004-07">
+  <data key="d2">0.7773641632342319</data>
+</edge>
+<edge source="1999-07" target="2003-07">
+  <data key="d2">0.7757172147772065</data>
+</edge>
+<edge source="1999-07" target="2009-07">
+  <data key="d2">0.707876094600002</data>
+</edge>
+<edge source="1999-07" target="2023-07">
+  <data key="d2">0.7059124144823703</data>
+</edge>
+<edge source="2000-07" target="2005-07">
+  <data key="d2">0.7460232452107844</data>
+</edge>
+<edge source="2001-07" target="2008-07">
+  <data key="d2">0.737105531228727</data>
+</edge>
+<edge source="2001-07" target="2009-07">
+  <data key="d2">0.729294174700949</data>
+</edge>
+<edge source="2001-07" target="2011-07">
+  <data key="d2">0.7195195080028539</data>
+</edge>
+<edge source="2001-07" target="2019-07">
+  <data key="d2">0.7529251214812606</data>
+</edge>
+<edge source="2001-07" target="2023-07">
+  <data key="d2">0.7539131394650461</data>
+</edge>
+<edge source="2002-07" target="2003-07">
+  <data key="d2">0.7333696080788232</data>
+</edge>
+<edge source="2002-07" target="2019-07">
+  <data key="d2">0.715795147878577</data>
+</edge>
+<edge source="2003-07" target="2007-07">
+  <data key="d2">0.795874814049627</data>
+</edge>
+<edge source="2003-07" target="2009-07">
+  <data key="d2">0.7446594887337871</data>
+</edge>
+<edge source="2003-07" target="2010-07">
+  <data key="d2">0.7162384739153839</data>
+</edge>
+<edge source="2003-07" target="2012-07">
+  <data key="d2">0.7141871214137374</data>
+</edge>
+<edge source="2003-07" target="2023-07">
+  <data key="d2">0.7877895676249028</data>
+</edge>
+<edge source="2004-07" target="2005-07">
+  <data key="d2">0.7186525518153124</data>
+</edge>
+<edge source="2004-07" target="2008-07">
+  <data key="d2">0.7072690199194387</data>
+</edge>
+<edge source="2005-07" target="2010-07">
+  <data key="d2">0.727017873358545</data>
+</edge>
+<edge source="2005-07" target="2014-07">
+  <data key="d2">0.7576268543983042</data>
+</edge>
+<edge source="2005-07" target="2016-07">
+  <data key="d2">0.7626197330659396</data>
+</edge>
+<edge source="2005-07" target="2020-07">
+  <data key="d2">0.8214203520923363</data>
+</edge>
+<edge source="2006-07" target="2021-07">
+  <data key="d2">0.7729260062308638</data>
+</edge>
+<edge source="2007-07" target="2009-07">
+  <data key="d2">0.7567993696115601</data>
+</edge>
+<edge source="2007-07" target="2015-07">
+  <data key="d2">0.7830588602129435</data>
+</edge>
+<edge source="2007-07" target="2023-07">
+  <data key="d2">0.7207181403334975</data>
+</edge>
+<edge source="2009-07" target="2010-07">
+  <data key="d2">0.7438132637599044</data>
+</edge>
+<edge source="2009-07" target="2015-07">
+  <data key="d2">0.7509740654766227</data>
+</edge>
+<edge source="2009-07" target="2016-07">
+  <data key="d2">0.744347600998453</data>
+</edge>
+<edge source="2009-07" target="2023-07">
+  <data key="d2">0.7829997288591667</data>
+</edge>
+<edge source="2010-07" target="2016-07">
+  <data key="d2">0.8142438270230757</data>
+</edge>
+<edge source="2014-07" target="2016-07">
+  <data key="d2">0.7313253819679865</data>
+</edge>
+<edge source="2016-07" target="2020-07">
+  <data key="d2">0.7117097421283796</data>
+</edge>
+<edge source="2016-07" target="2023-07">
+  <data key="d2">0.8194704836994551</data>
+</edge>
+<edge source="2019-07" target="2022-07">
+  <data key="d2">0.728135855158364</data>
+</edge>
+</graph></graphml>
