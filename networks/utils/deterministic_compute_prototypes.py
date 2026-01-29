@@ -10,7 +10,7 @@ from itertools import combinations
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..', '..'))
 GRAPH_DIR = os.path.join(PROJECT_ROOT, 'networks', 'global_networks', 'correct_avg_degree')
-EARLY_PERIOD_YEARS = range(1961, 1991)
+EARLY_PERIOD_YEARS = range(1960, 1991)
 LATE_PERIOD_YEARS = range(1991, 2025)
 # Penalty for missing edges in the graph
 MISSING_EDGE_PENALTY = 1_000_000
