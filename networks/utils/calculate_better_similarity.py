@@ -5,7 +5,7 @@ def calculate_similarity(
     month1_data,
     month2_data,
     stats,  # <-- NEW: global means & stds
-    weights={'deriv': 0.5, 'tg': 0.3, 'tn': 0.1, 'tx': 0.1}
+    weights={'deriv': 0.1, 'tg': 0.5, 'tn': 0.2, 'tx': 0.2}
 ):
     """
     stats = {
