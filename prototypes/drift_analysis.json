@@ -53,7 +53,7 @@
             "Dec": 2
         }
     },
-    "Cluj": {
+    "Kolozsvar": {
         "mean_drift": -0.25,
         "seasonal_drift": {
             "DJF": -0.3333333333333333,
