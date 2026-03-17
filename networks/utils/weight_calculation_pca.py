@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 
-def calculate_pca_weights(monthly_data, deriv_weight=0.1, variance_threshold=0.85):
+def calculate_pca_weights(monthly_data, *args, variance_threshold=0.85):
     """
     Calculates weights for different climate variables using PCA and integrates a pre-defined derivative weight.
 
@@ -13,7 +13,6 @@ def calculate_pca_weights(monthly_data, deriv_weight=0.1, variance_threshold=0.8
     Args:
         monthly_data (dict): A dictionary of monthly climate data, like the one
                              returned by get_rich_monthly_nodes.
-        deriv_weight (float): The desired weight for the 'deriv' feature (e.g., DTW distance).
         variance_threshold (float): The cumulative variance threshold to decide 
                                     how many principal components to keep for scalar variables.
 
@@ -29,7 +28,24 @@ def calculate_pca_weights(monthly_data, deriv_weight=0.1, variance_threshold=0.8
     df = pd.DataFrame.from_dict(df_data, orient='index')
 
     if df.empty:
-        return {'deriv': 1.0} if deriv_weight == 1.0 else {}
+        return {}
+
+    # --- Data Preparation for PCA ---
+    # Per user request, 'fg' weight is always 0, so remove it from PCA.
+    if 'mean_fg' in df.columns:
+        df = df.drop(columns=['mean_fg'])
+
+    # Fill any other potential NaNs with 0 for robustness.
+    df.fillna(0, inplace=True)
+    
+    # If all other scalar variables were unusable, handle gracefully.
+    if df.empty:
+        final_weights = {'deriv': 0.0, 'fg': 0.0}
+        # Normalize weights to sum to 1.0
+        total_weight = sum(final_weights.values())
+        if total_weight > 0:
+            final_weights = {k: v / total_weight for k, v in final_weights.items()}
+        return final_weights, np.array([])
 
     # --- PCA on Scalar Variables ---
     scaler = StandardScaler()
@@ -62,11 +78,11 @@ def calculate_pca_weights(monthly_data, deriv_weight=0.1, variance_threshold=0.8
     final_weights = {}
 
     if total_scalar_weight > 0:
-        # The total weight for scalar variables is (1 - deriv_weight)
-        scalar_weight_factor = (1 - deriv_weight) / total_scalar_weight
+        scalar_weight_factor = 1 / total_scalar_weight
         for key, value in raw_scalar_weights.items():
             final_weights[key] = value * scalar_weight_factor
 
-    final_weights['deriv'] = deriv_weight
+    final_weights['deriv'] = 0.0
+    final_weights['fg'] = 0.0
 
     return final_weights, explained_variance_ratio

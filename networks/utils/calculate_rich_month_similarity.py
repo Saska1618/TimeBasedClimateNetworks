@@ -24,19 +24,7 @@ def calculate_rich_month_similarity(
         float: The calculated similarity score between 0 and 1.
     """
 
-    # --- 1. DTW on derivatives (z-normalized DTW) ---
-    d1 = np.array(month1_data['tg_derivatives'], dtype=np.double)
-    d2 = np.array(month2_data['tg_derivatives'], dtype=np.double)
-
-    # optional but recommended: z-normalize the sequences themselves
-    if d1.std() > 0 and d2.std() > 0:
-        d1 = (d1 - d1.mean()) / d1.std()
-        d2 = (d2 - d2.mean()) / d2.std()
-
-    dtw_distance = dtw.distance(d1, d2)
-
-    # z-score the DTW distance
-    dtw_z = (dtw_distance - stats['dtw_mean']) / stats['dtw_std']
+    # --- 1. DTW on derivatives has been removed as per user request. ---
 
     # --- 2. Monthly statistics (already scalar → z-score differences) ---
     tg_diff = abs(month1_data['mean_tg'] - month2_data['mean_tg'])
@@ -45,27 +33,24 @@ def calculate_rich_month_similarity(
     rr_sum_diff = abs(month1_data['rr_sum'] - month2_data['rr_sum'])
     qq_diff = abs(month1_data['mean_qq'] - month2_data['mean_qq'])
     hu_diff = abs(month1_data['mean_hu'] - month2_data['mean_hu'])
-    fg_diff = abs(month1_data['mean_fg'] - month2_data['mean_fg'])
 
-    tg_z = (tg_diff - stats['tg_mean']) / stats['tg_std']
-    tn_z = (tn_diff - stats['tn_mean']) / stats['tn_std']
-    tx_z = (tx_diff - stats['tx_mean']) / stats['tx_std']
-    rr_sum_z = (rr_sum_diff - stats['rr_sum_mean']) / stats['rr_sum_std']
-    qq_z = (qq_diff - stats['qq_mean']) / stats['qq_std']
-    hu_z = (hu_diff - stats['hu_mean']) / stats['hu_std']
-    fg_z = (fg_diff - stats['fg_mean']) / stats['fg_std']
+    # Safely calculate z-scores, handling std == 0
+    tg_z = 0 if stats['tg_std'] == 0 else (tg_diff - stats['tg_mean']) / stats['tg_std']
+    tn_z = 0 if stats['tn_std'] == 0 else (tn_diff - stats['tn_mean']) / stats['tn_std']
+    tx_z = 0 if stats['tx_std'] == 0 else (tx_diff - stats['tx_mean']) / stats['tx_std']
+    rr_sum_z = 0 if stats['rr_sum_std'] == 0 else (rr_sum_diff - stats['rr_sum_mean']) / stats['rr_sum_std']
+    qq_z = 0 if stats['qq_std'] == 0 else (qq_diff - stats['qq_mean']) / stats['qq_std']
+    hu_z = 0 if stats['hu_std'] == 0 else (hu_diff - stats['hu_mean']) / stats['hu_std']
 
 
     # --- 3. Weighted combined distance ---
     combined_distance = (
-        weights['deriv'] * dtw_z +
         weights['tg'] * tg_z +
         weights['tn'] * tn_z +
         weights['tx'] * tx_z +
         weights['rr_sum'] * rr_sum_z +
         weights['qq'] * qq_z +
-        weights['hu'] * hu_z +
-        weights['fg'] * fg_z
+        weights['hu'] * hu_z
     )
 
     # --- 4. Convert distance → similarity ---
