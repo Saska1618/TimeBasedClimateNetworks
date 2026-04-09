@@ -17,6 +17,7 @@ PROTOTYPES_PATH = os.path.join(PROJECT_ROOT, 'prototypes', 'mean_prototypes','ri
 THRESHOLDS_PATH = os.path.join(PROJECT_ROOT, 'networks', 'network_creation_new', 'network_rich_thresholds.json')
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, 'prototypes', 'mean_prototypes')
 FEATURES = ['mean_tn', 'mean_tx', 'mean_tg', 'rr_sum', 'mean_qq', 'mean_hu']
+USE_THRESHOLD = True
 
 sys.path.append(PROJECT_ROOT)
 
@@ -76,8 +77,12 @@ def process_city(city, prototypes, thresholds):
     early_threshold = thresholds.get(early_thresh_key, 0)
     late_threshold = thresholds.get(late_thresh_key, 0)
     
-    # Use the maximum of the two thresholds as the cutoff
+    # Use the minimum of the two thresholds as the cutoff
     threshold = min(early_threshold, late_threshold)
+
+    if not USE_THRESHOLD:
+        threshold = 0.0
+
     print(f"  - Using threshold: {threshold:.4f}")
 
     for i, j in product(range(1, 13), range(1, 13)):
@@ -136,6 +141,10 @@ if __name__ == '__main__':
 
     # --- 3. Save Matrices ---
     output_path = os.path.join(OUTPUT_DIR, 'rich_mean_similarity_matrices.json')
+
+    if not USE_THRESHOLD:
+        output_path = os.path.join(OUTPUT_DIR, 'rich_mean_similarity_matrices_no_threshold.json')
+
     with open(output_path, 'w') as f:
         json.dump(final_similarity_matrices, f, indent=4)
 

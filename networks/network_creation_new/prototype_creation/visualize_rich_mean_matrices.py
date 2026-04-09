@@ -4,6 +4,8 @@ import sys
 import json
 import numpy as np
 
+from rich_mean_prototype_analysis import USE_THRESHOLD
+
 # Attempt to import plotting libraries, provide helpful error if they are not installed.
 try:
     import matplotlib.pyplot as plt
@@ -17,6 +19,10 @@ except ImportError:
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..', '..', '..'))
 MATRICES_PATH = os.path.join(PROJECT_ROOT, 'prototypes', 'mean_prototypes', 'rich_mean_similarity_matrices.json')
+
+if not USE_THRESHOLD:
+    MATRICES_PATH = os.path.join(PROJECT_ROOT, 'prototypes', 'mean_prototypes', 'rich_mean_similarity_matrices_no_threshold.json')
+
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, 'plots', 'mean_heatmaps')
 MONTH_LABELS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
@@ -69,7 +75,13 @@ if __name__ == '__main__':
             continue
         print(f"Processing city: {city}...")
         matrix = np.array(matrix_list)
-        output_file_path = os.path.join(OUTPUT_DIR, f'rich_{city}_heatmap.png')
+        output_file_path = os.path.join(OUTPUT_DIR, 'with_threshold',f'rich_mean_{city}_heatmap.png')
+
+        if not USE_THRESHOLD:
+            output_file_path = os.path.join(OUTPUT_DIR,'no_threshold', f'rich_mean_{city}_heatmap_no_threshold.png')
+
+
+
         create_rich_heatmap(matrix, city, output_file_path)
 
     print("\nAll rich heatmap visualizations have been generated.")
