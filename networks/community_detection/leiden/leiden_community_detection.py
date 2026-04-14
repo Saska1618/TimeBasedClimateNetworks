@@ -41,7 +41,7 @@ def convert_nx_to_igraph(G):
         
     return g_ig
 
-def detect_communities(file_path):
+def detect_communities(file_path, resolution=1.0):
     """
     Loads a graph and runs the Leiden algorithm.
     """
@@ -57,12 +57,13 @@ def detect_communities(file_path):
     # Determine if we have edge weights
     weights = g_ig.es['weight'] if 'weight' in g_ig.edge_attributes() else None
     
-    # Run Leiden Algorithm maximizing Modularity
+    # Run Leiden Algorithm with a customizable resolution parameter
     print("  - Running Leiden algorithm...")
     partition = leidenalg.find_partition(
         g_ig, 
-        leidenalg.ModularityVertexPartition,
-        weights=weights
+        leidenalg.RBConfigurationVertexPartition,
+        weights=weights,
+        resolution_parameter=resolution
     )
     
     # Format the results
@@ -134,15 +135,19 @@ def main():
     
     all_results = {}
     
+    # Set your desired resolution parameter here!
+    # > 1.0 favors more/smaller communities, < 1.0 favors fewer/larger communities
+    TARGET_RESOLUTION = 2.25
+    
     for filename in os.listdir(GRAPH_DIR):
         if filename.endswith(".graphml"):
             graph_name = filename.replace(".graphml", "")
             file_path = os.path.join(GRAPH_DIR, filename)
             
-            result = detect_communities(file_path)
+            result = detect_communities(file_path, resolution=TARGET_RESOLUTION)
             if result:
                 all_results[graph_name] = result
-                plot_path = os.path.join(PLOTS_DIR, f"{graph_name}_leiden.png")
+                plot_path = os.path.join(PLOTS_DIR, f"{graph_name}_leiden_res_{TARGET_RESOLUTION}.png")
                 plot_communities(graph_name, result, plot_path)
                 
     # Save all raw community data to JSON
