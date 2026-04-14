@@ -80,34 +80,39 @@ def process_city(city):
     """
     print(f"Processing city: {city}...")
     city_prototypes = {}
-    
-    # Define time periods
-    periods = {
-        'early': (f'{city}_1961-01_1990-12.graphml', EARLY_PERIOD_YEARS),
-        'late': (f'{city}_1995-01_2024-12.graphml', LATE_PERIOD_YEARS)
+
+    # 1. Load the full period graph to create a single, consistent PCA space.
+    full_graph_path = os.path.join(GRAPH_DIR, f'{city}_1961-01_2024-12.graphml')
+    if not os.path.exists(full_graph_path):
+        print(f"  - WARNING: Full period graph file not found for {city}. Skipping city.")
+        return {}
+
+    G_full = nx.read_graphml(full_graph_path)
+
+    # 2. Get PCA scores and node list from the full graph. This defines the common space.
+    print("  - Creating a single PCA space from the full 1961-2024 graph...")
+    scores, all_nodes = get_pca_scores(G_full)
+
+    # 3. Compute the full distance matrix from the PCA scores of the full graph.
+    distance_matrix = squareform(pdist(scores, metric='euclidean'))
+
+    # 4. Now find medoids for subsets (early/late months) within this global space.
+    period_definitions = {
+        'early': EARLY_PERIOD_YEARS,
+        'late': LATE_PERIOD_YEARS
     }
 
-    for period_name, (graph_file, years) in periods.items():
-        graph_path = os.path.join(GRAPH_DIR, graph_file)
-        if not os.path.exists(graph_path):
-            print(f"  - WARNING: Graph file not found for {city} {period_name}. Skipping.")
-            continue
-            
-        G = nx.read_graphml(graph_path)
-        
-        # Get PCA scores and the corresponding list of all node IDs
-        scores, all_nodes = get_pca_scores(G)
-        
-        # Compute the full distance matrix from the PCA scores
-        distance_matrix = squareform(pdist(scores, metric='euclidean'))
-        
+    for period_name, years in period_definitions.items():
+        # We no longer need to load individual graph files, as all nodes are in G_full.
+        # We just need the list of nodes for each period.
+
         for month in range(1, 13):
             month_str = f'{month:02d}'
-            
+
             # Get the node IDs for the current month and period
             node_ids_for_month = [f'{year}-{month_str}' for year in years]
-            
-            # Find the medoid for this group of nodes
+
+            # Find the medoid for this group of nodes using the global distance matrix
             medoid = find_medoid(node_ids_for_month, all_nodes, distance_matrix)
             city_prototypes[f'{period_name}_{month}'] = medoid
             print(f"  - {period_name.capitalize()} Month {month}: {medoid}")

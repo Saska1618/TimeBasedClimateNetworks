@@ -17,7 +17,7 @@ PROTOTYPES_PATH = os.path.join(PROJECT_ROOT, 'prototypes', 'rich_prototypes.json
 THRESHOLDS_PATH = os.path.join(PROJECT_ROOT, 'networks', 'network_creation_new', 'network_rich_thresholds.json')
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, 'prototypes')
 FEATURES = ['mean_tn', 'mean_tx', 'mean_tg', 'rr_sum', 'mean_qq', 'mean_hu']
-USE_THRESHOLD = True
+USE_THRESHOLD = False
 
 sys.path.append(PROJECT_ROOT)
 
