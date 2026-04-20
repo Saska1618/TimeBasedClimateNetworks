@@ -1,0 +1,57 @@
+{
+    "Bacskatopolya": {
+        "early_split_point": 0.9589212633185954,
+        "late_split_point": 0.9548133896504549,
+        "percolation_index": -0.0041078736681404715
+    },
+    "Brasov": {
+        "early_split_point": 0.96566082186894,
+        "late_split_point": 0.958029893395371,
+        "percolation_index": -0.007630928473568943
+    },
+    "Cluj": {
+        "early_split_point": 0.9661132614582488,
+        "late_split_point": 0.9661132614582488,
+        "percolation_index": 0.0
+    },
+    "Deva": {
+        "early_split_point": 0.9648397457841212,
+        "late_split_point": 0.9609330508712458,
+        "percolation_index": -0.00390669491287543
+    },
+    "Gheorgheni": {
+        "early_split_point": 0.9555103832511512,
+        "late_split_point": 0.9666327874383634,
+        "percolation_index": 0.01112240418721222
+    },
+    "Gyor": {
+        "early_split_point": 0.9532870246171309,
+        "late_split_point": 0.9532870246171309,
+        "percolation_index": 0.0
+    },
+    "Kassa": {
+        "early_split_point": 0.9570277830451732,
+        "late_split_point": 0.9570277830451732,
+        "percolation_index": 0.0
+    },
+    "Kecskemet": {
+        "early_split_point": 0.968892035478877,
+        "late_split_point": 0.9650035399137367,
+        "percolation_index": -0.0038884955651403708
+    },
+    "Keszthely": {
+        "early_split_point": 0.9573516153751644,
+        "late_split_point": 0.961616453837648,
+        "percolation_index": 0.0042648384624836
+    },
+    "Oradea": {
+        "early_split_point": 0.9631203802077233,
+        "late_split_point": 0.9631203802077233,
+        "percolation_index": 0.0
+    },
+    "Pecs": {
+        "early_split_point": 0.9667361258389234,
+        "late_split_point": 0.9584201572986544,
+        "percolation_index": -0.008315968540269059
+    }
+}
