@@ -1,0 +1,3597 @@
+{
+    "Bacskatopolya": {
+        "01": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "02": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "1": 29,
+                    "2": 1
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.45056120886630463,
+                "normalized_entropy": 0.1324713500297112,
+                "simpson_index": 0.2777777777777777,
+                "community_distribution": {
+                    "1": 25,
+                    "2": 5
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 3.0829791776428457,
+                "normalized_entropy": 3.0829791776428457,
+                "simpson_index": 4.3103448275862
+            }
+        },
+        "03": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6730116670092565,
+                "normalized_entropy": 0.19787492211944419,
+                "simpson_index": 0.48,
+                "community_distribution": {
+                    "1": 12,
+                    "2": 18
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.5004024235381879,
+                "normalized_entropy": 0.1471253700935294,
+                "simpson_index": 0.31999999999999984,
+                "community_distribution": {
+                    "1": 6,
+                    "2": 24
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.7435271156024482,
+                "normalized_entropy": 0.7435271156024482,
+                "simpson_index": 0.6666666666666664
+            }
+        },
+        "04": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.3250829733914482,
+                "normalized_entropy": 0.09557897908076746,
+                "simpson_index": 0.17999999999999994,
+                "community_distribution": {
+                    "0": 3,
+                    "2": 27
+                }
+            },
+            "late": {
+                "num_unique_communities": 3,
+                "shannon_entropy": 0.6277052571971504,
+                "normalized_entropy": 0.1845541986423595,
+                "simpson_index": 0.3377777777777776,
+                "community_distribution": {
+                    "0": 4,
+                    "2": 24,
+                    "3": 2
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.5,
+                "shannon_entropy": 1.9309078253117244,
+                "normalized_entropy": 1.9309078253117244,
+                "simpson_index": 1.8765432098765429
+            }
+        },
+        "05": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.39267446722755217,
+                "normalized_entropy": 0.11545183156516876,
+                "simpson_index": 0.23111111111111104,
+                "community_distribution": {
+                    "0": 26,
+                    "2": 4
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.39267446722755217,
+                "normalized_entropy": 0.11545183156516876,
+                "simpson_index": 0.23111111111111104,
+                "community_distribution": {
+                    "0": 26,
+                    "3": 4
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "06": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.24493002679463532,
+                "normalized_entropy": 0.07201288232056051,
+                "simpson_index": 0.12444444444444436,
+                "community_distribution": {
+                    "0": 28,
+                    "3": 2
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 244.93002679463532,
+                "normalized_entropy": 72.01288232056051,
+                "simpson_index": 124.44444444444436
+            }
+        },
+        "07": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 29,
+                    "3": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 146.1447460085638,
+                "normalized_entropy": 42.9686165220859,
+                "simpson_index": 64.44444444444453
+            }
+        },
+        "08": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 29,
+                    "3": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 146.1447460085638,
+                "normalized_entropy": 42.9686165220859,
+                "simpson_index": 64.44444444444453
+            }
+        },
+        "09": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6909233093138181,
+                "normalized_entropy": 0.20314119757912016,
+                "simpson_index": 0.49777777777777776,
+                "community_distribution": {
+                    "0": 14,
+                    "2": 16
+                }
+            },
+            "late": {
+                "num_unique_communities": 3,
+                "shannon_entropy": 1.009613758174038,
+                "normalized_entropy": 0.2968406842888497,
+                "simpson_index": 0.6044444444444445,
+                "community_distribution": {
+                    "0": 16,
+                    "2": 6,
+                    "3": 8
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.5,
+                "shannon_entropy": 1.4612529995213557,
+                "normalized_entropy": 1.4612529995213557,
+                "simpson_index": 1.2142857142857144
+            }
+        },
+        "10": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.24493002679463532,
+                "normalized_entropy": 0.07201288232056051,
+                "simpson_index": 0.12444444444444436,
+                "community_distribution": {
+                    "1": 2,
+                    "2": 28
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.45056120886630463,
+                "normalized_entropy": 0.1324713500297112,
+                "simpson_index": 0.2777777777777777,
+                "community_distribution": {
+                    "2": 25,
+                    "3": 5
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.8395507270494171,
+                "normalized_entropy": 1.839550727049417,
+                "simpson_index": 2.232142857142858
+            }
+        },
+        "11": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "1": 29,
+                    "2": 1
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.24493002679463532,
+                "normalized_entropy": 0.07201288232056051,
+                "simpson_index": 0.12444444444444436,
+                "community_distribution": {
+                    "1": 28,
+                    "2": 2
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.675941376505474,
+                "normalized_entropy": 1.6759413765054743,
+                "simpson_index": 1.9310344827586168
+            }
+        },
+        "12": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        }
+    },
+    "Brasov": {
+        "01": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "02": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.24493002679463532,
+                "normalized_entropy": 0.07201288232056051,
+                "simpson_index": 0.12444444444444436,
+                "community_distribution": {
+                    "1": 28,
+                    "2": 2
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 244.93002679463532,
+                "normalized_entropy": 72.01288232056051,
+                "simpson_index": 124.44444444444436
+            }
+        },
+        "03": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6909233093138181,
+                "normalized_entropy": 0.20314119757912016,
+                "simpson_index": 0.49777777777777776,
+                "community_distribution": {
+                    "1": 16,
+                    "2": 14
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.5004024235381879,
+                "normalized_entropy": 0.1471253700935294,
+                "simpson_index": 0.31999999999999984,
+                "community_distribution": {
+                    "1": 6,
+                    "2": 24
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.7242517610748381,
+                "normalized_entropy": 0.7242517610748381,
+                "simpson_index": 0.6428571428571426
+            }
+        },
+        "04": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.24493002679463532,
+                "normalized_entropy": 0.07201288232056051,
+                "simpson_index": 0.12444444444444436,
+                "community_distribution": {
+                    "0": 2,
+                    "2": 28
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 1,
+                    "2": 29
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.5966795820060915,
+                "normalized_entropy": 0.5966795820060915,
+                "simpson_index": 0.5178571428571439
+            }
+        },
+        "05": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "06": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 29,
+                    "3": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 146.1447460085638,
+                "normalized_entropy": 42.9686165220859,
+                "simpson_index": 64.44444444444453
+            }
+        },
+        "07": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "08": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "09": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6571577614973405,
+                "normalized_entropy": 0.19321365029870433,
+                "simpson_index": 0.46444444444444444,
+                "community_distribution": {
+                    "0": 19,
+                    "2": 11
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6909233093138181,
+                "normalized_entropy": 0.20314119757912016,
+                "simpson_index": 0.49777777777777776,
+                "community_distribution": {
+                    "0": 16,
+                    "2": 14
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0513811900197945,
+                "normalized_entropy": 1.0513811900197945,
+                "simpson_index": 1.0717703349282297
+            }
+        },
+        "10": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "2": 29,
+                    "3": 1
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "2": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 0.5,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0
+            }
+        },
+        "11": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.3250829733914482,
+                "normalized_entropy": 0.09557897908076746,
+                "simpson_index": 0.17999999999999994,
+                "community_distribution": {
+                    "1": 27,
+                    "2": 3
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.3250829733914482,
+                "normalized_entropy": 0.09557897908076746,
+                "simpson_index": 0.17999999999999994,
+                "community_distribution": {
+                    "1": 27,
+                    "2": 3
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "12": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        }
+    },
+    "Cluj": {
+        "01": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "02": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "1": 29,
+                    "2": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 146.1447460085638,
+                "normalized_entropy": 42.9686165220859,
+                "simpson_index": 64.44444444444453
+            }
+        },
+        "03": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6909233093138181,
+                "normalized_entropy": 0.20314119757912016,
+                "simpson_index": 0.49777777777777776,
+                "community_distribution": {
+                    "1": 14,
+                    "2": 16
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.45056120886630463,
+                "normalized_entropy": 0.1324713500297112,
+                "simpson_index": 0.2777777777777777,
+                "community_distribution": {
+                    "1": 5,
+                    "2": 25
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.6521146454210293,
+                "normalized_entropy": 0.6521146454210293,
+                "simpson_index": 0.5580357142857141
+            }
+        },
+        "04": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.24493002679463532,
+                "normalized_entropy": 0.07201288232056051,
+                "simpson_index": 0.12444444444444436,
+                "community_distribution": {
+                    "0": 2,
+                    "2": 28
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.5432727813369008,
+                "normalized_entropy": 0.15972985992109784,
+                "simpson_index": 0.35777777777777775,
+                "community_distribution": {
+                    "0": 7,
+                    "2": 23
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 2.2180734165044402,
+                "normalized_entropy": 2.2180734165044402,
+                "simpson_index": 2.8750000000000018
+            }
+        },
+        "05": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 29,
+                    "2": 1
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 0.5,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0
+            }
+        },
+        "06": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "07": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "08": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "09": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6931471805599453,
+                "normalized_entropy": 0.20379504709050617,
+                "simpson_index": 0.5,
+                "community_distribution": {
+                    "0": 15,
+                    "2": 15
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6909233093138181,
+                "normalized_entropy": 0.20314119757912016,
+                "simpson_index": 0.49777777777777776,
+                "community_distribution": {
+                    "0": 14,
+                    "2": 16
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.9967916319816367,
+                "normalized_entropy": 0.9967916319816368,
+                "simpson_index": 0.9955555555555555
+            }
+        },
+        "10": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "2": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "2": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "11": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.24493002679463532,
+                "normalized_entropy": 0.07201288232056051,
+                "simpson_index": 0.12444444444444436,
+                "community_distribution": {
+                    "1": 28,
+                    "2": 2
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "1": 29,
+                    "2": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.5966795820060915,
+                "normalized_entropy": 0.5966795820060915,
+                "simpson_index": 0.5178571428571439
+            }
+        },
+        "12": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        }
+    },
+    "Deva": {
+        "01": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "02": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.3250829733914482,
+                "normalized_entropy": 0.09557897908076746,
+                "simpson_index": 0.17999999999999994,
+                "community_distribution": {
+                    "1": 27,
+                    "2": 3
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 325.0829733914482,
+                "normalized_entropy": 95.57897908076745,
+                "simpson_index": 179.99999999999994
+            }
+        },
+        "03": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6730116670092565,
+                "normalized_entropy": 0.19787492211944419,
+                "simpson_index": 0.48,
+                "community_distribution": {
+                    "1": 12,
+                    "2": 18
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.5004024235381879,
+                "normalized_entropy": 0.1471253700935294,
+                "simpson_index": 0.31999999999999984,
+                "community_distribution": {
+                    "1": 6,
+                    "2": 24
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.7435271156024482,
+                "normalized_entropy": 0.7435271156024482,
+                "simpson_index": 0.6666666666666664
+            }
+        },
+        "04": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 1,
+                    "2": 29
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.45056120886630463,
+                "normalized_entropy": 0.1324713500297112,
+                "simpson_index": 0.2777777777777777,
+                "community_distribution": {
+                    "0": 5,
+                    "2": 25
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 3.0829791776428457,
+                "normalized_entropy": 3.0829791776428457,
+                "simpson_index": 4.3103448275862
+            }
+        },
+        "05": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 29,
+                    "2": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 146.1447460085638,
+                "normalized_entropy": 42.9686165220859,
+                "simpson_index": 64.44444444444453
+            }
+        },
+        "06": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "07": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "08": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 29,
+                    "3": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 146.1447460085638,
+                "normalized_entropy": 42.9686165220859,
+                "simpson_index": 64.44444444444453
+            }
+        },
+        "09": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6571577614973405,
+                "normalized_entropy": 0.19321365029870433,
+                "simpson_index": 0.46444444444444444,
+                "community_distribution": {
+                    "0": 19,
+                    "2": 11
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6909233093138181,
+                "normalized_entropy": 0.20314119757912016,
+                "simpson_index": 0.49777777777777776,
+                "community_distribution": {
+                    "0": 14,
+                    "2": 16
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0513811900197945,
+                "normalized_entropy": 1.0513811900197945,
+                "simpson_index": 1.0717703349282297
+            }
+        },
+        "10": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "2": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "2": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "11": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.24493002679463532,
+                "normalized_entropy": 0.07201288232056051,
+                "simpson_index": 0.12444444444444436,
+                "community_distribution": {
+                    "1": 28,
+                    "2": 2
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "1": 29,
+                    "2": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.5966795820060915,
+                "normalized_entropy": 0.5966795820060915,
+                "simpson_index": 0.5178571428571439
+            }
+        },
+        "12": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        }
+    },
+    "Gheorgheni": {
+        "01": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "02": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.24493002679463532,
+                "normalized_entropy": 0.07201288232056051,
+                "simpson_index": 0.12444444444444436,
+                "community_distribution": {
+                    "1": 28,
+                    "2": 2
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 244.93002679463532,
+                "normalized_entropy": 72.01288232056051,
+                "simpson_index": 124.44444444444436
+            }
+        },
+        "03": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6730116670092565,
+                "normalized_entropy": 0.19787492211944419,
+                "simpson_index": 0.48,
+                "community_distribution": {
+                    "0": 18,
+                    "2": 12
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.45056120886630463,
+                "normalized_entropy": 0.1324713500297112,
+                "simpson_index": 0.2777777777777777,
+                "community_distribution": {
+                    "1": 5,
+                    "2": 25
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.6694701309837883,
+                "normalized_entropy": 0.6694701309837883,
+                "simpson_index": 0.5787037037037035
+            }
+        },
+        "04": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "2": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 1,
+                    "2": 29
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 146.1447460085638,
+                "normalized_entropy": 42.9686165220859,
+                "simpson_index": 64.44444444444453
+            }
+        },
+        "05": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.24493002679463532,
+                "normalized_entropy": 0.07201288232056051,
+                "simpson_index": 0.12444444444444436,
+                "community_distribution": {
+                    "1": 28,
+                    "2": 2
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 29,
+                    "2": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.5966795820060915,
+                "normalized_entropy": 0.5966795820060915,
+                "simpson_index": 0.5178571428571439
+            }
+        },
+        "06": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 29,
+                    "3": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 146.1447460085638,
+                "normalized_entropy": 42.9686165220859,
+                "simpson_index": 64.44444444444453
+            }
+        },
+        "07": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "08": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "09": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.5799151714181009,
+                "normalized_entropy": 0.17050323940173623,
+                "simpson_index": 0.3911111111111112,
+                "community_distribution": {
+                    "1": 8,
+                    "2": 22
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6365141682948128,
+                "normalized_entropy": 0.18714414274415034,
+                "simpson_index": 0.4444444444444444,
+                "community_distribution": {
+                    "0": 10,
+                    "2": 20
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0975987517938304,
+                "normalized_entropy": 1.0975987517938304,
+                "simpson_index": 1.136363636363636
+            }
+        },
+        "10": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "2": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "2": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "11": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.24493002679463532,
+                "normalized_entropy": 0.07201288232056051,
+                "simpson_index": 0.12444444444444436,
+                "community_distribution": {
+                    "0": 28,
+                    "2": 2
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.3250829733914482,
+                "normalized_entropy": 0.09557897908076746,
+                "simpson_index": 0.17999999999999994,
+                "community_distribution": {
+                    "1": 27,
+                    "2": 3
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.3272483478067723,
+                "normalized_entropy": 1.3272483478067723,
+                "simpson_index": 1.4464285714285718
+            }
+        },
+        "12": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        }
+    },
+    "Gyor": {
+        "01": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "02": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 29,
+                    "2": 1
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.45056120886630463,
+                "normalized_entropy": 0.1324713500297112,
+                "simpson_index": 0.2777777777777777,
+                "community_distribution": {
+                    "1": 25,
+                    "2": 5
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 3.0829791776428457,
+                "normalized_entropy": 3.0829791776428457,
+                "simpson_index": 4.3103448275862
+            }
+        },
+        "03": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6730116670092565,
+                "normalized_entropy": 0.19787492211944419,
+                "simpson_index": 0.48,
+                "community_distribution": {
+                    "0": 12,
+                    "2": 18
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.5432727813369008,
+                "normalized_entropy": 0.15972985992109784,
+                "simpson_index": 0.35777777777777775,
+                "community_distribution": {
+                    "1": 7,
+                    "2": 23
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.8072263943819992,
+                "normalized_entropy": 0.8072263943819993,
+                "simpson_index": 0.7453703703703703
+            }
+        },
+        "04": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "2": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.5004024235381879,
+                "normalized_entropy": 0.1471253700935294,
+                "simpson_index": 0.31999999999999984,
+                "community_distribution": {
+                    "0": 6,
+                    "2": 24
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 500.40242353818786,
+                "normalized_entropy": 147.1253700935294,
+                "simpson_index": 319.99999999999983
+            }
+        },
+        "05": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 29,
+                    "3": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 146.1447460085638,
+                "normalized_entropy": 42.9686165220859,
+                "simpson_index": 64.44444444444453
+            }
+        },
+        "06": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "07": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "08": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "09": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6842317651303003,
+                "normalized_entropy": 0.20117378921299714,
+                "simpson_index": 0.49111111111111116,
+                "community_distribution": {
+                    "1": 13,
+                    "2": 17
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.45056120886630463,
+                "normalized_entropy": 0.1324713500297112,
+                "simpson_index": 0.2777777777777777,
+                "community_distribution": {
+                    "0": 25,
+                    "2": 5
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.6584920955555212,
+                "normalized_entropy": 0.6584920955555212,
+                "simpson_index": 0.5656108597285066
+            }
+        },
+        "10": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.24493002679463532,
+                "normalized_entropy": 0.07201288232056051,
+                "simpson_index": 0.12444444444444436,
+                "community_distribution": {
+                    "0": 2,
+                    "2": 28
+                }
+            },
+            "late": {
+                "num_unique_communities": 3,
+                "shannon_entropy": 0.639031859650177,
+                "normalized_entropy": 0.18788437951163067,
+                "simpson_index": 0.33999999999999986,
+                "community_distribution": {
+                    "0": 3,
+                    "1": 3,
+                    "2": 24
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.5,
+                "shannon_entropy": 2.6090384589145588,
+                "normalized_entropy": 2.6090384589145588,
+                "simpson_index": 2.732142857142858
+            }
+        },
+        "11": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "12": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        }
+    },
+    "Kassa": {
+        "01": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "02": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "03": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6571577614973405,
+                "normalized_entropy": 0.19321365029870433,
+                "simpson_index": 0.46444444444444444,
+                "community_distribution": {
+                    "1": 11,
+                    "2": 19
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.39267446722755217,
+                "normalized_entropy": 0.11545183156516876,
+                "simpson_index": 0.23111111111111104,
+                "community_distribution": {
+                    "1": 4,
+                    "2": 26
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.5975345498968764,
+                "normalized_entropy": 0.5975345498968764,
+                "simpson_index": 0.4976076555023922
+            }
+        },
+        "04": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 1,
+                    "2": 29
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.45056120886630463,
+                "normalized_entropy": 0.1324713500297112,
+                "simpson_index": 0.2777777777777777,
+                "community_distribution": {
+                    "0": 5,
+                    "2": 25
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 3.0829791776428457,
+                "normalized_entropy": 3.0829791776428457,
+                "simpson_index": 4.3103448275862
+            }
+        },
+        "05": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 29,
+                    "2": 1
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 0.5,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0
+            }
+        },
+        "06": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "07": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "08": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "09": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6909233093138181,
+                "normalized_entropy": 0.20314119757912016,
+                "simpson_index": 0.49777777777777776,
+                "community_distribution": {
+                    "0": 14,
+                    "2": 16
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6842317651303003,
+                "normalized_entropy": 0.20117378921299714,
+                "simpson_index": 0.49111111111111116,
+                "community_distribution": {
+                    "0": 17,
+                    "2": 13
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.9903150695694962,
+                "normalized_entropy": 0.9903150695694961,
+                "simpson_index": 0.986607142857143
+            }
+        },
+        "10": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "2": 29,
+                    "3": 1
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "2": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 0.5,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0
+            }
+        },
+        "11": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.24493002679463532,
+                "normalized_entropy": 0.07201288232056051,
+                "simpson_index": 0.12444444444444436,
+                "community_distribution": {
+                    "1": 28,
+                    "2": 2
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 244.93002679463532,
+                "normalized_entropy": 72.01288232056051,
+                "simpson_index": 124.44444444444436
+            }
+        },
+        "12": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        }
+    },
+    "Kecskemet": {
+        "01": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "02": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "1": 29,
+                    "2": 1
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.39267446722755217,
+                "normalized_entropy": 0.11545183156516876,
+                "simpson_index": 0.23111111111111104,
+                "community_distribution": {
+                    "1": 26,
+                    "2": 4
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 2.68688733568665,
+                "normalized_entropy": 2.68688733568665,
+                "simpson_index": 3.5862068965517184
+            }
+        },
+        "03": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6365141682948128,
+                "normalized_entropy": 0.18714414274415034,
+                "simpson_index": 0.4444444444444444,
+                "community_distribution": {
+                    "1": 10,
+                    "2": 20
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.45056120886630463,
+                "normalized_entropy": 0.1324713500297112,
+                "simpson_index": 0.2777777777777777,
+                "community_distribution": {
+                    "1": 5,
+                    "2": 25
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.707857313016824,
+                "normalized_entropy": 0.7078573130168239,
+                "simpson_index": 0.6249999999999998
+            }
+        },
+        "04": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.45056120886630463,
+                "normalized_entropy": 0.1324713500297112,
+                "simpson_index": 0.2777777777777777,
+                "community_distribution": {
+                    "0": 5,
+                    "2": 25
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 1,
+                    "2": 29
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.32436158091880796,
+                "normalized_entropy": 0.32436158091880796,
+                "simpson_index": 0.23200000000000037
+            }
+        },
+        "05": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 29,
+                    "3": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 146.1447460085638,
+                "normalized_entropy": 42.9686165220859,
+                "simpson_index": 64.44444444444453
+            }
+        },
+        "06": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "07": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "08": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "09": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6571577614973405,
+                "normalized_entropy": 0.19321365029870433,
+                "simpson_index": 0.46444444444444444,
+                "community_distribution": {
+                    "0": 19,
+                    "2": 11
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6730116670092565,
+                "normalized_entropy": 0.19787492211944419,
+                "simpson_index": 0.48,
+                "community_distribution": {
+                    "0": 18,
+                    "2": 12
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.024124961220564,
+                "normalized_entropy": 1.024124961220564,
+                "simpson_index": 1.0334928229665072
+            }
+        },
+        "10": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "1": 1,
+                    "2": 29
+                }
+            },
+            "late": {
+                "num_unique_communities": 3,
+                "shannon_entropy": 0.533961612789336,
+                "normalized_entropy": 0.15699224504529943,
+                "simpson_index": 0.2866666666666666,
+                "community_distribution": {
+                    "0": 1,
+                    "1": 4,
+                    "2": 25
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.5,
+                "shannon_entropy": 3.653649052549907,
+                "normalized_entropy": 3.653649052549907,
+                "simpson_index": 4.448275862068959
+            }
+        },
+        "11": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "1": 29,
+                    "2": 1
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 0.5,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0
+            }
+        },
+        "12": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        }
+    },
+    "Keszthely": {
+        "01": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "02": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.24493002679463532,
+                "normalized_entropy": 0.07201288232056051,
+                "simpson_index": 0.12444444444444436,
+                "community_distribution": {
+                    "1": 28,
+                    "2": 2
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.5799151714181009,
+                "normalized_entropy": 0.17050323940173623,
+                "simpson_index": 0.3911111111111112,
+                "community_distribution": {
+                    "1": 22,
+                    "2": 8
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 2.367676919842654,
+                "normalized_entropy": 2.367676919842654,
+                "simpson_index": 3.1428571428571455
+            }
+        },
+        "03": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6365141682948128,
+                "normalized_entropy": 0.18714414274415034,
+                "simpson_index": 0.4444444444444444,
+                "community_distribution": {
+                    "1": 10,
+                    "2": 20
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.39267446722755217,
+                "normalized_entropy": 0.11545183156516876,
+                "simpson_index": 0.23111111111111104,
+                "community_distribution": {
+                    "1": 4,
+                    "2": 26
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.6169139459684079,
+                "normalized_entropy": 0.6169139459684079,
+                "simpson_index": 0.5199999999999999
+            }
+        },
+        "04": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "2": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "2": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "05": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 29,
+                    "2": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 146.1447460085638,
+                "normalized_entropy": 42.9686165220859,
+                "simpson_index": 64.44444444444453
+            }
+        },
+        "06": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "07": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "08": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 29,
+                    "3": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 146.1447460085638,
+                "normalized_entropy": 42.9686165220859,
+                "simpson_index": 64.44444444444453
+            }
+        },
+        "09": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6842317651303003,
+                "normalized_entropy": 0.20117378921299714,
+                "simpson_index": 0.49111111111111116,
+                "community_distribution": {
+                    "0": 17,
+                    "2": 13
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6365141682948128,
+                "normalized_entropy": 0.18714414274415034,
+                "simpson_index": 0.4444444444444444,
+                "community_distribution": {
+                    "0": 20,
+                    "2": 10
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.9302610617231422,
+                "normalized_entropy": 0.9302610617231423,
+                "simpson_index": 0.9049773755656108
+            }
+        },
+        "10": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "1": 1,
+                    "2": 29
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.39267446722755217,
+                "normalized_entropy": 0.11545183156516876,
+                "simpson_index": 0.23111111111111104,
+                "community_distribution": {
+                    "1": 4,
+                    "2": 26
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 2.68688733568665,
+                "normalized_entropy": 2.68688733568665,
+                "simpson_index": 3.5862068965517184
+            }
+        },
+        "11": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.24493002679463532,
+                "normalized_entropy": 0.07201288232056051,
+                "simpson_index": 0.12444444444444436,
+                "community_distribution": {
+                    "1": 28,
+                    "2": 2
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 0.5,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0
+            }
+        },
+        "12": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        }
+    },
+    "Oradea": {
+        "01": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "02": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.39267446722755217,
+                "normalized_entropy": 0.11545183156516876,
+                "simpson_index": 0.23111111111111104,
+                "community_distribution": {
+                    "1": 26,
+                    "2": 4
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 2.0,
+                "shannon_entropy": 392.67446722755216,
+                "normalized_entropy": 115.45183156516876,
+                "simpson_index": 231.11111111111103
+            }
+        },
+        "03": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6730116670092565,
+                "normalized_entropy": 0.19787492211944419,
+                "simpson_index": 0.48,
+                "community_distribution": {
+                    "1": 12,
+                    "2": 18
+                }
+            },
+            "late": {
+                "num_unique_communities": 3,
+                "shannon_entropy": 0.533961612789336,
+                "normalized_entropy": 0.15699224504529943,
+                "simpson_index": 0.2866666666666666,
+                "community_distribution": {
+                    "1": 4,
+                    "2": 25,
+                    "3": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.5,
+                "shannon_entropy": 0.7933913169175296,
+                "normalized_entropy": 0.7933913169175296,
+                "simpson_index": 0.5972222222222222
+            }
+        },
+        "04": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.3250829733914482,
+                "normalized_entropy": 0.09557897908076746,
+                "simpson_index": 0.17999999999999994,
+                "community_distribution": {
+                    "0": 3,
+                    "2": 27
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.39267446722755217,
+                "normalized_entropy": 0.11545183156516876,
+                "simpson_index": 0.23111111111111104,
+                "community_distribution": {
+                    "0": 4,
+                    "2": 26
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.2079207444516442,
+                "normalized_entropy": 1.2079207444516442,
+                "simpson_index": 1.2839506172839508
+            }
+        },
+        "05": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 29,
+                    "2": 1
+                }
+            },
+            "late": {
+                "num_unique_communities": 3,
+                "shannon_entropy": 0.3887343902209295,
+                "normalized_entropy": 0.11429339335518249,
+                "simpson_index": 0.1844444444444444,
+                "community_distribution": {
+                    "0": 27,
+                    "2": 1,
+                    "3": 2
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.5,
+                "shannon_entropy": 2.6599272354146097,
+                "normalized_entropy": 2.6599272354146097,
+                "simpson_index": 2.862068965517237
+            }
+        },
+        "06": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "07": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "08": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "09": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6842317651303003,
+                "normalized_entropy": 0.20117378921299714,
+                "simpson_index": 0.49111111111111116,
+                "community_distribution": {
+                    "0": 17,
+                    "2": 13
+                }
+            },
+            "late": {
+                "num_unique_communities": 3,
+                "shannon_entropy": 1.022169375743282,
+                "normalized_entropy": 0.30053221293606625,
+                "simpson_index": 0.62,
+                "community_distribution": {
+                    "0": 14,
+                    "2": 11,
+                    "3": 5
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.5,
+                "shannon_entropy": 1.4938934843935918,
+                "normalized_entropy": 1.4938934843935916,
+                "simpson_index": 1.262443438914027
+            }
+        },
+        "10": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "2": 29,
+                    "3": 1
+                }
+            },
+            "late": {
+                "num_unique_communities": 3,
+                "shannon_entropy": 0.5905146653114488,
+                "normalized_entropy": 0.17361964009947167,
+                "simpson_index": 0.331111111111111,
+                "community_distribution": {
+                    "1": 1,
+                    "2": 24,
+                    "3": 5
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.5,
+                "shannon_entropy": 4.040615084970935,
+                "normalized_entropy": 4.040615084970935,
+                "simpson_index": 5.137931034482751
+            }
+        },
+        "11": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "1": 29,
+                    "2": 1
+                }
+            },
+            "late": {
+                "num_unique_communities": 3,
+                "shannon_entropy": 0.3887343902209295,
+                "normalized_entropy": 0.11429339335518249,
+                "simpson_index": 0.1844444444444444,
+                "community_distribution": {
+                    "1": 27,
+                    "2": 2,
+                    "3": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.5,
+                "shannon_entropy": 2.6599272354146097,
+                "normalized_entropy": 2.6599272354146097,
+                "simpson_index": 2.862068965517237
+            }
+        },
+        "12": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        }
+    },
+    "Pecs": {
+        "01": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "02": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.24493002679463532,
+                "normalized_entropy": 0.07201288232056051,
+                "simpson_index": 0.12444444444444436,
+                "community_distribution": {
+                    "1": 28,
+                    "2": 2
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.5004024235381879,
+                "normalized_entropy": 0.1471253700935294,
+                "simpson_index": 0.31999999999999984,
+                "community_distribution": {
+                    "1": 24,
+                    "2": 6
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 2.043042374538082,
+                "normalized_entropy": 2.043042374538082,
+                "simpson_index": 2.571428571428572
+            }
+        },
+        "03": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6365141682948128,
+                "normalized_entropy": 0.18714414274415034,
+                "simpson_index": 0.4444444444444444,
+                "community_distribution": {
+                    "1": 10,
+                    "2": 20
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.5004024235381879,
+                "normalized_entropy": 0.1471253700935294,
+                "simpson_index": 0.31999999999999984,
+                "community_distribution": {
+                    "1": 6,
+                    "2": 24
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.7861606991070428,
+                "normalized_entropy": 0.7861606991070427,
+                "simpson_index": 0.7199999999999996
+            }
+        },
+        "04": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.45056120886630463,
+                "normalized_entropy": 0.1324713500297112,
+                "simpson_index": 0.2777777777777777,
+                "community_distribution": {
+                    "0": 5,
+                    "2": 25
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.24493002679463532,
+                "normalized_entropy": 0.07201288232056051,
+                "simpson_index": 0.12444444444444436,
+                "community_distribution": {
+                    "0": 2,
+                    "2": 28
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 0.5436109944105587,
+                "normalized_entropy": 0.5436109944105588,
+                "simpson_index": 0.44799999999999984
+            }
+        },
+        "05": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 29,
+                    "2": 1
+                }
+            },
+            "late": {
+                "num_unique_communities": 3,
+                "shannon_entropy": 0.29113983883196504,
+                "normalized_entropy": 0.08559921879326093,
+                "simpson_index": 0.1266666666666667,
+                "community_distribution": {
+                    "0": 28,
+                    "2": 1,
+                    "3": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.5,
+                "shannon_entropy": 1.9921334620876812,
+                "normalized_entropy": 1.9921334620876814,
+                "simpson_index": 1.9655172413793085
+            }
+        },
+        "06": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "07": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "0": 29,
+                    "3": 1
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 0.5,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0
+            }
+        },
+        "08": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "0": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "09": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.6108643020548935,
+                "normalized_entropy": 0.17960272030915356,
+                "simpson_index": 0.42000000000000004,
+                "community_distribution": {
+                    "0": 21,
+                    "2": 9
+                }
+            },
+            "late": {
+                "num_unique_communities": 3,
+                "shannon_entropy": 0.8110053415676062,
+                "normalized_entropy": 0.2384470086741247,
+                "simpson_index": 0.5266666666666666,
+                "community_distribution": {
+                    "0": 16,
+                    "2": 13,
+                    "3": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.5,
+                "shannon_entropy": 1.3276358412816986,
+                "normalized_entropy": 1.3276358412816986,
+                "simpson_index": 1.2539682539682537
+            }
+        },
+        "10": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "1": 1,
+                    "2": 29
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "1": 1,
+                    "2": 29
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "11": {
+            "early": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "1": 29,
+                    "2": 1
+                }
+            },
+            "late": {
+                "num_unique_communities": 2,
+                "shannon_entropy": 0.1461447460085638,
+                "normalized_entropy": 0.0429686165220859,
+                "simpson_index": 0.06444444444444453,
+                "community_distribution": {
+                    "1": 29,
+                    "2": 1
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        },
+        "12": {
+            "early": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "late": {
+                "num_unique_communities": 1,
+                "shannon_entropy": 0.0,
+                "normalized_entropy": 0.0,
+                "simpson_index": 0.0,
+                "community_distribution": {
+                    "1": 30
+                }
+            },
+            "ratio_late_to_early": {
+                "num_unique_communities": 1.0,
+                "shannon_entropy": 1.0,
+                "normalized_entropy": 1.0,
+                "simpson_index": 1.0
+            }
+        }
+    }
+}
