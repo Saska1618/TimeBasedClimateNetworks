@@ -75,11 +75,17 @@ def process_city_degree_distributions(city):
     }
 
     # --- Plotting ---
-    fig, axes = plt.subplots(4, 3, figsize=(18, 16), sharex=False, sharey=False)
+    fig, axes = plt.subplots(4, 3, figsize=(18, 16), sharex=True, sharey=True)
     axes = axes.flatten()
     
     sns.set_theme(style="whitegrid")
     
+    # Calculate common bins across all months to ensure uniformity
+    all_degrees = [d for m in range(1, 13) for d in early_degrees[m] + late_degrees[m]]
+    global_min = min(all_degrees) if all_degrees else 0
+    global_max = max(all_degrees) if all_degrees else 1
+    common_bins = np.linspace(global_min, global_max, 31) # 30 bins
+
     for month in range(1, 13):
         e_deg = early_degrees[month]
         l_deg = late_degrees[month]
@@ -105,9 +111,9 @@ def process_city_degree_distributions(city):
         
         # Plot density histograms with KDE lines
         sns.histplot(early_degrees[month], color='blue', label='Early (1961-1990)', 
-                     alpha=0.4, ax=ax, kde=True, stat="density", discrete=False)
+                     alpha=0.4, ax=ax, kde=True, stat="density", bins=common_bins)
         sns.histplot(late_degrees[month], color='darkorange', label='Late (1995-2024)', 
-                     alpha=0.4, ax=ax, kde=True, stat="density", discrete=False)
+                     alpha=0.4, ax=ax, kde=True, stat="density", bins=common_bins)
         
         ax.set_title(MONTH_LABELS[month - 1], fontsize=14)
         ax.set_xlabel('Weighted Node Degree (Close Months)', fontsize=12)
