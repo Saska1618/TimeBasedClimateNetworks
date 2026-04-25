@@ -46,9 +46,6 @@ st.markdown(
     <style>
         header[data-testid="stHeader"] {
             background: transparent !important;
-            height: 0 !important;
-            min-height: 0 !important;
-            overflow: visible !important;
         }
         [data-testid="stToolbarActions"],
         [data-testid="stMainMenu"],

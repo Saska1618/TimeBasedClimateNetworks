@@ -90,6 +90,7 @@ st.markdown(
         button[aria-label="Open sidebar"],
         button[aria-label="Close sidebar"],
         button[aria-label*="ollapse" i] {
+            visibility: hidden !important;
             opacity: 0 !important;
             pointer-events: none !important;
             width: 1px !important;
@@ -244,6 +245,12 @@ components.html(
         let initialized = false;
         function ensureCustomBtn() {
             const d = doc();
+            
+            // If the user collapsed the native sidebar on another page, force it open
+            // so our custom CSS-based toggle doesn't break.
+            const expandBtn = d.querySelector('[data-testid="collapsedControl"], button[aria-label="Open sidebar"]');
+            if (expandBtn) expandBtn.click();
+
             if (initialized && d.getElementById(BTN_ID)) return;
 
             const stale = d.getElementById(BTN_ID);
