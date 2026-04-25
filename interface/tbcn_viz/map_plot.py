@@ -38,40 +38,45 @@ def build_heatmap(
     subtitle: str,
     *,
     height: int = 500,
+    opacity: float = 0.8,
 ) -> go.Figure:
     """Return a Plotly figure with hover-enabled cells (lat, lon, value).
 
-    Applies an equirectangular projection: the x-axis is compressed by
-    ``cos(mean_lat)`` so that 1° of longitude takes the right share of pixels
-    relative to 1° of latitude — without that the map looks stretched
-    horizontally at mid-latitudes.
+    Uses a Choroplethmapbox with an OpenStreetMap underlay.
     """
     spec = sel.spec
     diverging, center = _resolve_diverging(spec, sel.period)
     zmin, zmax = _color_range(da.values, diverging=diverging, center=center)
     colorscale = _resolve_colorscale(spec, sel.period)
-    lon_per_lat = _equirectangular_ratio(da)
 
     hovertemplate = (
-        "<b>Latitude:</b> %{y:.4f}°N<br>"
-        "<b>Longitude:</b> %{x:.4f}°E<br>"
+        "<b>Latitude:</b> %{customdata[1]:.4f}°N<br>"
+        "<b>Longitude:</b> %{customdata[0]:.4f}°E<br>"
         f"<b>{spec.label}:</b> %{{z:.4f}}"
         "<extra></extra>"
     )
 
-    heatmap = go.Heatmap(
-        z=da.values,
-        x=da.lon.values,
-        y=da.lat.values,
-        colorscale=colorscale,
-        zmin=zmin,
-        zmax=zmax,
-        zmid=center if diverging else None,
-        colorbar=dict(title=spec.label, thickness=12, len=0.92, x=1.02),
-        hovertemplate=hovertemplate,
-        hoverongaps=False,
-        connectgaps=False,
-    )
+    geojson, ids, z_flat, custom_lons, custom_lats = _create_grid_geojson(da)
+
+    if not z_flat:
+        # Fallback to an empty map if there's no finite data
+        fig = go.Figure(go.Scattermapbox())
+    else:
+        choropleth = go.Choroplethmapbox(
+            geojson=geojson,
+            locations=ids,
+            z=z_flat,
+            customdata=np.column_stack((custom_lons, custom_lats)),
+            colorscale=colorscale,
+            zmin=zmin,
+            zmax=zmax,
+            zmid=center if diverging else None,
+            colorbar=dict(title=spec.label, thickness=12, len=0.92, x=1.02),
+            hovertemplate=hovertemplate,
+            marker_opacity=opacity,
+            marker_line_width=0,
+        )
+        fig = go.Figure(data=choropleth)
 
     title = spec.label
     if subtitle:
@@ -79,30 +84,21 @@ def build_heatmap(
             f"<br><span style='font-size:12px;color:#888'>{subtitle}</span>"
         )
 
-    fig = go.Figure(data=heatmap)
-    # The overlay reuses the heatmap's hovertemplate so the user sees an
-    # identical tooltip whether the cursor is over an in-data cell
-    # (heatmap label fired) or the always-on-top scatter overlay.
-    _add_click_overlay(fig, da, hovertemplate=hovertemplate)
+    lat_center = float(da.lat.mean())
+    lon_center = float(da.lon.mean())
+
     fig.update_layout(
         title=dict(text=title, x=0.5, xanchor="center", font=dict(size=15)),
-        xaxis=dict(
-            title="Longitude (°E)",
-            scaleanchor="y",
-            scaleratio=lon_per_lat,
-            constrain="domain",
-            constraintoward="center",
+        mapbox=dict(
+            style="open-street-map",
+            center=dict(lat=lat_center, lon=lon_center),
+            zoom=5
         ),
-        yaxis=dict(title="Latitude (°N)", constrain="domain", constraintoward="middle"),
         margin=dict(l=20, r=20, t=55, b=40),
         height=height,
-        template="plotly_white",
         # ``clickmode='event+select'`` is what makes a *single click* on
-        # a scatter marker add it to the trace's ``selectedpoints``,
-        # which in turn is what fires ``plotly_selected`` — the event
-        # Streamlit's ``on_select='rerun'`` listens for. Without this,
-        # only box / lasso selection trigger reruns. Streamlit does not
-        # set this automatically.
+        # a marker add it to the trace's ``selectedpoints``,
+        # which in turn is what fires ``plotly_selected``.
         clickmode="event+select",
     )
     return fig
@@ -111,6 +107,46 @@ def build_heatmap(
 # ---------------------------------------------------------------------------
 # Internal helpers
 # ---------------------------------------------------------------------------
+
+def _create_grid_geojson(da: xr.DataArray) -> tuple[dict, list[str], list[float], list[float], list[float]]:
+    lons = da.lon.values
+    lats = da.lat.values
+    vals = da.values
+
+    dlon = lons[1] - lons[0] if len(lons) > 1 else 0.1
+    dlat = lats[1] - lats[0] if len(lats) > 1 else 0.1
+
+    features = []
+    ids = []
+    z_flat = []
+    custom_lons = []
+    custom_lats = []
+
+    for j, lat in enumerate(lats):
+        lat0, lat1 = lat - dlat/2, lat + dlat/2
+        for i, lon in enumerate(lons):
+            val = vals[j, i]
+            if np.isnan(val):
+                continue
+            
+            lon0, lon1 = lon - dlon/2, lon + dlon/2
+            feature_id = f"{j}_{i}"
+            features.append({
+                "type": "Feature",
+                "id": feature_id,
+                "geometry": {
+                    "type": "Polygon",
+                    "coordinates": [[[lon0, lat0], [lon1, lat0], [lon1, lat1], [lon0, lat1], [lon0, lat0]]]
+                }
+            })
+            ids.append(feature_id)
+            z_flat.append(float(val))
+            custom_lons.append(float(lon))
+            custom_lats.append(float(lat))
+            
+    geojson = {"type": "FeatureCollection", "features": features}
+    return geojson, ids, z_flat, custom_lons, custom_lats
+
 
 def _resolve_diverging(spec: IndexSpec, period: str | None) -> tuple[bool, float]:
     """Decide whether a given (index, period) pair is a diverging colormap.
@@ -141,70 +177,3 @@ def _color_range(values: np.ndarray, *, diverging: bool, center: float) -> tuple
             bound = 1.0
         return center - bound, center + bound
     return float(np.min(finite)), float(np.max(finite))
-
-
-def _add_click_overlay(fig: go.Figure, da: xr.DataArray, *, hovertemplate: str) -> None:
-    """Tile the heatmap with an invisible scatter so single clicks register.
-
-    Three Plotly gotchas, all of which had to be worked around together:
-
-    1. ``Heatmap`` traces don't emit selection events for single clicks
-       (only for lasso / box; Streamlit issues #8760, #8933). The
-       documented workaround is a transparent scatter overlay; a click
-       on a scatter marker DOES emit ``plotly_selected``.
-
-    2. ``hoverinfo='skip'`` would let the heatmap's hover label show
-       through the overlay — but it also kills click events
-       (Plotly community thread on hoverinfo='skip'). ``hoverinfo='none'``
-       suppresses the label only, but the overlay still intercepts the
-       hover, so the heatmap's tooltip never gets a chance to appear.
-       Solution: give the overlay its *own* hovertemplate, identical to
-       the heatmap's. Hover labels work, clicks work, and the tooltip
-       text is the same whichever trace produced it.
-
-    3. ``rgba(0, 0, 0, 0)`` (alpha 0) is unreliable for hit-testing in
-       scattergl (plotly.js #3413). ``rgba(0, 0, 0, 0.01)`` is visually
-       invisible but engages the hit-test.
-
-    The hovertemplate references ``%{customdata[0]}`` because scatter
-    traces don't carry a ``z`` attribute — we feed the heatmap's
-    underlying values via ``customdata`` so the same template works.
-    """
-    lons = da.lon.values
-    lats = da.lat.values
-    if lons.size == 0 or lats.size == 0:
-        return
-
-    lon_grid, lat_grid = np.meshgrid(lons, lats)
-    z_flat = da.values.flatten().reshape(-1, 1)
-
-    # Scatter has no `z`, so swap `%{z...}` → `%{customdata[0]...}`
-    # without touching the rest of the template (labels, formatting).
-    overlay_template = hovertemplate.replace("%{z", "%{customdata[0]")
-
-    fig.add_trace(go.Scattergl(
-        x=lon_grid.flatten(),
-        y=lat_grid.flatten(),
-        customdata=z_flat,
-        mode="markers",
-        marker=dict(
-            size=18,
-            symbol="square",
-            color="rgba(0, 0, 0, 0.01)",   # invisible but hit-testable
-            line=dict(width=0),
-        ),
-        hovertemplate=overlay_template,
-        showlegend=False,
-        name="_click_overlay",
-    ))
-
-
-def _equirectangular_ratio(da: xr.DataArray) -> float:
-    """Pixel-per-unit ratio for the x-axis (longitude) anchored to the y-axis (latitude).
-
-    At latitude φ, 1° of longitude spans ``cos(φ)`` times the ground distance of
-    1° of latitude. We use the mean latitude of the data slice as the projection
-    parallel — accurate enough for a small region like the Carpathian basin.
-    """
-    lat_center = float(da.lat.mean())
-    return max(0.05, math.cos(math.radians(lat_center)))

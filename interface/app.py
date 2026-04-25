@@ -151,6 +151,7 @@ ds = load_dataset()
 
 with st.sidebar:
     selection = render_controls(st.sidebar, ds)
+    map_opacity = st.slider("Map Opacity", min_value=0.0, max_value=1.0, value=0.8, step=0.05)
     st.markdown("---")
     render_analyze_section(st.sidebar, ds)
 
@@ -162,7 +163,7 @@ with st.sidebar:
 st.title("Carpathian Basin Overview")
 
 data_slice, subtitle = select_data(ds, selection)
-fig = build_heatmap(data_slice, selection, subtitle, height=500)
+fig = build_heatmap(data_slice, selection, subtitle, height=500, opacity=map_opacity)
 
 chart_state = st.plotly_chart(
     fig,

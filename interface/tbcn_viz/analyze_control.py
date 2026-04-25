@@ -199,9 +199,28 @@ def _extract_click_point(chart_state) -> Tuple[Optional[float], Optional[float]]
     last = points[-1]
 
     try:
-        lat = float(_get(last, "y"))
-        lon = float(_get(last, "x"))
-    except (TypeError, ValueError):
+        y_val = _get(last, "y")
+        x_val = _get(last, "x")
+        if y_val is not None and x_val is not None:
+            lat = float(y_val)
+            lon = float(x_val)
+        else:
+            customdata = _get(last, "customdata")
+            if customdata:
+                try:
+                    lon_val = customdata[0]
+                    lat_val = customdata[1]
+                except (KeyError, TypeError):
+                    lon_val = _get(customdata, "0")
+                    lat_val = _get(customdata, "1")
+                if lon_val is not None and lat_val is not None:
+                    lat = float(lat_val)
+                    lon = float(lon_val)
+                else:
+                    return None, None
+            else:
+                return None, None
+    except (TypeError, ValueError, IndexError):
         return None, None
     return lat, lon
 
