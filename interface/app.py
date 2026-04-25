@@ -6,6 +6,7 @@ Run with:
 from __future__ import annotations
 
 import sys
+import time
 from pathlib import Path
 
 # Make the package importable regardless of the directory streamlit is invoked from.
@@ -35,9 +36,7 @@ st.set_page_config(**DEFAULT_PAGE_CONFIG)
 #   2. Move the native sidebar to the right edge of the page.
 #   3. Pin the sidebar's expand/collapse toggle to the top-right corner.
 #   4. Tighten paddings so title + map + stats fit a single viewport.
-st.markdown(
-    """
-    <style>
+_CSS = """
         /* 1. Keep the header element AND the toolbar wrapper in the DOM —
               on some Streamlit versions the sidebar's expand button is nested
               inside the toolbar, so blanket-hiding either kills the toggle.
@@ -133,6 +132,13 @@ st.markdown(
             background: rgba(127, 127, 127, 0.06);
             border-radius: 6px;
         }
+"""
+
+st.markdown(
+    f"""
+    <style>
+    /* {time.time()} */
+    {_CSS}
     </style>
     """,
     unsafe_allow_html=True,
@@ -248,7 +254,7 @@ components.html(
             
             // If the user collapsed the native sidebar on another page, force it open
             // so our custom CSS-based toggle doesn't break.
-            const expandBtn = d.querySelector('[data-testid="collapsedControl"], button[aria-label="Open sidebar"]');
+            const expandBtn = d.querySelector('[data-testid="collapsedControl"], [data-testid="stSidebarCollapsedControl"], button[aria-label="Open sidebar"]');
             if (expandBtn) expandBtn.click();
 
             if (initialized && d.getElementById(BTN_ID)) return;

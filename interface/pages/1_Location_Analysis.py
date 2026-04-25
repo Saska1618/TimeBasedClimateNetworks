@@ -13,6 +13,7 @@ the network for that grid cell, and presents:
 from __future__ import annotations
 
 import sys
+import time
 from pathlib import Path
 
 # Make the package importable when the page is reached via Streamlit's
@@ -41,9 +42,7 @@ from tbcn_viz.config import DEFAULT_PAGE_CONFIG  # noqa: E402
 
 st.set_page_config(**{**DEFAULT_PAGE_CONFIG, "page_title": "TBCN — Location Analysis"})
 
-st.markdown(
-    """
-    <style>
+_CSS = """
         header[data-testid="stHeader"] {
             background: transparent !important;
         }
@@ -59,6 +58,13 @@ st.markdown(
         .stTabs [data-baseweb="tab-list"] { gap: 4px; }
         #tbcn-panel-toggle { display: none !important; }
         [data-testid="stSidebarNav"] { display: none !important; }
+"""
+
+st.markdown(
+    f"""
+    <style>
+    /* {time.time()} */
+    {_CSS}
     </style>
     """,
     unsafe_allow_html=True,
