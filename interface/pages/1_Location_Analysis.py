@@ -44,13 +44,32 @@ st.set_page_config(**{**DEFAULT_PAGE_CONFIG, "page_title": "TBCN — Location An
 st.markdown(
     """
     <style>
+        header[data-testid="stHeader"] {
+            background: transparent !important;
+            height: 0 !important;
+            min-height: 0 !important;
+            overflow: visible !important;
+        }
+        [data-testid="stToolbarActions"],
+        [data-testid="stMainMenu"],
+        [data-testid="stDecoration"],
+        .stDeployButton,
+        .stAppDeployButton {
+            display: none !important;
+        }
         .block-container { padding-top: 0.8rem; max-width: 1500px; }
         h1 { text-align: center; margin: 0 0 0.5rem 0 !important; font-size: 1.6rem !important; }
         .stTabs [data-baseweb="tab-list"] { gap: 4px; }
+        #tbcn-panel-toggle { display: none !important; }
+        [data-testid="stSidebarNav"] { display: none !important; }
     </style>
     """,
     unsafe_allow_html=True,
 )
+
+with st.sidebar:
+    st.page_link("app.py", label="Carpathian Basin Overview")
+    st.page_link("pages/1_Location_Analysis.py", label="Location Analysis")
 
 
 # ---------------------------------------------------------------------------

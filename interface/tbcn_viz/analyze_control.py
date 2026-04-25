@@ -111,17 +111,7 @@ def render_analyze_section(container: DeltaGenerator, ds: xr.Dataset) -> None:
     if container.button("Analyze", type="primary", use_container_width=True, disabled=not can_submit):
         _queue_and_switch(lat_value, lon_value, snapped_lat, snapped_lon)
 
-    has_prior = _SESSION_KEY in st.session_state
-    revisit_label = "Open Location Analysis" if has_prior else "Open with current coordinates"
-    revisit_disabled = not (has_prior or can_submit)
-    if container.button(revisit_label, use_container_width=True, disabled=revisit_disabled):
-        if has_prior:
-            try:
-                st.switch_page("pages/1_Location_Analysis.py")
-            except Exception:
-                container.info("Use the page navigator to open Location Analysis.")
-        else:
-            _queue_and_switch(lat_value, lon_value, snapped_lat, snapped_lon)
+
 
 
 def consume_selection() -> Optional[dict]:
