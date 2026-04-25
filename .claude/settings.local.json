@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import compileall; print\\('ok' if compileall.compile_dir\\('interface', quiet=1\\) else 'SYNTAX ERRORS'\\)\")",
+      "Bash(python -c \"import streamlit, plotly, xarray, numpy, pandas, networkx; print\\('ok core'\\)\")",
+      "Bash(python -c \"import scipy; print\\('scipy ok'\\)\")",
+      "Bash(python -c \"import matplotlib; print\\('mpl ok'\\)\")",
+      "Bash(python -c ' *)",
+      "Read(//d/Data/Carpathian_basin/CB_clipped_nc//**)"
+    ]
+  }
+}
