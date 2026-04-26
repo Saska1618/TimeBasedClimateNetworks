@@ -56,7 +56,22 @@ _CSS = """
         }
         .block-container { padding-top: 0.8rem; max-width: 1500px; }
         h1 { text-align: center; margin: 0 0 0.5rem 0 !important; font-size: 1.6rem !important; }
-        .stTabs [data-baseweb="tab-list"] { gap: 4px; }
+        .stTabs [data-baseweb="tab-list"] { gap: 1.2rem; }
+        .stTabs [data-baseweb="tab-list"] > button { 
+            position: relative; 
+            overflow: visible !important; 
+        }
+        .stTabs [data-baseweb="tab-list"] > button:not(:last-of-type)::after {
+            content: "|";
+            position: absolute;
+            right: -0.6rem;
+            top: 50%;
+            transform: translate(50%, -50%);
+            color: rgba(127, 127, 127, 0.5);
+            font-size: 1.2rem;
+            font-weight: 300;
+            pointer-events: none;
+        }
         #tbcn-panel-toggle { display: none !important; }
         [data-testid="stSidebarNav"] { display: none !important; }
 """
