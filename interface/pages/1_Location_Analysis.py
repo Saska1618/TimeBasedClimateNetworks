@@ -35,6 +35,7 @@ from tbcn_viz.analysis.figures import (  # noqa: E402
     per_month_degree_panel,
     percolation_figure,
     prototype_heatmap,
+    network_graph_figure,
 )
 from tbcn_viz.analyze_control import consume_selection  # noqa: E402
 from tbcn_viz.config import DEFAULT_PAGE_CONFIG  # noqa: E402
@@ -139,11 +140,12 @@ if result is None:
 # Tabs
 # ---------------------------------------------------------------------------
 
-tab_proto, tab_perc, tab_comm, tab_deg = st.tabs([
+tab_proto, tab_perc, tab_comm, tab_deg, tab_net = st.tabs([
     "Prototypes",
     "Percolation",
     "Community detection",
     "Degree distributions",
+    "Network visualization",
 ])
 
 PLOTLY_CONFIG = {"displaylogo": False, "modeBarButtonsToRemove": ["lasso2d", "select2d"]}
@@ -321,3 +323,29 @@ with tab_deg:
             per_month_degree_panel(result.degrees, month=int(month_value)),
             use_container_width=True, config=PLOTLY_CONFIG,
         )
+
+
+# ----- Network visualization -----------------------------------------------
+
+with tab_net:
+    st.markdown(
+        "Interactive force-directed graph layouts of the early, late, and full "
+        "period networks. Nodes represent months (colored by calendar month), "
+        "and edges represent similarities above the calculated thresholds. "
+        "Hover over a node to see its features and degree."
+    )
+    
+    st.plotly_chart(
+        network_graph_figure(result.networks.early, title="Early Network (1961–1990)"),
+        use_container_width=True, config=PLOTLY_CONFIG
+    )
+    st.markdown("---")
+    st.plotly_chart(
+        network_graph_figure(result.networks.late, title="Late Network (1995–2024)"),
+        use_container_width=True, config=PLOTLY_CONFIG
+    )
+    st.markdown("---")
+    st.plotly_chart(
+        network_graph_figure(result.networks.full, title="Full Network (1961–2024)"),
+        use_container_width=True, config=PLOTLY_CONFIG
+    )

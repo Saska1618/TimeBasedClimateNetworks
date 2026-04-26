@@ -13,6 +13,7 @@ import numpy as np
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from scipy.stats import gaussian_kde
+import networkx as nx
 
 from .community import CommunityResult
 from .degree import DegreeBundle
@@ -389,6 +390,121 @@ def per_month_degree_panel(
     fig.update_yaxes(range=y_range)
     fig.update_xaxes(title_text="Degree", row=2)
     fig.update_yaxes(title_text="Density", col=1)
+    return fig
+
+
+# ---------------------------------------------------------------------------
+# Network graphs
+# ---------------------------------------------------------------------------
+
+def network_graph_figure(G: nx.Graph, *, title: str) -> go.Figure:
+    """Interactive network visualization using Plotly and NetworkX spring layout."""
+    if G is None or G.number_of_nodes() == 0:
+        return _empty("Network is empty.")
+
+    # Calculate layout
+    pos = nx.spring_layout(G, weight="weight", seed=42, k=0.15)
+
+    fig = go.Figure()
+
+    # Edges trace
+    edge_x = []
+    edge_y = []
+    for u, v in G.edges():
+        x0, y0 = pos[u]
+        x1, y1 = pos[v]
+        edge_x.extend([x0, x1, None])
+        edge_y.extend([y0, y1, None])
+
+    fig.add_trace(go.Scattergl(
+        x=edge_x, y=edge_y,
+        line=dict(width=0.2, color='#888'),
+        opacity=0.3,
+        hoverinfo='skip',
+        mode='lines',
+        showlegend=False
+    ))
+
+    # Nodes grouped by month
+    palette = [
+        "#1f77b4",         # 1: Jan (blue)
+        "darkblue",        # 2: Feb (darkblue)
+        "lightgreen",      # 3: Mar (lightgreen)
+        "green",           # 4: Apr (green)
+        "darkgreen",       # 5: May (darkgreen)
+        "#ff7f7f",         # 6: Jun (lightred - hex for valid CSS)
+        "red",             # 7: Jul (red)
+        "darkred",         # 8: Aug (darkred)
+        "#ffeb73",         # 9: Sep (lightyellow - darker hex for visibility on white background)
+        "gold",            # 10: Oct (yellow - gold reads better than #ffff00)
+        "darkgoldenrod",   # 11: Nov (darkyellow)
+        "lightblue",       # 12: Dec (lightblue)
+    ]
+    
+    month_nodes = {m: {"x": [], "y": [], "text": []} for m in range(1, 13)}
+    other_nodes = {"x": [], "y": [], "text": []}
+    
+    for node in G.nodes():
+        x, y = pos[node]
+        data = G.nodes[node]
+        month = data.get("month")
+        
+        deg = G.degree(node)
+        
+        # Build hover text with feature info if available
+        features = ["mean_tn", "mean_tx", "mean_tg", "rr_sum", "mean_qq", "mean_hu"]
+        feat_str = ""
+        for f in features:
+            if f in data:
+                feat_str += f"<br>{f}: {data[f]:.2f}"
+                
+        details = f"<b>{node}</b><br>Degree: {deg}{feat_str}"
+        
+        if month is not None and 1 <= month <= 12:
+            month_nodes[month]["x"].append(x)
+            month_nodes[month]["y"].append(y)
+            month_nodes[month]["text"].append(details)
+        else:
+            other_nodes["x"].append(x)
+            other_nodes["y"].append(y)
+            other_nodes["text"].append(details)
+
+    for m in range(1, 13):
+        if not month_nodes[m]["x"]:
+            continue
+        fig.add_trace(go.Scattergl(
+            x=month_nodes[m]["x"],
+            y=month_nodes[m]["y"],
+            mode='markers',
+            name=MONTH_LABELS[m - 1],
+            text=month_nodes[m]["text"],
+            hoverinfo='text',
+            marker=dict(color=palette[m - 1], size=7, line=dict(width=0.5, color='white'))
+        ))
+
+    if other_nodes["x"]:
+        fig.add_trace(go.Scattergl(
+            x=other_nodes["x"],
+            y=other_nodes["y"],
+            mode='markers',
+            name="Other",
+            text=other_nodes["text"],
+            hoverinfo='text',
+            marker=dict(color='#888', size=7, line=dict(width=0.5, color='white'))
+        ))
+
+    fig.update_layout(
+        title=dict(text=title, x=0.5, xanchor="center"),
+        showlegend=True,
+        legend=dict(title="Month", orientation="v", y=1, x=1.02),
+        hovermode='closest',
+        margin=dict(b=20, l=20, r=20, t=60),
+        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+        yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+        template="plotly_white",
+        height=600
+    )
+    
     return fig
 
 
