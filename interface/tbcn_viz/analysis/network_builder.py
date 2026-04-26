@@ -70,13 +70,21 @@ def _fit_shared_pca(monthly_nodes: Dict[str, Dict[str, float]]) -> Tuple[np.ndar
     return scores, months, scaler, pca
 
 
-def _similarity_from_scores(scores: np.ndarray) -> np.ndarray:
+def _similarity_from_scores(scores: np.ndarray, d_min: Optional[float] = None, d_max: Optional[float] = None) -> np.ndarray:
     distances = pdist(scores, metric="euclidean")
-    spread = distances.max() - distances.min()
+    if distances.size == 0:
+        return np.empty((0, 0))
+        
+    c_min = distances.min() if d_min is None else d_min
+    c_max = distances.max() if d_max is None else d_max
+    
+    spread = c_max - c_min
     if spread > 0:
-        scaled = (distances - distances.min()) / spread
+        scaled = (distances - c_min) / spread
     else:
         scaled = np.zeros_like(distances)
+        
+    scaled = np.clip(scaled, 0.0, 1.0)
     return 1.0 - squareform(scaled)
 
 
@@ -156,7 +164,14 @@ def build_networks(lat: float, lon: float, target_avg_degree_factor: int = 3) ->
         return None
 
     full_scores, full_months, scaler, pca = _fit_shared_pca(full_nodes)
-    full_similarity = _similarity_from_scores(full_scores)
+    
+    full_distances = pdist(full_scores, metric="euclidean")
+    if full_distances.size > 0:
+        d_min, d_max = float(full_distances.min()), float(full_distances.max())
+    else:
+        d_min, d_max = 0.0, 1.0
+        
+    full_similarity = _similarity_from_scores(full_scores, d_min=d_min, d_max=d_max)
 
     period_specs = [
         ("early", EARLY_PERIOD),
@@ -172,7 +187,7 @@ def build_networks(lat: float, lon: float, target_avg_degree_factor: int = 3) ->
         else:
             nodes = extract_monthly_features(lat, lon, start, end)
             scores, months = _project_into(nodes, scaler, pca)
-            similarity = _similarity_from_scores(scores) if scores.size else np.empty((0, 0))
+            similarity = _similarity_from_scores(scores, d_min=d_min, d_max=d_max) if scores.size else np.empty((0, 0))
 
         years = int(end[:4]) - int(start[:4]) + 1
         target_avg_degree = years * target_avg_degree_factor - 1
