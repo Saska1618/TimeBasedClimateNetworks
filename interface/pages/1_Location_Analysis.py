@@ -172,8 +172,7 @@ with tab_proto:
     st.markdown(
         "Each cell is the similarity between the *mean* prototype for the "
         "early-period row and the *mean* prototype for the late-period "
-        "column in the full graph's PCA space — same logic as "
-        "`rich_mean_prototype_creation` + `rich_mean_prototype_analysis`. "
+        "column in the full graph's PCA space. "
         "The threshold heatmap zeros out cells below "
         "`min(early_threshold, late_threshold)` from the network's pruning step."
     )
@@ -247,8 +246,7 @@ with tab_comm:
     st.markdown(
         "Leiden algorithm with the default resolution (1.0). The temporal "
         "scatter shows which year/month nodes ended up in which community. "
-        "The two heatmaps are the *community* and *month* perspectives "
-        "described in `networks/community_detection/analysis`."
+        "The two heatmaps are the *community* and *month* perspectives."
     )
 
     period_labels = {"early": "Early (1961–1990)", "late": "Late (1995–2024)"}
@@ -277,7 +275,7 @@ with tab_deg:
         "Density histograms of the per-node degree, by calendar month, "
         "comparing the early (blue) and late (orange) periods. The "
         "*close-month* variants only count neighbours whose month is the "
-        "previous, current, or next calendar month (Dec ↔ Jan wraps)."
+        "previous, current, or next calendar month."
     )
 
     sub_unw, sub_w, sub_per = st.tabs(["Unweighted", "Weighted", "Per-month"])

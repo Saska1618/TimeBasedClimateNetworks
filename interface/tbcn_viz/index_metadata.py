@@ -70,14 +70,15 @@ _SPECS: Dict[str, IndexSpec] = {
         label="Unweighted Degree Fragmentation",
         description=(
             "Share of unweighted degree connecting to neighbouring (±1) months "
-            "vs. all months. Higher values mean stronger local seasonality."
+            "vs. all months. Higher values mean stronger local connections."
         ),
     ),
     "weighted_degree_fragmentation": IndexSpec(
         name="weighted_degree_fragmentation",
         label="Weighted Degree Fragmentation",
         description=(
-            "Same as the unweighted version but using edge weights (similarity)."
+            "Share of weighted degree connecting to neighbouring (±1) months "
+            "vs. all months. Higher values mean stronger local connections."
         ),
     ),
 }
