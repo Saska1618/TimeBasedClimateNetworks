@@ -24,6 +24,7 @@ if str(_INTERFACE_ROOT) not in sys.path:
 
 import pandas as pd  # noqa: E402
 import streamlit as st  # noqa: E402
+import networkx as nx  # noqa: E402
 
 from tbcn_viz.analysis import run_analysis  # noqa: E402
 from tbcn_viz.analysis.figures import (  # noqa: E402
@@ -42,6 +43,52 @@ from tbcn_viz.config import DEFAULT_PAGE_CONFIG  # noqa: E402
 
 
 st.set_page_config(**{**DEFAULT_PAGE_CONFIG, "page_title": "TBCN — Location Analysis"})
+
+PLOTLY_CONFIG = {"displaylogo": False, "modeBarButtonsToRemove": ["lasso2d", "select2d"]}
+
+
+def _plot_and_download(figure, file_name_stem: str, container=st, key_suffix: str = ""):
+    """Displays a Plotly chart and a download button for it."""
+    container.plotly_chart(figure, use_container_width=True, config=PLOTLY_CONFIG)
+
+    png_bytes = figure.to_image(format="png", scale=2)
+    container.download_button(
+        "Download as PNG",
+        data=png_bytes,
+        file_name=f"{file_name_stem}.png",
+        mime="image/png",
+        key=f"png_{key_suffix}" if key_suffix else None,
+    )
+
+
+def _graph_and_download(G, title: str, file_name_stem: str, container=st, key_suffix: str = ""):
+    """Displays a network graph plot and download buttons for PNG and GraphML."""
+    fig = network_graph_figure(G, title=title)
+    container.plotly_chart(fig, use_container_width=True, config=PLOTLY_CONFIG)
+
+    if G is not None and G.number_of_nodes() > 0:
+        # Use columns for buttons to keep them tidy side-by-side
+        c1, c2, _ = container.columns([2, 2, 7])
+
+        # PNG download
+        png_bytes = fig.to_image(format="png", scale=2)
+        c1.download_button(
+            "Download as PNG",
+            data=png_bytes,
+            file_name=f"{file_name_stem}.png",
+            mime="image/png",
+            key=f"png_{key_suffix}" if key_suffix else None,
+        )
+
+        # GraphML download
+        graphml_str = "\n".join(nx.generate_graphml(G))
+        c2.download_button(
+            "Download as GraphML",
+            data=graphml_str,
+            file_name=f"{file_name_stem}.graphml",
+            mime="application/xml",
+            key=f"graphml_{key_suffix}" if key_suffix else None,
+        )
 
 _CSS = """
         header[data-testid="stHeader"] {
@@ -74,6 +121,16 @@ _CSS = """
         }
         #tbcn-panel-toggle { display: none !important; }
         [data-testid="stSidebarNav"] { display: none !important; }
+        
+        /* Make download buttons more compact */
+        [data-testid="stDownloadButton"] button {
+            padding: 0.25rem 0.6rem !important;
+            min-height: 2rem !important;
+            height: auto !important;
+        }
+        [data-testid="stDownloadButton"] button p {
+            font-size: 0.85rem !important;
+        }
 """
 
 st.markdown(
@@ -163,9 +220,6 @@ tab_proto, tab_perc, tab_comm, tab_deg, tab_net = st.tabs([
     "Network visualization",
 ])
 
-PLOTLY_CONFIG = {"displaylogo": False, "modeBarButtonsToRemove": ["lasso2d", "select2d"]}
-
-
 # ----- Prototypes ----------------------------------------------------------
 
 with tab_proto:
@@ -181,20 +235,18 @@ with tab_proto:
     else:
         col_no, col_thr = st.columns(2)
         with col_no:
-            st.plotly_chart(
-                prototype_heatmap(
-                    result.prototypes.similarity_no_threshold,
-                    title="Without threshold",
-                ),
-                use_container_width=True, config=PLOTLY_CONFIG,
+            fig = prototype_heatmap(
+                result.prototypes.similarity_no_threshold,
+                title="Without threshold",
             )
+            _plot_and_download(fig, "prototypes_no_threshold", container=col_no, key_suffix="proto_no_thresh")
         with col_thr:
-            st.plotly_chart(
-                prototype_heatmap(
-                    result.prototypes.similarity_with_threshold,
-                    title=f"With threshold (cut-off {result.prototypes.threshold:.3f})",
-                ),
-                use_container_width=True, config=PLOTLY_CONFIG,
+            fig = prototype_heatmap(
+                result.prototypes.similarity_with_threshold,
+                title=f"With threshold (cut-off {result.prototypes.threshold:.3f})",
+            )
+            _plot_and_download(
+                fig, "prototypes_with_threshold", container=col_thr, key_suffix="proto_with_thresh"
             )
         with st.expander("Mean prototype feature values"):
             cols = st.columns(2)
@@ -226,7 +278,8 @@ with tab_perc:
     if result.percolation is None:
         st.warning("Percolation analysis needs at least one weighted edge in each period.")
     else:
-        st.plotly_chart(percolation_figure(result.percolation), use_container_width=True, config=PLOTLY_CONFIG)
+        fig = percolation_figure(result.percolation)
+        _plot_and_download(fig, "percolation_comparison", key_suffix="perc")
         m1, m2 = st.columns(2)
         m1.metric(
             "Early critical threshold",
@@ -252,19 +305,17 @@ with tab_comm:
     period_labels = {"early": "Early (1961–1990)", "late": "Late (1995–2024)"}
     for key, period_result in (("early", result.communities.early), ("late", result.communities.late)):
         st.markdown(f"### {period_labels[key]}  ·  {period_result.num_communities} communities  ·  modularity {period_result.modularity:.3f}")
-        st.plotly_chart(
-            community_scatter(period_result, period_label=period_labels[key]),
-            use_container_width=True, config=PLOTLY_CONFIG,
-        )
+        fig_scatter = community_scatter(period_result, period_label=period_labels[key])
+        _plot_and_download(fig_scatter, f"community_scatter_{key}", key_suffix=f"comm_scatter_{key}")
+
         col1, col2 = st.columns(2)
-        col1.plotly_chart(
-            community_perspective_heatmap(period_result, period_label=period_labels[key]),
-            use_container_width=True, config=PLOTLY_CONFIG,
-        )
-        col2.plotly_chart(
-            month_perspective_heatmap(period_result, period_label=period_labels[key]),
-            use_container_width=True, config=PLOTLY_CONFIG,
-        )
+
+        fig_comm = community_perspective_heatmap(period_result, period_label=period_labels[key])
+        _plot_and_download(fig_comm, f"community_perspective_{key}", container=col1, key_suffix=f"comm_persp_{key}")
+
+        fig_month = month_perspective_heatmap(period_result, period_label=period_labels[key])
+        _plot_and_download(fig_month, f"month_perspective_{key}", container=col2, key_suffix=f"month_persp_{key}")
+
         st.markdown("---")
 
 
@@ -298,14 +349,14 @@ with tab_deg:
         scope = _scope_radio("deg_scope_unw")
         suffix = "Close months only" if scope == "close" else "all months"
         x_label = "Node degree (close-month neighbours)" if scope == "close" else "Node degree"
-        st.plotly_chart(
-            monthly_degree_grid(
-                result.degrees,
-                variant=f"unweighted_{scope}",
-                title=f"Monthly unweighted degree distributions · {suffix}",
-                x_label=x_label,
-            ),
-            use_container_width=True, config=PLOTLY_CONFIG,
+        fig = monthly_degree_grid(
+            result.degrees,
+            variant=f"unweighted_{scope}",
+            title=f"Monthly unweighted degree distributions · {suffix}",
+            x_label=x_label,
+        )
+        _plot_and_download(
+            fig, f"degree_grid_unweighted_{scope}", key_suffix=f"deg_unw_{scope}"
         )
 
     with sub_w:
@@ -315,14 +366,14 @@ with tab_deg:
             "Weighted degree (close-month neighbours)" if scope == "close"
             else "Weighted node degree (strength)"
         )
-        st.plotly_chart(
-            monthly_degree_grid(
-                result.degrees,
-                variant=f"weighted_{scope}",
-                title=f"Monthly weighted degree distributions · {suffix}",
-                x_label=x_label,
-            ),
-            use_container_width=True, config=PLOTLY_CONFIG,
+        fig = monthly_degree_grid(
+            result.degrees,
+            variant=f"weighted_{scope}",
+            title=f"Monthly weighted degree distributions · {suffix}",
+            x_label=x_label,
+        )
+        _plot_and_download(
+            fig, f"degree_grid_weighted_{scope}", key_suffix=f"deg_w_{scope}"
         )
 
     with sub_per:
@@ -332,9 +383,9 @@ with tab_deg:
             value=6,
             format_func=lambda m: MONTH_LABELS[m - 1],
         )
-        st.plotly_chart(
-            per_month_degree_panel(result.degrees, month=int(month_value)),
-            use_container_width=True, config=PLOTLY_CONFIG,
+        fig = per_month_degree_panel(result.degrees, month=int(month_value))
+        _plot_and_download(
+            fig, f"degree_per_month_{month_value}", key_suffix=f"deg_per_month_{month_value}"
         )
 
 
@@ -348,17 +399,23 @@ with tab_net:
         "Hover over a node to see its features and degree."
     )
     
-    st.plotly_chart(
-        network_graph_figure(result.networks.early, title="Early Network (1961–1990)"),
-        use_container_width=True, config=PLOTLY_CONFIG
+    _graph_and_download(
+        result.networks.early,
+        title="Early Network (1961–1990)",
+        file_name_stem="network_early",
+        key_suffix="net_early",
     )
     st.markdown("---")
-    st.plotly_chart(
-        network_graph_figure(result.networks.late, title="Late Network (1995–2024)"),
-        use_container_width=True, config=PLOTLY_CONFIG
+    _graph_and_download(
+        result.networks.late,
+        title="Late Network (1995–2024)",
+        file_name_stem="network_late",
+        key_suffix="net_late",
     )
     st.markdown("---")
-    st.plotly_chart(
-        network_graph_figure(result.networks.full, title="Full Network (1961–2024)"),
-        use_container_width=True, config=PLOTLY_CONFIG
+    _graph_and_download(
+        result.networks.full,
+        title="Full Network (1961–2024)",
+        file_name_stem="network_full",
+        key_suffix="net_full",
     )
