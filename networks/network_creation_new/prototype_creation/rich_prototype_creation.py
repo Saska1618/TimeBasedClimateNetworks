@@ -47,7 +47,7 @@ def get_pca_scores(graph):
     pca = PCA(n_components=2)
     scores = pca.fit_transform(X_scaled)
     
-    return scores, nodes
+    return scores, nodes, pca.explained_variance_ratio_
 
 def find_medoid(node_ids, all_nodes, distance_matrix):
     """
@@ -85,13 +85,18 @@ def process_city(city):
     full_graph_path = os.path.join(GRAPH_DIR, f'{city}_1961-01_2024-12.graphml')
     if not os.path.exists(full_graph_path):
         print(f"  - WARNING: Full period graph file not found for {city}. Skipping city.")
-        return {}
+        return {}, None
 
     G_full = nx.read_graphml(full_graph_path)
 
     # 2. Get PCA scores and node list from the full graph. This defines the common space.
     print("  - Creating a single PCA space from the full 1961-2024 graph...")
-    scores, all_nodes = get_pca_scores(G_full)
+    scores, all_nodes, explained_variance = get_pca_scores(G_full)
+    
+    print(f"  - PCA explained variance for {city}:")
+    print(f"    - PC1: {explained_variance[0]:.2%}")
+    print(f"    - PC2: {explained_variance[1]:.2%}")
+    print(f"    - Total: {np.sum(explained_variance):.2%}")
 
     # 3. Compute the full distance matrix from the PCA scores of the full graph.
     distance_matrix = squareform(pdist(scores, metric='euclidean'))
@@ -116,19 +121,33 @@ def process_city(city):
             medoid = find_medoid(node_ids_for_month, all_nodes, distance_matrix)
             city_prototypes[f'{period_name}_{month}'] = medoid
             print(f"  - {period_name.capitalize()} Month {month}: {medoid}")
-            
-    return city_prototypes
+
+    return city_prototypes, explained_variance
 
 if __name__ == '__main__':
     all_prototypes = {}
+    all_variances = {}
     
     for city in CITIES:
-        all_prototypes[city] = process_city(city)
+        prototypes, variance_data = process_city(city)
+        if prototypes: # Check if processing was successful
+            all_prototypes[city] = prototypes
+            if variance_data is not None:
+                all_variances[city] = {
+                    'PC1': float(variance_data[0]),
+                    'PC2': float(variance_data[1]),
+                    'Total': float(np.sum(variance_data))
+                }
 
-    # --- Save Prototypes ---
+    # --- Save Results ---
     os.makedirs(PROTOTYPE_DIR, exist_ok=True)
-    output_path = os.path.join(PROTOTYPE_DIR, 'rich_prototypes.json')
-    with open(output_path, 'w') as f:
+    
+    prototypes_output_path = os.path.join(PROTOTYPE_DIR, 'rich_prototypes.json')
+    with open(prototypes_output_path, 'w') as f:
         json.dump(all_prototypes, f, indent=4)
-        
-    print(f"Rich prototypes saved to {output_path}")
+    print(f"\nRich prototypes saved to {prototypes_output_path}")
+
+    variance_output_path = os.path.join(PROTOTYPE_DIR, 'rich_pca_explained_variance.json')
+    with open(variance_output_path, 'w') as f:
+        json.dump(all_variances, f, indent=4)
+    print(f"PCA explained variance data saved to {variance_output_path}")

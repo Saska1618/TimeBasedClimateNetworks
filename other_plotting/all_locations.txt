@@ -1,0 +1,368 @@
+BRASSÓ
+
+Az elemzést a Brassóhoz legközelebbi rácspontra vettem: 45.74986°N, 25.54986°E, tehát gyakorlatilag pontosan a megadott 45.75, 25.55 koordinátára. A kutatásod módszertana szerint itt az év–hónap egységek alkotják a hálózati csomópontokat, az élek pedig a hónapok közötti többváltozós klimatikus hasonlóságot fejezik ki.
+1. Pontos indexértékek Brassóra
+A network_indexes_combined_output.nc fájlból kiolvasott pontos perkolációs index:
+Iperc = −0.014192342
+A perkolációs görbén látható kerekített kritikus küszöbök ezzel összhangban vannak:
+Mutató	Érték
+Early kritikus küszöb	kb. 0.971
+Late kritikus küszöb	kb. 0.957
+Perkolációs index	−0.01419
+Mivel a perkolációs index definíciója szerint a késői és a korai kritikus küszöb különbsége, a negatív érték azt jelzi, hogy a Brassóhoz tartozó késői hálózat alacsonyabb hasonlósági küszöbnél fragmentálódik, vagyis a kortárs időszak hálózata valamivel kevésbé robusztus. Ez megfelel a módszertani értelmezésednek is: pozitív érték nagyobb késői robusztusságot, negatív érték könnyebb fragmentációt jelez.
+A Shannon-entrópia pontos havi értékei:
+Hónap	Early	Late	Változás
+Jan	0.000	0.000	0.000
+Feb	0.000	0.245	+0.245
+Mar	0.691	0.500	−0.191
+Apr	0.245	0.146	−0.099
+May	0.000	0.000	0.000
+Jun	0.000	0.146	+0.146
+Jul	0.000	0.000	0.000
+Aug	0.000	0.000	0.000
+Sep	0.657	0.691	+0.034
+Oct	0.146	0.000	−0.146
+Nov	0.325	0.325	0.000
+Dec	0.000	0.000	0.000
+Itt az entrópia azt mutatja, hogy az adott hónap év-hónap csomópontjai mennyire oszlanak meg több közösség között: az alacsony érték homogén, egy közösségbe koncentrált állapotot, a magasabb érték pedig nagyobb strukturális változatosságot jelez.
+2. Közösségszerkezet: stabil éves váz, de átrendeződő átmeneti hónapok
+Brassónál mindkét időszakban 4 közösség jelenik meg, tehát a hálózat alapvető szezonális tagolódása nem omlik össze. A modularitás ugyanakkor csökken: 14986.536-ról 14305.696-ra, ami arra utal, hogy a késői időszakban a közösségi határok valamivel kevésbé élesen válnak el egymástól.
+A fő szezonális blokkok jól felismerhetők:
+téli blokk: január, február, december, részben november;
+nyári blokk: május–augusztus, részben szeptember;
+átmeneti blokk: március, április, szeptember, október;
+kis anomális közösség: az early periódusban októberhez, a late periódusban júniushoz kötődik.
+Fontos, hogy a negyedik közösség nem önálló szezonként értelmezendő. Inkább egy-egy ritka, kiugró év-hónap állapotot jelöl: early esetben az október 3.3%-a, late esetben a június 3.3%-a kerül külön közösségbe.
+3. Havi értelmezés
+A téli mag Brassónál nagyon stabil. Január és december mindkét időszakban teljesen a téli közösséghez tartozik, Shannon-entrópiájuk végig 0. Ez azt jelenti, hogy ezek a hónapok nem mutatnak közösségi fragmentációt.
+A február viszont elmozdul: early időszakban 100%-ban a téli közösséghez tartozott, a late időszakban viszont 6.7%-a már az átmeneti közösségbe kerül. Ezért nő az entrópiája 0.000-ról 0.245-re. Ez Brassónál a késő tél enyhe destabilizálódására utalhat: február már nem teljesen homogén téli hónapként viselkedik.
+A március a legfontosabb tavaszi átrendeződési jel. Early időszakban szinte kiegyensúlyozottan oszlott meg a téli és az átmeneti közösség között: 53.3% téli, 46.7% átmeneti. Late időszakban viszont már 80% az átmeneti közösséghez tartozik. Emiatt az entrópia csökken 0.691-ről 0.500-ra, de ez nem visszarendeződést jelent, hanem azt, hogy március egyértelműbben átkerül a tavaszi/átmeneti szerkezetbe.
+Az április mindkét periódusban főként az átmeneti közösséghez tartozik, sőt late időszakban még koncentráltabbá válik: 93.3%-ról 96.7%-ra nő az átmeneti közösségi arány. Ezért az entrópia 0.245-ről 0.146-ra csökken. Brassónál tehát az április nem szétesőbbé, hanem strukturálisan egységesebb átmeneti hónappá válik.
+A május–augusztus blokk alapvetően stabil. Május, július és augusztus mindkét időszakban teljesen a nyári közösségben marad. Június esetében azonban a late periódusban megjelenik egy kis anomális komponens: a júniusi csomópontok 3.3%-a külön közösségbe kerül, ezért az entrópia 0.000-ról 0.146-ra nő. Ez nem a nyári rendszer általános szétesését jelenti, inkább egy ritka júniusi éghajlati állapot elkülönülését.
+A szeptember Brassónál az egyik legfontosabb átmeneti hónap. Early időszakban 63.3% nyári és 36.7% átmeneti jellegű, late időszakban viszont 53.3% nyári és 46.7% átmeneti. A Shannon-entrópia 0.657-ről 0.691-re nő, vagyis szeptember még kiegyensúlyozottabban oszlik meg két közösség között. Ez a késő nyári–őszi átmenet bizonytalanabb, kettősebb szerkezetét jelzi.
+Az október ezzel szemben letisztul: early időszakban 96.7%-ban az átmeneti közösséghez, 3.3%-ban külön anomális közösséghez tartozott, late időszakban viszont 100%-ban az átmeneti közösségbe kerül. Emiatt az entrópia 0.146-ról 0.000-ra csökken.
+4. Prototípus-hasonlóságok értelmezése
+A küszöb nélküli prototípusmátrixban jól látszik a szezonális folytonosság: a téli hónapok a késői téli hónapokhoz, a nyári hónapok a késői nyári hónapokhoz, az átmeneti hónapok pedig egymáshoz hasonlítanak leginkább.
+A küszöbölt ábrán szereplő 0.826-os cut-off nem perkolációs küszöb, hanem a prototípus-hasonlóságok szűrésére használt strukturális élküszöb. Ez azért fontos, mert a perkolációs kritikus küszöbök ennél jóval magasabbak, kb. 0.96–0.97 körül vannak.
+A küszöbölt mátrix alapján Brassónál különösen fontosak a következő kapcsolatok:
+early március erősen hasonlít late februárhoz, márciushoz, októberhez és novemberhez;
+early április late márciussal, áprilissal, szeptemberrel és októberrel kapcsolódik;
+early szeptember late áprilissal, májussal, szeptemberrel és októberrel mutat erős kapcsolatot;
+a nyári mag, főleg május–augusztus, továbbra is nagyon stabilan kapcsolódik a késői nyári hónapokhoz.
+Ez azt jelzi, hogy Brassónál a legfontosabb átrendeződés nem a teljes éves ciklusban, hanem a tavaszi és őszi átmeneti hónapok hasonlósági mezőjében történik.
+5. Összegző értelmezés Brassóra
+Brassó esetében a temporális klímahálózat megőrzi alapvető szezonális szerkezetét, de a közösségi és prototípus-alapú eredmények egyértelműen jelzik az átmeneti hónapok átrendeződését. A téli és nyári mag továbbra is stabil, különösen január, december, május, július és augusztus esetében. A változás főként februárban, márciusban, júniusban és szeptemberben jelenik meg.
+A legmarkánsabb jel a március szerkezeti áthelyeződése: a hónap a korai időszakban még téli és átmeneti közösségek között oszlott meg, a késői időszakban azonban sokkal inkább az átmeneti közösséghez kapcsolódik. A szeptember ezzel szemben nem koncentráltabbá, hanem kiegyensúlyozottabban kettős jellegűvé válik, ami a nyár–ősz átmenet fokozott bizonytalanságára utal. A perkolációs index negatív értéke alapján a késői hálózat strukturálisan valamivel sérülékenyebb: a magas hasonlóságú kapcsolatok eltávolításakor hamarabb fragmentálódik, mint az early időszak hálózata.
+Ezt a helyszínt ezért úgy érdemes értelmezni, mint ahol az éves szezonális váz továbbra is erős, de a szezonhatárok — különösen a késő tél–tavasz és a késő nyár–ősz átmenete — finom, de jól mérhető hálózati átrendeződést mutatnak.
+
+DÉVA
+
+Déva – összefoglaló értelmezés
+Déva esetében a korai időszak hálózata három nagyobb időbeli közösségre tagolódik, míg a késői időszakban már négy közösség jelenik meg. Ez önmagában is arra utal, hogy a kortárs időszakban a szezonális szerkezet enyhén fragmentáltabbá vált. A modularitás ugyanakkor csökkent, 14630.467-ről 14131.356-ra, vagyis a közösségek elkülönülése valamivel gyengébb lett. Ez azt jelenti, hogy nem egyszerűen erősebb szezonális blokkok alakultak ki, hanem inkább több átmeneti, kevert állapot jelent meg.
+A korai időszakban a közösségi szerkezet viszonylag klasszikus szezonális felosztást mutat. Az első közösség főként a meleg félévhez kötődik: május, június, július és augusztus egyaránt 21.4%-kal szerepel benne, szeptember pedig még 13.6%-kal kapcsolódik hozzá. A második közösség a hideg évszakot fogja össze: január, február és december domináns, de november is erősen jelen van. A harmadik közösség elsősorban átmeneti jellegű: március, április, szeptember és október alkotják a fő szerkezetét.
+A késői időszakban ez az alapstruktúra megmarad, de több hónap átmenetibbé válik. A tavaszi blokkban különösen február, március és április mutat átrendeződést: február már nem kizárólag a téli közösséghez tartozik, március döntően az átmeneti közösségbe kerül, április pedig részben a meleg évszak felé tolódik. Szeptember szintén erősen kevert hónappá válik: a késői időszakban 50–50%-ban oszlik meg a nyári és az átmeneti közösség között. Ez Dévánál az egyik legtisztább jele annak, hogy az évszakváltások hálózati értelemben kevésbé stabilak, mint a korai időszakban.
+A negyedik közösség a késői hálózatban kizárólag augusztushoz kötődik. Mivel az augusztusi hónapoknak csak 3.3%-a kerül ide, ez lényegében egyetlen év-hónap anomáliát jelez. A hálózati ábrán is látható egy erősen elkülönülő pont, amely nem a teljes nyári szerkezet átalakulását, hanem egy lokális, extrém vagy szokatlan augusztusi klimatikus állapotot valószínűsít.
+Shannon-entrópia Dévánál
+A network_indexes_combined_output.nc állományból a Dévához legközelebbi rácspontot használtam: 45.84986°N, 22.94986°E, ami gyakorlatilag egybeesik a megadott 45.85, 22.95 koordinátával.
+Hónap	Early Shannon	Late Shannon	Változás
+Jan	0.000	0.000	0.000
+Feb	0.000	0.325	+0.325
+Mar	0.673	0.500	-0.173
+Apr	0.146	0.451	+0.304
+May	0.000	0.146	+0.146
+Jun	0.000	0.000	0.000
+Jul	0.000	0.000	0.000
+Aug	0.000	0.146	+0.146
+Sep	0.657	0.693	+0.036
+Oct	0.000	0.000	0.000
+Nov	0.245	0.146	-0.099
+Dec	0.000	0.000	0.000
+Az átlagos Shannon-entrópia 0.143-ról 0.201-re nőtt, vagyis Dévánál a havi klimatikus állapotok közösségek közötti szóródása erősödött. A legnagyobb növekedés februárban és áprilisban látható. Február esetében ez azt mutatja, hogy a késői időszakban a tél végi állapot már nem teljesen homogén: 90%-ban még a téli közösséghez tartozik, de 10%-ban már az átmeneti közösséghez kapcsolódik. Áprilisban a növekedés még fontosabb, mert a hónap a késői időszakban már 16.7%-ban a meleg évszaki közösséghez kapcsolódik, miközben 83.3%-ban továbbra is az átmeneti blokk része.
+Március ezzel szemben érdekes ellenirányú változást mutat: az entrópia 0.673-ról 0.500-ra csökken. A korai időszakban március 40%-ban a téli, 60%-ban az átmeneti közösséghez tartozott, míg később 80%-ban az átmeneti közösségbe koncentrálódik. Ez arra utal, hogy március Dévánál hálózati értelemben kevésbé kettős karakterűvé, inkább egységesebben átmeneti hónappá vált.
+Prototípus-hasonlóságok
+A prototípus-mátrixok alapján a legerősebb stabilitás továbbra is a tél közepén és a nyár közepén figyelhető meg. Január, február és december erős kölcsönös hasonlóságot mutat a késői időszak hideg hónapjaival, míg június–augusztus továbbra is egy viszonylag stabil nyári magot alkot. A küszöb nélküli mátrixban ugyanakkor több átmeneti kapcsolat is magas értéket kap, különösen március–október, április–szeptember/október, illetve május–szeptember között.
+A 0.827-es küszöb után megmaradó kapcsolatok jól mutatják, hogy Dévánál az átmeneti hónapok nem egyszerűen saját naptári pozíciójukhoz kötődnek, hanem több szezonális irányba is kapcsolódnak. Április például erős kapcsolatot tart fenn a késői márciussal, áprilissal, májussal, szeptemberrel és októberrel is. Szeptember hasonlóan kettős természetű: egyszerre kapcsolódik a meleg évszak végéhez és az őszi átmenethez. Ez jól illeszkedik a Shannon-entrópia alapján kapott képhez.
+Perkolációs index
+A network_indexes_combined_output.nc alapján Déva perkolációs indexe:
+Perkolációs index = -0.010599
+Ez lényegében a perkolációs ábrán is látható értelmezést adja vissza: a korai hálózat kritikus töréspontja kb. 0.972, míg a késői hálózaté kb. 0.961. Mivel a késői hálózat alacsonyabb hasonlósági küszöbnél fragmentálódik, a perkolációs index negatív. Ez Dévánál enyhe szerkezeti robusztusság-csökkenést jelez: a kortárs időszak hálózata valamivel hamarabb veszti el nagy összefüggő komponensét, vagyis érzékenyebbé válik a gyengébb kapcsolatok eltávolítására.
+Fontos, hogy ez nem drámai összeomlás, hanem mérsékelt, de következetes negatív elmozdulás. A perkolációs görbék alapján mindkét időszak hálózata sokáig összefüggő marad, majd magas hasonlósági tartományban gyorsan fragmentálódik. A különbség inkább abban áll, hogy a késői hálózat töréspontja kissé korábbra tolódik.
+Dolgozatba illeszthető rövid értelmezés
+Déva esetében a temporális klímahálózat a szezonális szerkezet mérsékelt, de jól azonosítható átrendeződését mutatja. A korai időszak három közössége viszonylag tiszta szezonális felosztást követett: egy téli, egy nyári és egy átmeneti blokk különült el. A késői időszakban a közösségek száma négyre nőtt, miközben a modularitás enyhén csökkent. Ez arra utal, hogy a kortárs időszakban a szezonális szerkezet nem erősebb blokkokra vált szét, hanem inkább több átmeneti és kevert állapot jelent meg.
+A Shannon-entrópia átlagos értéke 0.143-ról 0.201-re emelkedett, ami a havi klimatikus állapotok közösségek közötti nagyobb szóródását jelzi. A legerősebb növekedés februárban és áprilisban figyelhető meg, vagyis főként a tél végi és tavaszi átmeneti időszak vált változékonyabbá. Szeptember továbbra is az egyik leginkább megosztott hónap, a késői időszakban pontosan fele-fele arányban kapcsolódva a nyári és az átmeneti közösséghez. Ezzel szemben január, június, július, október és december továbbra is stabil, alacsony entrópiájú hónapok maradtak.
+A perkolációs index értéke -0.010599, ami enyhe robusztusság-csökkenést jelez. A késői hálózat valamivel alacsonyabb hasonlósági küszöbnél fragmentálódik, mint a korai hálózat, vagyis Déva kortárs temporális klímahálózata kissé érzékenyebbé vált a gyengébb kapcsolatok eltávolítására. Összességében Dévánál a legfontosabb változás nem a teljes szezonális ciklus felbomlása, hanem az átmeneti hónapok — különösen február, április és szeptember — hálózati szerepének átalakulása.
+
+GYERGYÓSZENTMIKLÓS
+
+A netCDF-ből a Gyergyószentmiklóshoz legközelebbi rácscellát használtam: 46.74986054, 25.44986029. A módszertani keret szerint itt az év–hónap egységek alkotják a hálózati csomópontokat, az élek pedig a többváltozós klímaállapotok közötti hasonlóságot fejezik ki, ezért az eredményeket elsősorban a szezonális szerkezet átrendeződéseként kell olvasni.
+1. Pontos indexértékek Gyergyószentmiklósra
+Perkolációs index: +0.0100184743
+Ez pozitív érték, tehát a késői hálózat valamivel magasabb hasonlósági küszöbnél fragmentálódik, mint a korai. A perkolációs ábrán ez nagyjából úgy jelenik meg, hogy a korai hálózat kritikus törése kb. 0.960, a későié kb. 0.970 körül van. Vagyis Gyergyószentmiklós esetében a kortárs hálózat nem gyengébb, hanem enyhén robusztusabb szerkezetű.
+Shannon-entrópia, hónaponként:
+Hónap	Early	Late	Változás
+Jan	0.000000	0.000000	+0.000000
+Feb	0.000000	0.244930	+0.244930
+Mar	0.673012	0.450561	-0.222450
+Apr	0.000000	0.146145	+0.146145
+May	0.244930	0.146145	-0.098785
+Jun	0.000000	0.146145	+0.146145
+Jul	0.000000	0.000000	+0.000000
+Aug	0.000000	0.000000	+0.000000
+Sep	0.579915	0.636514	+0.056599
+Oct	0.000000	0.000000	+0.000000
+Nov	0.244930	0.325083	+0.080153
+Dec	0.000000	0.000000	+0.000000
+Az átlagos Shannon-entrópia 0.145232-ről 0.174627-re nőtt, vagyis a helyszínen összességében mérsékelt közösségi diverzifikáció történt. Ez azonban nem egyenletes: főleg februárban, áprilisban, júniusban, szeptemberben és novemberben nőtt a közösségi megosztottság, míg márciusban és májusban csökkent.
+2. Közösségszerkezet értelmezése
+A korai időszakban a hálózat 3 közösségre bomlik, magas modularitással (15160.063). A szerkezet klasszikus szezonális tagolódást mutat: az első közösség főként a téli hónapokat fogja össze, különösen januárt, februárt, decembert és nagyrészt novembert. A második közösség a nyári magot adja, májustól augusztusig. A harmadik közösség átmeneti jellegű: ide tartozik teljesen április és október, valamint jelentős részben március és szeptember.
+A késői időszakban a közösségek száma 4-re nő, miközben a modularitás 14554.893-ra csökken, ami körülbelül 4%-os mérséklődés. Ez azt jelenti, hogy bár több közösség jelenik meg, ezek nem feltétlenül alkotnak erősebben elkülönülő szezonális blokkokat. A negyedik közösség lényegében egy júniusi anomáliaként értelmezhető, mivel a hónap-perspektívában a júniusnak csak 3.3%-a kerül ebbe a közösségbe.
+A legfontosabb változás az, hogy március szerkezeti szerepe átrendeződik. A korai időszakban március 60%-ban még a téli közösséghez, 40%-ban az átmeneti közösséghez tartozott. A késői időszakban viszont március 83.3%-ban az átmeneti, tavasz–ősz jellegű közösségbe kerül. Ez arra utal, hogy Gyergyószentmiklósnál a március klimatikus hálózati pozíciója kevésbé téli, inkább átmeneti jellegűvé vált.
+3. Prototípus-hasonlóságok
+A küszöb nélküli prototípusmátrix alapján a szezonális kontinuitás erős: a téli hónapok erősen hasonlítanak késői téli megfelelőikhez, a nyári hónapok pedig továbbra is egy jól elkülönülő nyári blokkot alkotnak. A küszöbölt mátrixban, ahol a cut-off 0.836, ezekből csak a strukturálisan erős hasonlóságok maradnak meg.
+A legérdekesebb elem az átmeneti évszakoknál látható. A korai április és szeptember/október több késői átmeneti hónappal is erős kapcsolatban marad. Ez azt jelzi, hogy Gyergyószentmiklós esetében a tavaszi és őszi átmeneti állapotok nem egyszerűen külön-külön mozdultak el, hanem részben egymással is nagyobb klimatikus hasonlósági mezőt alkotnak. Más szóval: a fő változás nem a tél vagy a nyár teljes átalakulása, hanem az átmeneti szezonok belső újraszerveződése.
+4. Hálózati és perkolációs következtetés
+A hálózati ábrák alapján a szezonális gradiens mindkét időszakban jól felismerhető: a tél és a nyár továbbra is két stabil pólust alkot, közöttük a tavaszi és őszi hónapok közvetítő szerepet töltenek be. A késői hálózat azonban elnyújtottabb, és több kisebb, átmeneti vagy anomális elválást mutat. Ez összhangban van az entrópiaértékekkel: a középtéli és nyári mag stabil maradt, miközben a peremhónapok változékonyabbá váltak.
+A pozitív perkolációs index alapján Gyergyószentmiklósnál a kortárs hálózat nem sérülékenyebb, hanem enyhén ellenállóbb. Ez fontos, mert a közösségszám növekedése önmagában fragmentációt sugallhatna, de a perkoláció azt mutatja, hogy a legerősebb kapcsolatok mentén a késői hálózat valamivel magasabb küszöbig képes megőrizni fő összefüggő komponensét.
+Beilleszthető szöveg az eredmények fejezetbe
+Gyergyószentmiklós esetében a temporális klímahálózat alapvető szezonális szerkezete mindkét vizsgált időszakban jól felismerhető marad, ugyanakkor a késői időszakban mérsékelt közösségi diverzifikáció figyelhető meg. A Shannon-entrópia átlagos értéke a korai időszak 0.145-ös szintjéről a késői időszakban 0.175-re emelkedik. Ez arra utal, hogy a hónapok klimatikus állapotai valamivel nagyobb arányban oszlanak meg több közösség között, vagyis a kortárs időszakban a szezonális szerkezet enyhén heterogénebbé vált.
+A változás azonban erősen hónapfüggő. A téli és nyári maghónapok — különösen január, július, augusztus és december — továbbra is stabil, alacsony entrópiájú hónapok maradnak. Ezzel szemben február entrópiája 0.000-ről 0.245-re, áprilisé 0.000-ről 0.146-ra, szeptemberé pedig 0.580-ról 0.637-re emelkedik. A legfontosabb szerkezeti eltolódás márciusban jelenik meg: bár entrópiája 0.673-ról 0.451-re csökken, közösségi besorolása erősen átrendeződik, és a hónap a késői időszakban már sokkal inkább az átmeneti tavasz–ősz közösséghez kapcsolódik, nem pedig a téli blokkhoz.
+A perkolációs eredmények alapján a késői hálózat enyhén robusztusabb, mint a korai. A netCDF-adatállományból kiolvasott perkolációs index +0.010018, ami azt jelenti, hogy a kortárs hálózat magasabb hasonlósági küszöb mellett éri el kritikus fragmentációs pontját. Így Gyergyószentmiklós esetében a fő következtetés nem a teljes szezonális rendszer szétesése, hanem az átmeneti hónapok — különösen február, március, április, szeptember és november — finom, de jól mérhető átrendeződése.
+
+GYŐR
+
+A Győrre megadott koordinátát a NetCDF rácshoz illesztve a legközelebbi cella: 47.74986°N, 17.64986°E. A network_indexes_combined_output.nc alapján a perkolációs index = 0.000, vagyis Győr esetében a korai és késői hálózat kritikus fragmentációs küszöbe gyakorlatilag azonos. A módszertani keret szerint itt az év–hónap egységek alkotják a hálózati csomópontokat, az élek pedig a hónapok közötti többváltozós éghajlati hasonlóságot fejezik ki.
+Shannon-entrópia Győr esetében
+Hónap	Shannon Early	Shannon Late	Változás
+Jan	0.000	0.000	0.000
+Feb	0.146	0.451	+0.304
+Már	0.673	0.543	−0.130
+Ápr	0.000	0.500	+0.500
+Máj	0.000	0.146	+0.146
+Jún	0.000	0.000	0.000
+Júl	0.000	0.000	0.000
+Aug	0.000	0.000	0.000
+Szept	0.684	0.451	−0.234
+Okt	0.245	0.639	+0.394
+Nov	0.000	0.000	0.000
+Dec	0.000	0.000	0.000
+A legfontosabb entrópia-növekedés áprilisban, októberben és februárban jelentkezik. Ez arra utal, hogy Győr esetében a késői időszakban főként az átmeneti hónapok váltak közösségi szempontból változatosabbá. Ezzel szemben március és szeptember entrópiája csökkent, vagyis ezek a hónapok a késői időszakban kevésbé szóródtak szét több közösség között, mint a korai időszakban. A téli mag — január, november, december — és a nyári mag — június, július, augusztus — végig nagyon stabil maradt.
+Eredmények értelmezése Győrre
+Győr korai hálózata három közösségre tagolódik. Az első közösség főként a téli hónapokat foglalja magába: január, február, november és december dominálnak benne. A második közösség a nyári blokkot képviseli, amelyet május, június, július és augusztus alkotnak, kisebb szeptemberi kapcsolódással. A harmadik közösség átmeneti jellegű: március, április, szeptember és október tartozik ide nagyobb arányban. Ez a korai időszakban viszonylag klasszikus szezonális szerkezetet mutat: elkülönül a tél, a nyár és a tavaszi–őszi átmeneti zóna.
+A késői időszakban a hálózat négy közösségre bomlik, miközben a modularitás csökken: 14612.471-ről 13735.177-re. Ez nem egyszerűen erősebb tagolódást, hanem inkább a szezonális szerkezet átrendeződését jelzi. A nyári blokk továbbra is stabil, de a május–szeptember közötti meleg időszak erősebben kapcsolódik egymáshoz. A téli blokk is megmarad, de február és március már kevésbé tisztán tartozik hozzá. A negyedik közösség egy nagyon kicsi, májusi anomáliaként jelenik meg, ezért ezt nem érdemes új stabil szezonális csoportként értelmezni, inkább egy kiugró év–hónap állapotként.
+A prototípus-hasonlósági mátrix alapján Győr esetében a legerősebb stabilitás a téli és nyári maghónapoknál figyelhető meg. A téli hónapok közötti hasonlóság továbbra is magas: például a korai december és a késői december hasonlósága 0.98, a korai január és a késői január hasonlósága 0.95. A nyári blokk szintén erős: a korai július és a késői június hasonlósága 0.98, míg a korai július és a késői augusztus hasonlósága 0.96. A küszöbölt mátrixban ezek a kapcsolatok megmaradnak, ami azt mutatja, hogy a fő szezonális magok nem estek szét.
+A legfontosabb átalakulás az átmeneti hónapoknál látható. A korai szeptember egyszerre mutat erős kapcsolatot a késői áprilissal, májussal, szeptemberrel és októberrel, ami arra utal, hogy Győrben a szeptember átmeneti szerepe összetettebbé vált. Hasonlóan, az október is több irányba kapcsolódik: a késői márciussal, októberrel és novemberrel is erős hasonlóságot mutat. Ez jól illeszkedik a Shannon-entrópia eredményeihez, ahol október entrópiája 0.245-ről 0.639-re nőtt.
+A perkolációs görbe alapján a két időszak hálózati robusztussága szinte azonos. Mindkét hálózat a 0.957 körüli hasonlósági küszöbnél fragmentálódik erőteljesen, és a NetCDF-ből kinyert perkolációs index 0.000. Ez azt jelenti, hogy Győr esetében a késői hálózat nem lett sem egyértelműen robusztusabb, sem sérülékenyebb. A változás tehát nem a teljes hálózat stabilitásában, hanem a hónapok közösségi besorolásának belső átrendeződésében jelenik meg.
+Beilleszthető szöveg
+Győr temporal climate network shows a clear but internally differentiated seasonal reorganization between the Early Period and the Late Period. In the Early Period, the network is organized into three main communities, corresponding broadly to a winter block, a summer block, and a transitional spring–autumn block. January, February, November, and December are concentrated in the winter community, while May to August form a coherent warm-season community. March, April, September, and October occupy a transitional position, indicating that the historical climate structure around Győr followed a relatively regular seasonal partition.
+In the Late Period, the number of detected communities increases from three to four, while modularity decreases from 14612.471 to 13735.177. This indicates that the contemporary structure is not simply more strongly separated, but more internally rearranged. The core winter and summer months remain stable, but the transitional months become more heterogeneous. This is particularly visible in February, April, and October, where Shannon entropy increases substantially. April changes from a fully concentrated month in the Early Period to a divided month in the Late Period, while October becomes the most diverse month, with its nodes distributed across three communities. This suggests that the main climate-network transformation in Győr is concentrated in the seasonal transition periods rather than in the middle of winter or summer.
+The prototype similarity matrices confirm this interpretation. Winter and summer prototypes remain highly similar across the two periods, showing that the main seasonal cores persisted. However, the thresholded similarity matrix highlights stronger cross-seasonal links among spring and autumn transition months. Early September and October, for example, show robust similarities with several Late Period transition months, indicating a more complex overlap between late-summer, autumn, and spring-like climatic states.
+The percolation analysis points to almost no change in global network robustness. Both the Early and Late networks fragment at approximately the same critical threshold, around 0.957, and the extracted percolation index for Győr is 0.000. Therefore, the Győr case does not indicate a collapse or reinforcement of the overall temporal climate-network structure. Instead, the main signal is a selective seasonal reorganization: stable winter and summer cores are preserved, while the transitional months become more variable and more structurally complex in the contemporary period.
+
+KASSA
+
+Kassa / Košice – helyi klímahálózati eredmények értelmezése
+A megadott koordinátát a NetCDF rács a 48.6499°N, 21.2499°E cellára illesztette, tehát gyakorlatilag pontosan Kassa pontjára. Az értelmezést a dolgozat módszertanához igazítva végzem: a közösségdetektálás az év–hónap csomópontok szezonális csoportosulását mutatja, a Shannon-entrópia pedig azt méri, hogy egy adott hónap mennyire szóródik szét több közösség között; a perkolációs index a késői és korai hálózat kritikus fragmentációs küszöbének különbsége.
+1. Fő számszerű eredmények
+Perkolációs index Kassa esetében:
+−0.0039
+Ez nagyon enyhén negatív érték, tehát a késői időszak hálózata valamivel alacsonyabb hasonlósági küszöbnél fragmentálódik, mint a korai időszaké. A perkolációs ábra alapján a kritikus küszöbök nagyjából:
+Időszak	Kritikus küszöb
+Early, 1961–1990	~0.961
+Late, 1995–2024	~0.957
+Különbség	−0.0039
+Ez nem erős összeomlási jel, inkább nagyon enyhe robusztusságcsökkenést mutat.
+Shannon-entrópia hónaponként
+Hónap	Early	Late	Változás
+Jan	0.000	0.000	0.000
+Feb	0.000	0.000	0.000
+Mar	0.657	0.393	−0.265
+Apr	0.146	0.451	+0.305
+May	0.146	0.000	−0.146
+Jun	0.000	0.000	0.000
+Jul	0.000	0.000	0.000
+Aug	0.000	0.000	0.000
+Sep	0.691	0.684	−0.007
+Oct	0.146	0.000	−0.146
+Nov	0.000	0.245	+0.245
+Dec	0.000	0.000	0.000
+Átlagosan a Shannon-entrópia 0.149-ről 0.148-ra változik, vagyis Kassa esetében nincs lényegi teljes éves entrópianövekedés. A változás inkább hónapspecifikus átrendeződés, nem pedig általános fragmentáció.
+2. Közösségszerkezet: stabil évszakos váz, de átrendeződő átmeneti hónapok
+A korai időszakban 4 közösség jelenik meg, míg a késői időszakban már csak 3 közösség. A korai negyedik közösség gyakorlatilag egy izolált októberi anomáliát képvisel: a közösség-perspektívában a Community_4 teljes egészében októberből áll. A késői időszakban ez az izolált októberi elem eltűnik, és október teljesen beolvad az átmeneti/őszi közösségbe.
+A fő szezonális blokkok mindkét időszakban jól felismerhetők:
+téli blokk: január, február, november, december;
+nyári blokk: május–augusztus;
+átmeneti blokk: március, április, szeptember, október.
+A legfontosabb változás nem az, hogy a szezonális szerkezet szétesne, hanem az, hogy a tavaszi és őszi átmeneti hónapok közösségi hovatartozása átrendeződik. Március a késői időszakban kevésbé kötődik a téli közösséghez, április viszont erősebben keveredik a nyári közösséggel. Ez a tavaszi átmenet belső szerkezeti eltolódására utal.
+3. Hónapszintű értelmezés
+Március entrópiája jelentősen csökken: 0.657-ről 0.393-ra. A korai időszakban március még erősebben megoszlott a téli és az átmeneti közösség között, míg a késői időszakban már 86.7%-ban az átmeneti közösséghez tartozik. Ez arra utal, hogy március klimatikus szerkezete Kassán egyértelműbben levált a téli blokkról.
+Április ezzel szemben erősen fragmentáltabbá válik: entrópiája 0.146-ról 0.451-re nő. A késői időszakban az áprilisi csomópontok 16.7%-a már a nyári közösséghez kapcsolódik, szemben a korai 3.3%-kal. Ez a hónap a legfontosabb lokális átrendeződési pont, és a tavaszi felmelegedés, illetve a korábbi nyárias jellegű állapotok megjelenésének hálózati megfelelőjeként értelmezhető.
+Szeptember mindkét időszakban a leginkább átmeneti hónap marad. Entrópiája magas, de alig változik: 0.691-ről 0.684-re. A késői időszakban kissé nagyobb arányban kapcsolódik a nyári közösséghez, ami arra utal, hogy a nyári karakter Kassán valamelyest átnyúlhat szeptemberbe, de ez nem jár erős entrópianövekedéssel.
+November a késői időszakban enyhén diverzifikálódik: entrópiája 0-ról 0.245-re nő. Ez azt jelenti, hogy a hónap továbbra is főként a téli blokkhoz tartozik, de már megjelenik egy kisebb átmeneti komponens is. Ez a késő őszi időszak bizonytalanabb vagy vegyesebb hálózati pozíciójára utal.
+4. Prototípus-hasonlóságok
+A prototípus-mátrixok alapján Kassa esetében az éves ciklus alapvető szerkezete stabil: a téli hónapok késői megfelelőikkel, a nyári hónapok pedig a késői nyári hónapokkal mutatják a legerősebb hasonlóságot. A küszöb nélküli mátrix azonban több érdekes átmeneti kapcsolatot is jelez.
+A téli blokk erős marad: január és február magas hasonlóságot mutat a késői január–február, illetve november–december irányába. A nyári blokk még stabilabb: május–augusztus között széles, magas hasonlósági zóna jelenik meg, vagyis a nyári klímaállapotok egymással erősen összekapcsoltak.
+A legérdekesebb elem az átmeneti hónapoknál látható. A korai március nemcsak a késői márciussal, hanem a késői februárral, októberrel és novemberrel is magas hasonlóságot mutat. A korai április pedig a késői március–április mellett késői májussal, szeptemberrel és októberrel is kapcsolatban marad. Ez azt sugallja, hogy Kassán a tavaszi és őszi átmeneti időszakok között erős szerkezeti analógia van.
+5. Perkolációs értelmezés
+A perkolációs görbék nagyon közel futnak egymáshoz, vagyis Kassa esetében nem beszélhetünk drasztikus robusztussági átalakulásról. A késői hálózat kritikus küszöbe azonban kissé alacsonyabb, ezért a −0.0039-es perkolációs index enyhe sérülékenységnövekedést jelez.
+Ez fontos árnyalat: miközben a közösségszerkezet később tisztábbnak tűnik, mert 4 helyett 3 közösség jelenik meg, a legerősebb hasonlósági kapcsolatokból felépülő hálózati gerinc mégis valamivel hamarabb fragmentálódik. Tehát a késői időszakban a szezonális közösségek egyszerűbbek, de a teljes hálózati összekapcsoltság kissé kevésbé robusztus.
+Beilleszthető szöveg a Results fejezetbe
+Kassa esetében a temporális klímahálózat alapvető szezonális szerkezete mindkét vizsgált időszakban jól felismerhető. A téli hónapok, a nyári hónapok és az átmeneti tavaszi–őszi hónapok külön blokkokba rendeződnek, ami arra utal, hogy a helyi éghajlati éves ciklus fő váza stabil maradt. A korai időszakban négy közösség jelent meg, míg a késői időszakban három. A negyedik korai közösség egy izolált októberi elemet képvisel, amely a késői időszakra eltűnik, és október teljesen beolvad az átmeneti közösségbe.
+A Shannon-entrópia alapján Kassa nem mutat erős teljes éves diverzifikációt: az átlagos érték 0.149-ről 0.148-ra változik. A változások inkább hónapspecifikusak. Március entrópiája jelentősen csökken, ami azt jelzi, hogy a hónap később kevésbé oszlik meg a téli és az átmeneti közösségek között, és egyértelműbben az átmeneti blokkhoz kapcsolódik. Április ezzel szemben erősen diverzifikálódik, mivel a késői időszakban nagyobb arányban kapcsolódik a nyári közösséghez. Szeptember továbbra is átmeneti jellegű marad, magas, de alig változó entrópiával, míg novemberben kisebb késő őszi szerkezeti keveredés jelenik meg.
+A prototípus-hasonlósági mátrixok megerősítik ezt az értelmezést. A téli és nyári maghónapok magas önhasonlóságot mutatnak a két időszak között, míg a legerősebb kereszt-szezonális kapcsolatok az átmeneti hónapokban jelennek meg. Különösen március, április, szeptember és október mutat olyan kapcsolatrendszert, amely a tavaszi és őszi átmenetek közötti klimatikus hasonlóságra utal. A perkolációs index értéke −0.0039, ami enyhe robusztusságcsökkenést jelez: a késői hálózat valamivel alacsonyabb hasonlósági küszöbnél fragmentálódik. Ez alapján Kassa esetében a szezonális közösségek később egyszerűbbé válnak, de a teljes hálózati gerinc stabilitása kismértékben gyengül.
+
+KECSKEMÉT
+
+A Kecskeméthez legközelebb eső rácscella a network_indexes_combined_output.nc alapján: 46.8498605°N, 19.7498603°E. Az értelmezést a dolgozat módszertani logikájához igazítottam: az év–hónap csomópontok többváltozós klimatikus hasonlóság alapján kapcsolódnak, majd ezek közösségszerkezete, prototípus-hasonlósága és perkolációs viselkedése alapján értelmezhető a szezonális szerkezet átalakulása.
+Kecskemét fő eredményei
+Kecskemét esetében a szezonális szerkezet alapvetően stabil maradt, de a tavaszi és őszi átmeneti hónapokban jól látható átrendeződés történt. A korai időszakban 3 közösség, a késői időszakban 4 közösség jelenik meg. Ez első látásra fragmentációra utal, de a negyedik közösség valójában nagyon kicsi: a késői hálózatban egyetlen májushoz kötődő outlier alkotja. Emiatt nem általános szétesésről, hanem inkább egy lokális, átmeneti hónapot érintő strukturális kilengésről beszélhetünk.
+A modularitás csökkent: 15106.730 → 13840.885, vagyis a késői időszak közösségi tagolódása valamivel gyengébb, kevésbé tiszta. Ez jól illeszkedik a hálózati ábrákhoz is: a késői hálózatban a szezonális gradiens továbbra is felismerhető, de a közösségek közötti határok kissé elmosódottabbak, miközben egy izolált májusi elem is megjelenik.
+Shannon-entrópia értékek
+Hónap	Early	Late	Változás
+Jan	0.000	0.000	0.000
+Feb	0.146	0.393	+0.247
+Mar	0.637	0.451	−0.186
+Apr	0.451	0.146	−0.304
+May	0.000	0.146	+0.146
+Jun	0.000	0.000	0.000
+Jul	0.000	0.000	0.000
+Aug	0.000	0.000	0.000
+Sep	0.657	0.673	+0.016
+Oct	0.146	0.534	+0.388
+Nov	0.146	0.000	−0.146
+Dec	0.000	0.000	0.000
+Az átlagos Shannon-entrópia csak kis mértékben nő: 0.182 → 0.195. Ez azt jelenti, hogy Kecskemétnél nincs erős általános közösségi diverzifikáció, inkább hónapspecifikus átrendeződések látszanak. A legerősebb növekedés októberben és februárban jelenik meg, míg áprilisban és márciusban csökken az entrópia. Ez arra utal, hogy a késői időszakban a február és az október változékonyabb, több közösség között megosztottabb helyzetbe került, miközben az április inkább egy domináns átmeneti struktúrába rendeződött.
+Perkolációs index
+A netCDF-ből kiolvasott pontos perkolációs index:
+Perkolációs index = −0.003643572
+Ez nagyon enyhén negatív érték. A perkolációs ábrán a kritikus küszöbök is ezt mutatják: a korai hálózat kb. 0.971, a késői kb. 0.967 hasonlósági küszöbnél esik szét. Ez alapján Kecskemét késői hálózata minimálisan sérülékenyebb, vagyis valamivel alacsonyabb hasonlósági szinten veszti el nagy összefüggő komponensét. A különbség azonban kicsi, ezért ezt nem érdemes erős strukturális összeomlásként értelmezni, inkább gyenge robusztusságcsökkenésként.
+Prototípus-hasonlóságok értelmezése
+A prototípusmátrixok alapján a legerősebb stabilitás a téli és nyári maghónapokban figyelhető meg. Január, február, november és december továbbra is erősen kapcsolódnak egymáshoz, míg június, július és augusztus szinte teljesen stabil, egy közösségben koncentrált nyári blokkot alkot.
+A legfontosabb jelzés az átmeneti hónapoknál látszik. A küszöbölt mátrixban az április, szeptember és október több szomszédos szezonális állapottal is erős kapcsolatot tart fenn. Például az early április erősen hasonlít late márciushoz, áprilishoz, májushoz, szeptemberhez és októberhez is. Ez azt jelzi, hogy Kecskemétnél a tavaszi és őszi átmeneti időszakok között erősebb strukturális átfedés alakult ki. A szezonális határok tehát nem a nyár vagy a tél magjában, hanem az átmeneti hónapokban váltak mozgékonyabbá.
+Beilleszthető szöveg az eredmények fejezetbe
+Kecskemét időalapú klímahálózata alapvetően stabil szezonális szerkezetet mutat, ugyanakkor a késői időszakban több kisebb, átmeneti jellegű átrendeződés is megfigyelhető. A korai időszak három közösségével szemben a késői hálózatban négy közösség jelenik meg, de az új közösség mindössze egy májusi csomóponthoz kötődik. Ezért az eredmény nem általános fragmentációként, hanem egy lokális, átmeneti hónaphoz kapcsolódó strukturális kilengésként értelmezhető. A modularitás csökkenése arra utal, hogy a késői időszak közösségi tagolódása valamivel kevésbé éles, vagyis a hónapok közötti határok részben elmosódottabbá váltak.
+A Shannon-entrópia alapján Kecskemét esetében nem figyelhető meg erős általános diverzifikáció, mivel az átlagos érték csak kis mértékben nőtt. A változások inkább hónapspecifikusak: februárban és különösen októberben nőtt a közösségek közötti megoszlás, míg márciusban és áprilisban csökkent. Ez arra utal, hogy a késő téli és közép-őszi klimatikus állapotok változékonyabb, több közösséghez kapcsolódó szerkezetet vettek fel, miközben a tavaszi átmenet egyes részei koncentráltabbá váltak. A nyári maghónapok, vagyis június, július és augusztus mindkét időszakban nulla entrópiával jelennek meg, ami a nyári klimatikus struktúra nagyfokú stabilitását jelzi.
+A prototípus-hasonlósági mátrixok szintén az átmeneti hónapok fontosságát emelik ki. A küszöbölt kapcsolatok alapján az április, szeptember és október több szomszédos szezonális állapottal is erős hasonlóságot mutat, ami a tavaszi és őszi átmenetek közötti strukturális átfedés erősödésére utal. Ezzel szemben a téli és nyári maghónapok továbbra is jól elkülönülő, stabil blokkokat alkotnak. A perkolációs index értéke −0.0036, ami nagyon enyhe robusztusságcsökkenést jelez: a késői hálózat valamivel alacsonyabb hasonlósági küszöbnél fragmentálódik, mint a korai. Összességében Kecskemét esetében a klímahálózat nem radikálisan szerveződött át, hanem főként a február–április és szeptember–október átmeneti zónákban mutat finom, de jól értelmezhető szerkezeti eltolódásokat.
+
+KESZTHELY
+
+A Keszthelyhez megadott koordináta a netCDF rácsban a 46.74986054, 17.14986032 pontnak felel meg. Az értelmezés a dolgozatban leírt időalapú, év–hónap csomópontokra épülő hálózati kerethez illeszkedik, ahol a közösségi megoszlás és a Shannon-entrópia a hónapok közösségek közötti szétterülését méri.
+Keszthely – eredmények értelmezése
+Keszthely esetében a korai időszak hálózata három fő közösségre tagolódik. Az első közösség egyértelműen a nyári félév magját fogja össze: május, június, július és augusztus teljes egészében, szeptember pedig részben ide tartozik. A második közösség a téli blokkot képviseli, elsősorban januárból, februárból, novemberből és decemberből áll. A harmadik közösség átmeneti jellegű: március, április és október dominál benne, szeptember pedig részben ehhez is kapcsolódik. Ez a felosztás jól mutatja, hogy a korai időszakban Keszthely éghajlati időhálózata viszonylag szabályos szezonális logikát követ: a nyári, téli és átmeneti időszakok elkülönülnek, de a tavaszi és őszi hónapok között erős szerkezeti hasonlóság marad.
+A késői időszakban a hálózat négy közösségre bomlik, de a negyedik közösség nem önálló szezonális blokkot jelent, hanem gyakorlatilag egy izolált augusztusi állapotot. A hónapperspektíva alapján augusztus 96,7%-ban továbbra is a nyári közösséghez tartozik, 3,3%-ban viszont külön közösségbe kerül. Ez valószínűleg egy rendkívüli késő nyári év-hónap állapotot jelez, nem pedig a teljes nyári szerkezet átalakulását. A késői időszak fő változása inkább a tél végi, tavaszi és őszi átmenetekben jelentkezik: február kevésbé tisztán téli hónap, március erősebben a tavaszi–őszi átmeneti közösséghez kötődik, október pedig szintén megosztottabbá válik.
+A Shannon-entrópia alapján Keszthelyen az átlagos közösségi diverzitás enyhén nőtt: 0.163-ról 0.191-re, vagyis a késői időszakban a hónapok valamivel gyakrabban oszlanak meg több közösség között. A növekedés azonban nem egyenletes. A legerősebb pozitív változás februárban látható, ahol az entrópia 0.245-ről 0.580-ra nőtt. Ez azt jelzi, hogy a késő téli éghajlati állapotok kevésbé stabilan tartoznak egyetlen téli közösséghez. Októberben szintén jelentős növekedés figyelhető meg, 0.146-ról 0.393-ra, ami az őszi átmenet erősebb belső változékonyságára utal. Ezzel szemben márciusban az entrópia 0.637-ről 0.393-ra, novemberben pedig 0.245-ről 0.000-ra csökken, ami azt jelenti, hogy ezek a hónapok a késői időszakban koncentráltabban kapcsolódnak egy domináns közösséghez.
+Hónap	Shannon Early	Shannon Late	Változás
+Jan	0.000	0.000	0.000
+Feb	0.245	0.580	+0.335
+Mar	0.637	0.393	-0.244
+Apr	0.000	0.000	0.000
+May	0.000	0.146	+0.146
+Jun	0.000	0.000	0.000
+Jul	0.000	0.000	0.000
+Aug	0.000	0.146	+0.146
+Sep	0.684	0.637	-0.048
+Oct	0.146	0.393	+0.247
+Nov	0.245	0.000	-0.245
+Dec	0.000	0.000	0.000
+A prototípus-hasonlósági mátrixok alapján a szezonális ciklus alapstruktúrája Keszthelyen stabil maradt. A legmagasabb értékek továbbra is az azonos vagy szomszédos hónapok között jelentkeznek, például a téli hónapok egymással, illetve a nyári hónapok egymással mutatnak erős hasonlóságot. A küszöbölt mátrixban a 0.803-as cut-off után is megmaradnak a klasszikus szezonális blokkok: a január–február–november–december téli egység, a május–augusztus közötti nyári egység, valamint a március–április–szeptember–október körüli átmeneti kapcsolatok. Ugyanakkor az átmeneti hónapoknál több keresztkapcsolat is fennmarad, például a korai április és a késői szeptember–október, illetve a korai szeptember és a késői május/október között. Ez arra utal, hogy a szezonális átmenetek nem egyszerűen eltolódtak, hanem részben átfedőbbé és komplexebbé váltak.
+A hálózati ábrák ugyanezt a képet erősítik meg. A korai hálózatban a csomópontok egy jól követhető szezonális gradiens mentén rendeződnek: a téli hónapok, az átmeneti hónapok és a nyári hónapok elkülönülnek, de folytonos átmenetet alkotnak. A teljes hálózatban ez a szezonális ív még erősebben látható. A késői hálózatban az alapstruktúra megmarad, de egy izolált csomópont jelenik meg, ami összhangban van a negyedik közösségként megjelenő, egyedi augusztusi állapottal. Ez lokális anomáliára vagy szélsőségesebb nyári konfigurációra utalhat.
+A perkolációs elemzés alapján Keszthely hálózati robusztussága csak nagyon kis mértékben változott. A korai hálózat kritikus szétesési küszöbe körülbelül 0.960, míg a késői hálózaté körülbelül 0.964. A netCDF-ből kiolvasott pontos perkolációs index:
+Perkolációs index = 0.0040154486
+Ez pozitív, tehát a késői hálózat kissé magasabb hasonlósági küszöbig marad összefüggő, mint a korai. Az érték azonban nagyon közel van a nullához, ezért nem erős robusztussági növekedésként, hanem inkább gyenge, lokális stabilizálódásként értelmezhető. A fő következtetés tehát nem az, hogy Keszthely éghajlati időhálózata alapvetően ellenállóbbá vált, hanem az, hogy a teljes szerkezeti stabilitás nagyrészt fennmaradt, miközben a változások inkább a téli–tavaszi és őszi átmeneti hónapok közösségi átrendeződésében jelentkeznek.
+
+KOLOZSVÁR
+
+A Kolozsvárhoz tartozó cellát az .nc állományban a megadott koordinátára illesztve a legközelebbi rácspont: 46.74986°N, 23.64986°E, tehát gyakorlatilag pontosan a megadott helyszínnek felel meg. A módszertani keret szerint a hálózat csomópontjai év–hónap egységek, az élek pedig a hónapok többváltozós klimatikus hasonlóságát fejezik ki; a perkolációs index a késői és korai kritikus küszöb különbségeként értelmezendő, ahol a negatív érték gyengülő robusztusságot jelez.
+Pontos indexértékek Kolozsvárra
+Perkolációs index: −0.0034894913
+A perkolációs görbén ez úgy jelenik meg, hogy a korai hálózat kritikus szétesési pontja kb. 0.972, míg a késői hálózaté kb. 0.969. Ez nagyon kicsi, de negatív irányú változás: Kolozsvár esetében a késői időszak hálózata valamivel alacsonyabb hasonlósági küszöbnél kezd erősen fragmentálódni, vagyis a temporális klímaszerkezet robusztussága enyhén csökkent.
+Shannon-entrópia értékek
+Hónap	Early H	Late H	Változás
+Jan	0.000	0.000	0.000
+Feb	0.000	0.146	+0.146
+Mar	0.691	0.451	−0.240
+Apr	0.245	0.543	+0.298
+May	0.146	0.000	−0.146
+Jun	0.000	0.000	0.000
+Jul	0.000	0.000	0.000
+Aug	0.000	0.000	0.000
+Sep	0.693	0.691	−0.002
+Oct	0.000	0.000	0.000
+Nov	0.245	0.146	−0.099
+Dec	0.000	0.000	0.000
+Az átlagos Shannon-entrópia 0.1683-ról 0.1648-ra csökkent, tehát Kolozsváron nincs általános entrópianövekedés. A változás inkább hónapspecifikus: április erősen diverzifikálódott, míg március és november kevésbé szóródik több közösség között, mint a korai időszakban. A Shannon-entrópia értelmezése itt közvetlenül a közösségek közötti havi megoszlásra épül: minél több közösség között oszlik meg egy hónap, annál nagyobb a strukturális változékonysága.
+Eredmények értelmezése
+Kolozsvár esetében mind a korai, mind a késői hálózat három közösségre tagolódik, vagyis a szezonális szerkezet alapvető hármas felosztása megmarad. A modularitás ugyanakkor 15070.245-ről 14401.899-re csökken, ami arra utal, hogy a késői időszakban a közösségek közötti határok valamivel kevésbé élesek. Ez nem teljes szezonális átrendeződést jelent, hanem inkább a tavaszi és őszi átmeneti hónapok finomabb újraszerveződését.
+A téli közösség továbbra is stabil: január és december mindkét időszakban teljes egészében a hideg évszakhoz kötődő közösségben marad, február pedig csak minimális mértékben válik vegyesebbé a késői időszakban. A nyári mag szintén nagyon stabil: június, július és augusztus mindkét periódusban teljesen a meleg évszak közösségéhez tartozik. Ez azt mutatja, hogy Kolozsváron a téli és nyári klimatikus állapotok hálózati értelemben nem omlanak össze, hanem megőrzik jól elkülönülő szezonális identitásukat.
+A legfontosabb változás a tavaszi átmenetben figyelhető meg. Március a korai időszakban még megosztott volt a téli és az átmeneti közösség között, a késői időszakban viszont sokkal nagyobb arányban az átmeneti közösséghez kerül. Ezzel párhuzamosan április entrópiája erősen nő: a korai időszakban még szinte teljesen az átmeneti közösséghez tartozott, a késői időszakban viszont már jelentős része a meleg évszak közössége felé kapcsolódik. Ez arra utal, hogy a tavaszi átmenet belső szerkezete átalakult: március kevésbé téli jellegű, április pedig kevésbé egységes átmeneti hónap, és részben a nyári klimatikus rezsim felé tolódik.
+A prototípus-hasonlósági mátrix ugyanezt erősíti meg. A küszöb nélküli mátrixban a téli hónapok továbbra is erősen kötődnek saját késői megfelelőikhez, például a korai január–késői január hasonlóság 0.96, a korai december–késői december 0.97. A tavaszi és őszi hónapok azonban több kereszt-szezonális kapcsolatot mutatnak. Különösen fontos, hogy a korai szeptember nagyon erősen hasonlít a késői áprilishoz, míg a korai május erős kapcsolatot mutat a késői szeptemberrel is. A küszöbölt mátrixban ezek a kapcsolatok fennmaradnak, tehát nem pusztán gyenge háttérhasonlóságok, hanem a hálózat strukturális gerincében is megjelenő kapcsolatok.
+A perkolációs eredmény alapján Kolozsvár késői hálózata enyhén sérülékenyebb lett. A negatív, de kis abszolút értékű perkolációs index nem radikális szétesést jelez, hanem azt, hogy a késői időszakban a hálózat integritása valamivel hamarabb sérül, amikor a gyengébb hasonlósági éleket eltávolítjuk. Ez összhangban van azzal, hogy a modularitás is csökkent: a közösségek megmaradnak, de a közöttük lévő határok kevésbé stabilak.
+Beilleszthető szöveg
+Kolozsvár temporális klímahálózata mindkét vizsgált időszakban három fő közösségre tagolódik, ami a szezonális szerkezet alapvető stabilitását jelzi. A téli hónapok, különösen január és december, valamint a nyári magot alkotó június–augusztus időszak mindkét periódusban jól elkülönülő, stabil hálózati egységet alkotnak. A modularitás ugyanakkor 15070.245-ről 14401.899-re csökkent, ami arra utal, hogy a késői időszakban a szezonális közösségek közötti határok valamivel kevésbé élesek.
+A legmarkánsabb átrendeződés a tavaszi átmeneti időszakhoz kötődik. Március a késői időszakban erősebben az átmeneti közösséghez kapcsolódik, miközben április Shannon-entrópiája 0.245-ről 0.543-ra nő. Ez azt jelzi, hogy április klimatikus állapota kevésbé egységes, és részben a meleg évszak hálózati struktúrája felé tolódik. Ezzel szemben a teljes éves átlagos Shannon-entrópia enyhén csökken, 0.168-ról 0.165-re, tehát Kolozsváron nem általános diverzifikáció, hanem célzott, átmeneti hónapokra koncentrálódó szerkezeti átrendeződés figyelhető meg.
+A prototípus-hasonlósági mátrixok alapján a téli és nyári hónapok saját késői megfelelőikkel továbbra is erős kapcsolatban maradnak, míg az átmeneti hónapoknál több kereszt-szezonális hasonlóság jelenik meg. A korai szeptember például erősen kapcsolódik a késői áprilishoz, míg a korai május a késői szeptemberrel is magas hasonlóságot mutat. Ez arra utal, hogy a szezonális átmenetek hálózati értelemben átfedőbbé váltak.
+A perkolációs index értéke Kolozsvár esetében −0.00349, ami enyhén csökkenő hálózati robusztusságot jelez. A késői hálózat kritikus szétesési küszöbe valamivel alacsonyabb, mint a korai hálózaté, ezért a kortárs időszak temporális klímaszerkezete kissé könnyebben fragmentálódik. Összességében Kolozsvár nem radikális szezonális átalakulást, hanem mérsékelt, de jól értelmezhető tavaszi–átmeneti újraszerveződést mutat.
+
+NAGYVÁRAD
+
+A Nagyváradra megadott koordináta alapján a NetCDF-ben használt legközelebbi rácspont: 47.1498605°N, 21.8498603°E, tehát gyakorlatilag pontosan a megadott helyszínre esik. Az értelmezést a dolgozat módszertanához igazítottam: a csomópontok év–hónap egységeket képviselnek, az élek pedig a többváltozós, PCA-alapú klimatikus hasonlóságot fejezik ki; a perkolációs görbe a hálózat súlyalapú fragmentációját, a Shannon-entrópia pedig a hónapok közösségek közötti szétoszlását méri.
+Nagyvárad – eredmények értelmezése
+Nagyvárad esetében a szezonális szerkezet alapvetően jól megőrzött, de a késői időszakban több átmeneti hónap közösségi hovatartozása diverzifikáltabbá válik. A prototípus-hasonlósági mátrix alapján az azonos hónapok közötti korai–késői megfelelések továbbra is erősek: a legtöbb diagonális érték 0.94–0.97 között mozog. Ez arra utal, hogy a hónapok alapvető éves pozíciója nem omlott össze, vagyis Január továbbra is januári, Július továbbra is nyári jellegű hálózati állapotot mutat. A fontosabb változás nem az éves ciklus szétesése, hanem az átmeneti évszakok közötti átfedés erősödése.
+A küszöbölt prototípus-mátrix különösen jól mutatja, hogy a stabil téli blokk — január, február, november, december — továbbra is koherens marad. Ugyanez igaz a nyári magra is: június, július és augusztus mindkét időszakban nagyon stabilan ugyanahhoz a közösségi szerkezethez kapcsolódik. A legfontosabb átrendeződés a tavaszi és őszi átmenetekben látható. Április, szeptember és október több késői hónappal is erős, küszöb feletti kapcsolatot mutat, ami arra utal, hogy Nagyváradnál a szezonális átmeneti zónák hálózati értelemben összetettebbé váltak.
+A közösségi szerkezetben a korai időszakban négy közösség jelenik meg, de ezek közül a negyedik gyakorlatilag csak egy elszigetelt októberi állapotot képvisel. A késői időszakban ezzel szemben a negyedik közösség már nem pusztán izolált elem: március, május, szeptember, október és november egyes évei is megjelennek benne. Ez azt jelzi, hogy a késői időszakban az átmeneti hónapok belső változékonysága erősödik. A modularitás ugyanakkor 14774.635-ről 14229.497-re csökken, vagyis a közösségek elkülönülése kissé gyengül. Ez nem a szezonális struktúra eltűnését, hanem inkább annak rugalmasabbá, átmenetibbé válását jelzi.
+A hónap-perspektíva alapján a legstabilabb hónapok Nagyvárad esetében: január, június, július, augusztus és december, amelyek mindkét időszakban 100%-ban egyetlen közösséghez tartoznak. Február viszont a késői időszakban már 13.3%-ban a tavaszi közösséghez kapcsolódik. Május esetében a korai 96.7%-os nyári kötődés 90%-ra csökken, miközben megjelenik egy kisebb átmeneti komponens is. A legerősebb átrendeződés azonban szeptemberben és októberben látható: szeptember a késői időszakban már három közösség között oszlik meg, október pedig 80%-ban marad az őszi-tavaszi közösségben, de 16.7%-ban az új átmeneti közösséghez kapcsolódik.
+Shannon-entrópia Nagyváradnál
+Hónap	Shannon Early	Shannon Late	Változás
+Jan	0.000000	0.000000	0.000000
+Feb	0.000000	0.392674	+0.392674
+Mar	0.673012	0.533962	-0.139050
+Apr	0.325083	0.392674	+0.067591
+May	0.146145	0.388734	+0.242590
+Jun	0.000000	0.000000	0.000000
+Jul	0.000000	0.000000	0.000000
+Aug	0.000000	0.000000	0.000000
+Sep	0.684232	1.022169	+0.337938
+Oct	0.146145	0.590515	+0.444370
+Nov	0.146145	0.388734	+0.242590
+Dec	0.000000	0.000000	0.000000
+A Shannon-entrópia alapján a legnagyobb növekedés októberben, februárban és szeptemberben jelentkezik. Ez azt jelenti, hogy ezekben a hónapokban a késői időszakban az azonos naptári hónaphoz tartozó évek már nem egyetlen stabil közösségbe rendeződnek, hanem több eltérő hálózati állapot között oszlanak meg. Március az egyetlen jelentősebb kivétel: itt az entrópia csökken, ami arra utal, hogy a korábbi, erősebben megosztott márciusi struktúra a késői időszakban valamivel koncentráltabbá válik.
+Perkolációs index
+A NetCDF-ből kiolvasott pontos perkolációs index Nagyváradnál:
+Perkolációs index = +0.0037007256
+A perkolációs görbén a kritikus szétesési küszöb a korai időszakban körülbelül 0.962, a késői időszakban pedig körülbelül 0.966. A pozitív index azt jelenti, hogy a késői hálózat minimálisan magasabb hasonlósági küszöbig őrzi meg a fő komponensét, tehát hálózati értelemben kismértékben robusztusabb. Ugyanakkor az érték nagyon kicsi, ezért ezt nem radikális stabilizálódásként, hanem enyhe szerkezeti robusztusság-növekedésként érdemes értelmezni. A két görbe lefutása nagyon hasonló, és mindkét időszakban a hálózat 0.96 körüli küszöbnél esik át gyors fragmentáción.
+Rövid, beilleszthető értelmezés
+Nagyvárad időalapú klímahálózata a szezonális ciklus alapvető stabilitását mutatja, ugyanakkor a késői időszakban az átmeneti hónapok közösségi szerkezete diverzifikáltabbá válik. A téli és nyári maghónapok — különösen január, június, július, augusztus és december — mindkét időszakban alacsony entrópiával és stabil közösségi hovatartozással rendelkeznek. Ezzel szemben február, szeptember és október jelentősebb entrópianövekedést mutat, ami arra utal, hogy ezek a hónapok a késői időszakban többféle klimatikus-hálózati állapot között oszlanak meg.
+A prototípus-hasonlósági mátrix alapján az éves ciklus fő szerkezete nem bomlik fel, mivel az azonos hónapok korai–késői megfelelései továbbra is magas hasonlóságot mutatnak. A változás inkább az átmeneti évszakok kiszélesedésében és átfedésében ragadható meg. A perkolációs index pozitív, de nagyon alacsony értéke (+0.0037) arra utal, hogy a késői hálózat Nagyvárad esetében csak enyhén robusztusabb, miközben a közösségi mutatók alapján a szezonális átmenetek belső szerkezete érzékelhetően összetettebbé vált.
+
+PÉCS
+
+A Pécshez megadott koordinátát a NetCDF rácsban a 46.04986, 18.24986 rácspontra illesztettem. A perkolációs index és a Shannon-entrópia értelmezését a dolgozatod jelenlegi módszertani keretéhez igazítottam: a perkolációs index a késői és korai kritikus fragmentációs küszöb különbsége, míg a Shannon-entrópia azt mutatja, hogy egy hónap csomópontjai mennyire szóródnak szét a detektált közösségek között.
+Pécs — fő eredmények
+Perkolációs index: −0.00759
+Ez nagyon enyhén negatív érték, vagyis Pécs esetében a késői hálózat valamivel alacsonyabb hasonlósági küszöbnél fragmentálódik, mint a korai hálózat. A perkolációs ábra is ezt támasztja alá: a korai hálózat kritikus töréspontja kb. 0.965, a későié kb. 0.958. Ez nem erős strukturális összeomlást jelez, hanem csak gyenge robusztusságcsökkenést. Ez jól illeszkedik ahhoz az általános értelmezéshez, hogy a perkolációs értékek többnyire nulla körül maradnak, ezért inkább lokális/szezonális átrendeződést, nem pedig teljes hálózati destabilizációt mutatnak.
+Shannon-entrópia Pécsnél
+Hónap	Early	Late	Változás
+Jan	0.000	0.000	0.000
+Feb	0.245	0.500	+0.255
+Mar	0.637	0.500	−0.136
+Apr	0.451	0.245	−0.206
+May	0.146	0.291	+0.145
+Jun	0.000	0.000	0.000
+Jul	0.146	0.000	−0.146
+Aug	0.000	0.000	0.000
+Sep	0.611	0.811	+0.200
+Oct	0.146	0.146	0.000
+Nov	0.146	0.146	0.000
+Dec	0.000	0.000	0.000
+Az éves átlagos Shannon-entrópia csak enyhén nőtt: 0.211-ről 0.220-ra. Ez azt jelenti, hogy Pécsnél a teljes éves közösségi diverzitás nem változott drasztikusan, de néhány átmeneti hónapban egyértelmű szerkezeti átrendeződés történt. A legfontosabb növekedés februárban és szeptemberben látható. Február esetében ez a késő téli állapotok nagyobb változékonyságára utal, míg szeptembernél az őszbe való átmenet vált sokkal heterogénebbé.
+Közösségi szerkezet
+Mindkét időszakban 4 közösség jelenik meg, de a modularitás csökken: 14873.299-ről 13898.149-re. Ez arra utal, hogy a késői hálózatban a közösségek közötti elkülönülés valamivel gyengébb, vagyis a szezonális blokkok közötti határok kevésbé élesek.
+A korai időszakban a szerkezet viszonylag jól értelmezhető szezonális blokkokra tagolódik. A Community_2 főként a téli hónapokat fogja össze: január, február, november és december dominálják. A Community_1 a késő tavaszi–nyári blokkot képviseli, főként májustól augusztusig, szeptemberrel kiegészülve. A Community_3 átmeneti közösségként viselkedik, benne március, április és október a legerősebb. A Community_4 a korai időszakban gyakorlatilag egyetlen júliusi anomáliát jelent.
+A késői időszakban az alapvető szezonális felosztás megmarad, de az átmeneti hónapok erősebben szóródnak. Februárban a Community_3 aránya 6.7%-ról 20%-ra nő, márciusban pedig a Community_3 dominanciája 66.7%-ról 80%-ra erősödik. Szeptember a leglátványosabban fragmentálódó hónap: a korai időszakban 70%-ban a nyári Community_1-hez és 30%-ban az átmeneti Community_3-hoz tartozott, a késői időszakban viszont már csak 53.3%-ban marad a nyári közösségben, miközben 43.3%-ban az átmeneti közösséghez, 3.3%-ban pedig a kis Community_4-hez kapcsolódik.
+Prototípus-hasonlóságok
+A küszöb nélküli prototípusmátrix alapján az éves ciklus alapvető szerkezete továbbra is felismerhető: a téli hónapok a késői téli hónapokkal, a nyári hónapok a késői nyári hónapokkal mutatnak magas hasonlóságot. A küszöbölt mátrix azonban jobban kiemeli a lényegi változásokat. A 0.813-as cut-off után megmaradó kapcsolatok alapján Pécsnél különösen fontos, hogy több korai tavaszi és nyár végi állapot késői őszi vagy átmeneti hónapokkal is erős kapcsolatot mutat.
+Kiemelkedő példák: a korai április nagyon erősen hasonlít a késői októberhez /0.95/, a korai május pedig a késői szeptemberhez /0.97/. Ez arra utal, hogy Pécsnél az átmeneti évszakok klimatikus pozíciója eltolódott: a tavasz, a késő nyár és az ősz közötti hasonlósági mező átfedőbbé vált.
+Beilleszthető szöveg az eredmények fejezetbe
+Pécs esetében a temporális klímahálózat alapvető szezonális szerkezete mindkét időszakban megmarad, azonban a közösségi mintázatok az átmeneti hónapokban érzékelhető átrendeződést mutatnak. A korai időszakban a téli hónapok egy jól elkülönülő közösséget alkotnak, míg a május–augusztus közötti időszak főként a nyári közösséghez kapcsolódik. Március, április és október ezzel szemben átmeneti közösségi pozíciót foglal el. A késői időszakban ez az alapstruktúra fennmarad, de a modularitás 14873.299-ről 13898.149-re csökken, ami a szezonális közösségek közötti határok enyhe gyengülésére utal.
+A Shannon-entrópia alapján Pécsnél az éves átlagos közösségi diverzitás csak mérsékelten nőtt, 0.211-ről 0.220-ra. A változás azonban nem egyenletesen oszlik meg az év során. Február entrópiája 0.245-ről 0.500-ra, szeptemberé pedig 0.611-ről 0.811-re emelkedett, ami a késő téli és kora őszi állapotok erősebb közösségi fragmentációját jelzi. Ezzel szemben március és április entrópiája csökkent, vagyis ezekben a hónapokban a klimatikus állapotok a késői időszakban koncentráltabban kapcsolódnak egy domináns közösséghez.
+A prototípus-hasonlósági mátrixok különösen jól mutatják az átmeneti hónapok átrendeződését. A küszöbölt mátrixban a korai május legerősebben a késői szeptemberhez kapcsolódik /0.97/, míg a korai április nagyon magas hasonlóságot mutat a késői októberrel /0.95/. Ez arra utal, hogy Pécs esetében a szezonális ciklus nem egyszerűen eltolódott, hanem a tavaszi, késő nyári és őszi átmeneti állapotok közötti hasonlósági kapcsolatok váltak erősebbé.
+A perkolációs index értéke −0.00759, ami enyhe robusztusságcsökkenést jelez. A késői hálózat tehát valamivel alacsonyabb hasonlósági küszöbnél fragmentálódik, mint a korai hálózat, de az eltérés kicsi. Pécsnél ezért a klímaváltozáshoz kapcsolódó hálózati átalakulás elsősorban nem a teljes szerkezet széteséseként, hanem a szezonális közösségek és az átmeneti hónapok finomabb átrendeződéseként értelmezhető.
